@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="mt-auto border-t-4 border-black bg-[#FEF08A] px-6 py-8 md:px-12 md:py-12">
+    <footer className="mt-auto border-t-4 border-black bg-accent px-6 py-8 md:px-12 md:py-12">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
         <div className="flex flex-col items-center text-center md:items-start md:text-left">
           <h2 className="text-3xl font-bold uppercase tracking-tight">Zioo</h2>
