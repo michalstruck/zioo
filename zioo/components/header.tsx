@@ -5,8 +5,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 flex h-16 w-full items-center justify-between border-b-4 border-black bg-background px-5 md:h-20 md:px-12 lg:px-20">
       <div className="flex items-center gap-8">
-        <Link 
-          href="/" 
+        <Link
+          href="/"
           className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl hover:text-primary transition-colors duration-150"
         >
           Zioo.
