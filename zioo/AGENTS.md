@@ -18,24 +18,24 @@ Available blends (6 products total across 2 lines: Natural & Terpene-Infused):
 
 "Deep Unwind" (Sleep & Relaxation)
 20.00% Damiana
-45.00% Dziewanna Liść
-20.00% Malina Liść
+45.00% Dziewanna
+20.00% Malina
 15.00% Melisa
 Terpene (Infused Line Only) - Purple Punch
 
 "Social Spark" (Euphoria & Mood Enhancement)
-10.00% Róża Kwiat
+10.00% Róża
 45.00% Dziewanna
-10.00% Lawenda Kwiat
-25.00% Prawoślaz Liść
-10.00% Rumianek kwiat
+10.00% Lawenda
+25.00% Prawoślaz
+10.00% Rumianek
 Terpene (Infused Line Only) - GSC
 
 "Clear Mind" (Focus & Clarity)
 15.00% Mięta
 40.00% Dziewanna
 20.00% Pokrzywa
-25.00% Malina Liść
+25.00% Malina
 Terpene (Infused Line Only) - Lemon Skunk
 
 ## Commands
