@@ -60,6 +60,20 @@
   --shadow-md: 4px 4px 0px 0px rgba(0, 0, 0, 1);
   --shadow-lg: 8px 8px 0px 0px rgba(0, 0, 0, 1);
   --shadow-xl: 12px 12px 0px 0px rgba(0, 0, 0, 1);
+
+  --animate-blob: blob 20s infinite alternate;
+  @keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(3vw, -5vh) scale(1.1); }
+    66% { transform: translate(-2vw, 2vh) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+  }
+  
+  --animate-wobble: wobble 1s ease-in-out infinite;
+  @keyframes wobble {
+    0%, 100% { transform: rotate(-2deg) scale(1.02); }
+    50% { transform: rotate(2deg) scale(1.02); }
+  }
 }
 
 :root {
@@ -96,6 +110,62 @@
   --sidebar-accent-foreground: #000000;
   --sidebar-border: #000000;
   --sidebar-ring: #F97316;
+}
+
+.theme-retro-surfer {
+  /* Zioo palette — Retro Surfer / Sun-bleached vintage organic vibe */
+  --background: #FFFBEB; /* Warm Cream/Sand */
+  --foreground: #000000; /* Solid black for stark contrast */
+  
+  --card: #FFFBEB;
+  --card-foreground: #000000;
+  
+  --popover: #FFFBEB;
+  --popover-foreground: #000000;
+  
+  --primary: #F97316; /* Vibrant Orange/Sunset */
+  --primary-foreground: #FFFFFF;
+  
+  --secondary: #06B6D4; /* Electric Cyan/Ocean */
+  --secondary-foreground: #000000;
+  
+  --muted: #F3F4F6; /* Neutral light grey */
+  --muted-foreground: #737373;
+  
+  --accent: #F472B6; /* Hot Pink/Floral */
+  --accent-foreground: #000000;
+  
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  
+  --border: #000000; /* Hard black borders */
+  --input: #000000;
+  --ring: #F97316;
+  
+  --chart-1: #F97316;
+  --chart-2: #06B6D4;
+  --chart-3: #F472B6;
+  --chart-4: #000000;
+  --chart-5: #EF4444;
+  
+  /* Organic borders & typography */
+  --radius: 2rem;
+  --font-sans: var(--font-shrikhand), var(--font-space-grotesk);
+
+  /* Shadows - strictly neo-brutalist black */
+  --shadow-sm: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+  --shadow-md: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+  --shadow-lg: 12px 12px 0px 0px rgba(0, 0, 0, 1);
+  --shadow-xl: 16px 16px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.theme-retro-surfer::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
 }
 
 @layer base {

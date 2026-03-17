@@ -9,11 +9,6 @@ ALL copy on landing or else is in Polish.
 
 Payments will be handled using Stripe.
 
-## Design Context & Guidelines
-
-Use `ui-ux-pro-max` skill.
-For all UI/UX work, styling, and design-related decisions, you **MUST** read and strictly follow the design context outlined in `.impeccable.md`.
-
 Available blends (6 products total across 2 lines: Natural & Terpene-Infused):
 
 "Deep Unwind" (Sleep & Relaxation)
