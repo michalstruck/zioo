@@ -6,7 +6,8 @@
     "dev": "bun next dev",
     "build": "bun next build",
     "start": "bun next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",

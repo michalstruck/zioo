@@ -16,14 +16,14 @@
 
 ### Color Palette
 
-| Role | Hex | CSS Variable |
-|------|-----|--------------|
-| Primary | `#F97316` | `--color-primary` |
-| Secondary | `#2DD4BF` | `--color-secondary` |
-| Accent | `#FEF08A` | `--color-accent` |
+| Role       | Hex       | CSS Variable         |
+| ---------- | --------- | -------------------- |
+| Primary    | `#F97316` | `--color-primary`    |
+| Secondary  | `#2DD4BF` | `--color-secondary`  |
+| Accent     | `#FEF08A` | `--color-accent`     |
 | Background | `#FAFAFA` | `--color-background` |
-| Text | `#000000` | `--color-text` |
-| Border | `#000000` | `--color-border` |
+| Text       | `#000000` | `--color-text`       |
+| Border     | `#000000` | `--color-border`     |
 
 **Color Notes:** Sun-bleached brights with stark contrasts. Washed-out teal, sunset orange, pale yellow, and solid black for grounding.
 
@@ -35,29 +35,30 @@
 - **Google Fonts:** [Space Grotesk + Space Grotesk](https://fonts.google.com/share?selection.family=Space+Grotesk:wght@700)
 
 **CSS Import:**
+
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap");
 ```
 
 ### Spacing Variables
 
-| Token | Value | Usage |
-|-------|-------|-------|
-| `--space-xs` | `4px` / `0.25rem` | Tight gaps |
-| `--space-sm` | `8px` / `0.5rem` | Icon gaps, inline spacing |
-| `--space-md` | `16px` / `1rem` | Standard padding |
-| `--space-lg` | `24px` / `1.5rem` | Section padding |
-| `--space-xl` | `32px` / `2rem` | Large gaps |
-| `--space-2xl` | `48px` / `3rem` | Section margins |
-| `--space-3xl` | `64px` / `4rem` | Hero padding |
+| Token         | Value             | Usage                     |
+| ------------- | ----------------- | ------------------------- |
+| `--space-xs`  | `4px` / `0.25rem` | Tight gaps                |
+| `--space-sm`  | `8px` / `0.5rem`  | Icon gaps, inline spacing |
+| `--space-md`  | `16px` / `1rem`   | Standard padding          |
+| `--space-lg`  | `24px` / `1.5rem` | Section padding           |
+| `--space-xl`  | `32px` / `2rem`   | Large gaps                |
+| `--space-2xl` | `48px` / `3rem`   | Section margins           |
+| `--space-3xl` | `64px` / `4rem`   | Hero padding              |
 
 ### Shadow Depths
 
-| Level | Value | Usage |
-|-------|-------|-------|
-| `--shadow-sm` | `2px 2px 0px 0px rgba(0,0,0,1)` | Buttons, small inputs |
-| `--shadow-md` | `4px 4px 0px 0px rgba(0,0,0,1)` | Cards, standard components |
-| `--shadow-lg` | `8px 8px 0px 0px rgba(0,0,0,1)` | Modals, dropdowns |
+| Level         | Value                             | Usage                       |
+| ------------- | --------------------------------- | --------------------------- |
+| `--shadow-sm` | `2px 2px 0px 0px rgba(0,0,0,1)`   | Buttons, small inputs       |
+| `--shadow-md` | `4px 4px 0px 0px rgba(0,0,0,1)`   | Cards, standard components  |
+| `--shadow-lg` | `8px 8px 0px 0px rgba(0,0,0,1)`   | Modals, dropdowns           |
 | `--shadow-xl` | `12px 12px 0px 0px rgba(0,0,0,1)` | Hero images, featured cards |
 
 ---
@@ -69,6 +70,7 @@
 **Styling:** Tailwind CSS
 
 ### General Styling Directives (Neo-Brutalist)
+
 - **Borders:** Thick solid black (`border-2 border-black` or `border-4 border-black` for emphasis).
 - **Shadows:** Hard black shadows (e.g., `shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]`).
 - **Transitions:** Snappy, instantaneous or very short `duration-150` with slight translate for press effects.
@@ -76,19 +78,23 @@
 ### shadcn/ui Component Modifications
 
 **Buttons (`components/ui/button.tsx`)**
+
 - Modify default variants to include thick borders and hard shadows.
-- *Primary:* `bg-primary text-primary-foreground border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-y-[4px] active:translate-x-[4px] active:shadow-none transition-all`
-- *Secondary:* `bg-secondary text-secondary-foreground border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-y-[4px] active:translate-x-[4px] active:shadow-none transition-all`
+- _Primary:_ `bg-primary text-primary-foreground border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-y-[4px] active:translate-x-[4px] active:shadow-none transition-all`
+- _Secondary:_ `bg-secondary text-secondary-foreground border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-y-[4px] active:translate-x-[4px] active:shadow-none transition-all`
 
 **Cards (`components/ui/card.tsx`)**
+
 - Apply uniform `border-2 border-black` and `shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]`.
 - Background should typically be `bg-card` (often white or pale yellow).
 - Rounded corners should be minimal to emphasize the brutalist feel, but can be slightly rounded (e.g., `rounded-xl`) if a "sticker" look is intended.
 
 **Inputs (`components/ui/input.tsx`)**
+
 - `border-2 border-black rounded-md focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]`
 
 **Icons (`lucide-react`)**
+
 - Always use `strokeWidth={2.5}` or `strokeWidth={3}` to match the heavy typography and thick borders.
 
 ---
