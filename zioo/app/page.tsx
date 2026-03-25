@@ -14,22 +14,24 @@ export default function Home() {
         id="hero"
         className="relative overflow-hidden px-5 pt-12 pb-16 md:px-12 md:pt-20 md:pb-24 lg:px-20"
       >
-        {/* Decorative accent block — top-right */}
+        {/* Organic Background */}
         <div
-          className="pointer-events-none absolute -top-6 right-8 hidden size-28 rotate-12 rounded-xl border-4 border-black bg-accent md:block"
-          aria-hidden="true"
+          className="absolute inset-0 z-0 opacity-20 mix-blend-multiply pointer-events-none bg-cover bg-center transition-all duration-1000"
+          style={{ backgroundImage: "url('/dark-moss-bg.png')" }}
         />
+        {/* Gradient transition to next section, avoiding tailwind opacity shorthands per instructions */}
+        <div className="absolute inset-x-0 bottom-0 h-32 z-0 bg-linear-to-t from-background to-transparent pointer-events-none" />
 
-        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
+        <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
           {/* Copy column */}
           <div className="flex flex-col gap-6">
-            <p className="w-fit rounded-lg border-2 border-black bg-secondary px-3 py-1 text-sm font-bold uppercase tracking-wide shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+            <p className="w-fit rounded-full border border-primary/20 bg-white/50 backdrop-blur-sm px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-primary shadow-sm">
               Herbata ziołowa z terpenami
             </p>
 
-            <h1 className="text-4xl font-bold leading-[0.95] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+            <h1 className="text-5xl font-heading font-medium leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
               Poczuj
-              <span className="block text-primary">się lepiej.</span>
+              <span className="block text-secondary italic">się lepiej.</span>
             </h1>
 
             <p className="max-w-lg text-lg font-medium leading-relaxed text-foreground/80 md:text-xl">
@@ -38,41 +40,45 @@ export default function Home() {
               i&nbsp;spokój.
             </p>
 
-            <div className="flex flex-wrap gap-3 pt-2">
-              <Button size="lg" className="text-base">
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Button size="lg" className="px-8">
                 Poznaj mieszanki
               </Button>
-              <Button size="lg" variant="outline" className="text-base">
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-full px-8 border-primary/20 text-primary hover:bg-primary/5"
+              >
                 Jak to działa?
               </Button>
             </div>
           </div>
 
           {/* Illustrations column */}
-          <div className="grid grid-cols-3 gap-4 md:gap-5 lg:gap-6">
+          <div className="grid grid-cols-3 gap-4 md:gap-5 lg:gap-8">
             <div className="flex flex-col items-center gap-2">
-              <div className="rounded-xl border-2 border-black bg-card shadow-[var(--shadow-xl)] transition-all duration-150 hover:-translate-y-1 hover:shadow-[14px_14px_0px_0px_rgba(0,0,0,1)]">
+              <div className="card-organic p-4 transition-organic hover:scale-105">
                 <DeepUnwindIllustration />
               </div>
-              <span className="text-xs font-bold uppercase tracking-wider pt-3">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-secondary/60 pt-3">
                 Deep Unwind
               </span>
             </div>
 
-            <div className="flex flex-col items-center gap-2 pt-8 md:pt-12">
-              <div className="rounded-xl border-2 border-black bg-card p-3 shadow-[var(--shadow-xl)] transition-all duration-150 hover:-translate-y-1 hover:shadow-[14px_14px_0px_0px_rgba(0,0,0,1)]">
+            <div className="flex flex-col items-center gap-2 pt-12 md:pt-16">
+              <div className="card-organic p-4 transition-organic hover:scale-105 bg-white/80">
                 <SocialSparkIllustration />
               </div>
-              <span className="text-xs font-bold uppercase tracking-wider pt-3">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-secondary/60 pt-3">
                 Social Spark
               </span>
             </div>
 
             <div className="flex flex-col items-center gap-2">
-              <div className="rounded-xl border-2 border-black bg-card p-3 shadow-[var(--shadow-xl)] transition-all duration-150 hover:-translate-y-1 hover:shadow-[14px_14px_0px_0px_rgba(0,0,0,1)]">
+              <div className="card-organic p-4 transition-organic hover:scale-105">
                 <ClearMindIllustration />
               </div>
-              <span className="text-xs font-bold uppercase tracking-wider pt-3">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-secondary/60 pt-3">
                 Clear Mind
               </span>
             </div>
@@ -83,24 +89,21 @@ export default function Home() {
       {/* ─── VALUE PROPOSITION ────────────────────────────── */}
       <section
         id="value-proposition"
-        className="border-y-4 border-black bg-accent/30 px-5 py-[var(--space-2xl)] md:px-12 md:py-[var(--space-3xl)] lg:px-20"
+        className="border-y border-border/20 bg-muted/30 px-5 py-(--space-2xl) md:px-12 md:py-(--space-3xl) lg:px-20"
       >
         <div className="mx-auto max-w-7xl">
-          <h2 className="mb-10 text-2xl font-bold tracking-tight md:mb-14 md:text-4xl lg:text-5xl">
+          <h2 className="mb-10 text-3xl font-heading font-medium tracking-tight text-secondary md:mb-14 md:text-5xl lg:text-6xl">
             Czemu Zioo?
           </h2>
 
           <div className="grid gap-8 sm:grid-cols-2 lg:gap-12">
             {/* 1 — Lepszy nastrój */}
-            <div className="group flex gap-4">
-              <div className="flex size-14 shrink-0 items-center justify-center rounded-xl border-2 border-black bg-primary shadow-[var(--shadow-sm)] transition-all duration-150 group-hover:-translate-y-0.5 group-hover:shadow-[var(--shadow-md)]">
-                <Smile
-                  className="size-7 text-primary-foreground"
-                  strokeWidth={2.5}
-                />
+            <div className="group flex gap-6">
+              <div className="flex size-16 shrink-0 items-center justify-center rounded-2xl border border-primary/10 bg-white shadow-sm transition-organic group-hover:-translate-y-px group-hover:shadow-md">
+                <Smile className="size-8 text-primary" strokeWidth={1.5} />
               </div>
               <div>
-                <h3 className="text-xl font-bold md:text-2xl">
+                <h3 className="text-2xl font-heading font-medium text-secondary">
                   Lepszy nastrój, bez kompromisów
                 </h3>
                 <p className="mt-1 text-base leading-relaxed text-foreground/70">
@@ -111,15 +114,12 @@ export default function Home() {
             </div>
 
             {/* 2 — Bez niepokoju */}
-            <div className="group flex gap-4">
-              <div className="flex size-14 shrink-0 items-center justify-center rounded-xl border-2 border-black bg-secondary shadow-[var(--shadow-sm)] transition-all duration-150 group-hover:-translate-y-0.5 group-hover:shadow-[var(--shadow-md)]">
-                <Leaf
-                  className="size-7 text-secondary-foreground"
-                  strokeWidth={2.5}
-                />
+            <div className="group flex gap-6">
+              <div className="flex size-16 shrink-0 items-center justify-center rounded-2xl border border-secondary/10 bg-white shadow-sm transition-organic group-hover:-translate-y-px group-hover:shadow-md">
+                <Leaf className="size-8 text-secondary" strokeWidth={1.5} />
               </div>
               <div>
-                <h3 className="text-xl font-bold md:text-2xl">
+                <h3 className="text-2xl font-heading font-medium text-secondary">
                   Zero niepokoju
                 </h3>
                 <p className="mt-1 text-base leading-relaxed text-foreground/70">
@@ -130,15 +130,12 @@ export default function Home() {
             </div>
 
             {/* 3 — Czysty smak */}
-            <div className="group flex gap-4">
-              <div className="flex size-14 shrink-0 items-center justify-center rounded-xl border-2 border-black bg-accent shadow-[var(--shadow-sm)] transition-all duration-150 group-hover:-translate-y-0.5 group-hover:shadow-[var(--shadow-md)]">
-                <Droplets
-                  className="size-7 text-accent-foreground"
-                  strokeWidth={2.5}
-                />
+            <div className="group flex gap-6">
+              <div className="flex size-16 shrink-0 items-center justify-center rounded-2xl border border-accent/10 bg-white shadow-sm transition-organic group-hover:-translate-y-px group-hover:shadow-md">
+                <Droplets className="size-8 text-accent" strokeWidth={1.5} />
               </div>
               <div>
-                <h3 className="text-xl font-bold md:text-2xl">
+                <h3 className="text-2xl font-heading font-medium text-secondary">
                   Smak, nie chemia
                 </h3>
                 <p className="mt-1 text-base leading-relaxed text-foreground/70">
@@ -149,15 +146,15 @@ export default function Home() {
             </div>
 
             {/* 4 — Transparentne składy */}
-            <div className="group flex gap-4">
-              <div className="flex size-14 shrink-0 items-center justify-center rounded-xl border-2 border-black bg-card shadow-[var(--shadow-sm)] transition-all duration-150 group-hover:-translate-y-0.5 group-hover:shadow-[var(--shadow-md)]">
+            <div className="group flex gap-6">
+              <div className="flex size-16 shrink-0 items-center justify-center rounded-2xl border border-border bg-white shadow-sm transition-organic group-hover:-translate-y-px group-hover:shadow-md">
                 <ShieldCheck
-                  className="size-7 text-foreground"
-                  strokeWidth={2.5}
+                  className="size-8 text-secondary/60"
+                  strokeWidth={1.5}
                 />
               </div>
               <div>
-                <h3 className="text-xl font-bold md:text-2xl">
+                <h3 className="text-2xl font-heading font-medium text-secondary">
                   Skład na wierzchu
                 </h3>
                 <p className="mt-1 text-base leading-relaxed text-foreground/70">
@@ -170,7 +167,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
     </main>
   );
 }

@@ -36,92 +36,114 @@ export function CartDrawer() {
         <Button
           variant="default"
           size="lg"
-          className="relative flex items-center gap-2 border-2 border-black font-bold uppercase transition-all duration-150 hover:-translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+          className="relative flex items-center gap-3 px-6 h-12"
           aria-label={`Koszyk (${cartCount})`}
         >
-          <ShoppingCart className="size-5" />
-          <span className="hidden sm:inline">Koszyk</span>
+          <ShoppingCart className="size-4" />
+          <span className="hidden sm:inline font-sans text-xs uppercase tracking-widest font-bold">
+            Koszyk
+          </span>
           {cartCount > 0 && (
-            <Badge className="absolute -top-3 -right-3 flex size-6 items-center justify-center rounded-full border-2 border-black bg-primary text-primary-foreground p-0 text-xs font-bold shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-transform duration-150 group-hover:scale-110">
+            <Badge className="absolute -top-2 -right-2 flex size-6 items-center justify-center rounded-full border border-white/20 bg-secondary text-white p-0 text-[10px] font-bold shadow-md transition-organic group-hover:scale-110">
               {cartCount}
             </Badge>
           )}
         </Button>
       </SheetTrigger>
 
-      <SheetContent side="right" className="flex flex-col">
-        <SheetHeader className="border-b-2 border-black pb-4">
-          <SheetTitle className="text-2xl font-bold tracking-tight">
+      <SheetContent
+        side="right"
+        className="flex flex-col bg-background border-l border-border/10 p-0 sm:max-w-md"
+      >
+        <SheetHeader className="border-b border-border/5 px-6 py-6">
+          <SheetTitle className="text-3xl font-heading font-medium tracking-tight text-secondary">
             Koszyk
             {cartCount > 0 && (
-              <span className="ml-2 text-muted-foreground">({cartCount})</span>
+              <span className="ml-3 text-sm font-sans font-normal text-muted-foreground/60 italic lowercase">
+                — {cartCount} sztuk
+              </span>
             )}
           </SheetTitle>
         </SheetHeader>
 
         {/* Cart items */}
         {items.length === 0 ? (
-          <div className="flex flex-1 flex-col items-center justify-center gap-3 px-4 text-center">
-            <div className="flex size-16 items-center justify-center rounded-xl border-2 border-black bg-muted shadow-[var(--shadow-sm)]">
-              <ShoppingCart className="size-8 text-muted-foreground" />
+          <div className="flex flex-1 flex-col items-center justify-center gap-4 px-6 text-center">
+            <div className="flex size-20 items-center justify-center rounded-full border border-primary/10 bg-white shadow-sm">
+              <ShoppingCart
+                className="size-8 text-primary/30"
+                strokeWidth={1.5}
+              />
             </div>
-            <p className="text-lg font-bold">Pusto tutaj</p>
-            <p className="text-sm text-muted-foreground">
-              Dodaj mieszankę, żeby zacząć
+            <p className="text-xl font-heading font-medium text-secondary">
+              Twój koszyk jest pusty
+            </p>
+            <p className="text-sm text-secondary/80 font-sans">
+              Wybierz jedną z naszych botanicznych mieszanek, aby zacząć.
             </p>
           </div>
         ) : (
-          <ul className="flex-1 space-y-3 overflow-y-auto px-4">
+          <ul className="flex-1 space-y-4 overflow-y-auto px-6 py-6">
             {items.map(({ product, quantity }) => (
               <li
                 key={product.id}
-                className="flex items-center gap-3 rounded-xl border-2 border-black bg-card p-3 shadow-[var(--shadow-sm)]"
+                className="flex items-center gap-4 rounded-2xl border border-border/20 bg-white p-4 shadow-sm transition-organic hover:shadow-md"
               >
-                {/* Color swatch */}
+                {/* Color swatch - Botanical Icon placeholder */}
                 <div
-                  className="size-10 shrink-0 rounded-lg border-2 border-black"
+                  className="size-12 shrink-0 rounded-full border border-black/5 flex items-center justify-center"
                   style={{
-                    backgroundColor: product.color,
+                    backgroundColor: `${product.color}15`,
                   }}
-                />
+                >
+                  <div
+                    className="size-3 rounded-full"
+                    style={{ backgroundColor: product.color }}
+                  />
+                </div>
 
                 <div className="flex-1 min-w-0">
-                  <p className="truncate text-sm font-bold">{product.name}</p>
-                  <p className="text-xs text-muted-foreground">
+                  <p className="truncate text-base font-heading font-medium text-secondary">
+                    {product.name}
+                  </p>
+                  <p className="text-xs font-sans text-primary/60 italic">
                     {product.primaryTerpene}
                   </p>
                 </div>
 
                 {/* Quantity controls */}
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-1 bg-muted/30 rounded-full p-1 border border-border/5">
                   <Button
-                    variant="outline"
+                    variant="ghost"
                     size="icon-xs"
+                    className="rounded-full size-7 hover:bg-white"
                     onClick={() => updateQuantity(product.id, quantity - 1)}
                     aria-label={`Zmniejsz ilość ${product.name}`}
                   >
-                    <Minus />
+                    <Minus className="size-3" />
                   </Button>
-                  <span className="w-8 text-center text-sm font-bold tabular-nums">
+                  <span className="w-6 text-center text-xs font-bold font-mono">
                     {quantity}
                   </span>
                   <Button
-                    variant="outline"
+                    variant="ghost"
                     size="icon-xs"
+                    className="rounded-full size-7 hover:bg-white"
                     onClick={() => updateQuantity(product.id, quantity + 1)}
                     aria-label={`Zwiększ ilość ${product.name}`}
                   >
-                    <Plus />
+                    <Plus className="size-3" />
                   </Button>
                 </div>
 
                 <Button
                   variant="ghost"
                   size="icon-xs"
+                  className="rounded-full size-8 text-destructive/40 hover:text-destructive hover:bg-destructive/5"
                   onClick={() => removeFromCart(product.id)}
                   aria-label={`Usuń ${product.name}`}
                 >
-                  <Trash2 className="text-destructive" />
+                  <Trash2 className="size-4" />
                 </Button>
               </li>
             ))}
@@ -130,9 +152,9 @@ export function CartDrawer() {
 
         {/* Footer with checkout button */}
         {items.length > 0 && (
-          <SheetFooter className="border-t-2 border-black p-4">
-            <Button size="lg" className="h-14 w-full text-lg font-bold">
-              Zamów
+          <SheetFooter className="border-t border-border/10 p-6 bg-white shadow-[0_-8px_30px_rgba(26,31,26,0.03)]">
+            <Button size="lg" className="h-14 w-full text-lg shadow-lg">
+              Przejdź do zamówienia
             </Button>
           </SheetFooter>
         )}

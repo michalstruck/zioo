@@ -1,150 +1,91 @@
-# Design System Master File
+## 🏛️ Aesthetic Definition & Vibe
 
-> **LOGIC:** When building a specific page, first check `design-system/pages/[page-name].md`.
-> If that file exists, its rules **override** this Master file.
-> If not, strictly follow the rules below.
+**Clinical Naturalism** is a blend of **1970s health journal aesthetics** with **modern clinical precision**, now enhanced with **Organic Design** principles to emphasize wellness and human connection.
 
----
-
-**Project:** Zioo
-**Generated:** 2026-03-16 23:07:23
-**Category:** E-commerce
-
----
-
-## Global Rules
-
-### Color Palette
-
-| Role       | Hex       | CSS Variable         |
-| ---------- | --------- | -------------------- |
-| Primary    | `#F97316` | `--color-primary`    |
-| Secondary  | `#2DD4BF` | `--color-secondary`  |
-| Accent     | `#FEF08A` | `--color-accent`     |
-| Background | `#FAFAFA` | `--color-background` |
-| Text       | `#000000` | `--color-text`       |
-| Border     | `#000000` | `--color-border`     |
-
-**Color Notes:** Sun-bleached brights with stark contrasts. Washed-out teal, sunset orange, pale yellow, and solid black for grounding.
-
-### Typography
-
-- **Heading Font:** Space Grotesk
-- **Body Font:** Space Grotesk
-- **Mood:** neo brutalism, pop art, loud, bold, heavy, stickers, mechanical, high contrast, cream, gen-z
-- **Google Fonts:** [Space Grotesk + Space Grotesk](https://fonts.google.com/share?selection.family=Space+Grotesk:wght@700)
-
-**CSS Import:**
-
-```css
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap");
-```
-
-### Spacing Variables
-
-| Token         | Value             | Usage                     |
-| ------------- | ----------------- | ------------------------- |
-| `--space-xs`  | `4px` / `0.25rem` | Tight gaps                |
-| `--space-sm`  | `8px` / `0.5rem`  | Icon gaps, inline spacing |
-| `--space-md`  | `16px` / `1rem`   | Standard padding          |
-| `--space-lg`  | `24px` / `1.5rem` | Section padding           |
-| `--space-xl`  | `32px` / `2rem`   | Large gaps                |
-| `--space-2xl` | `48px` / `3rem`   | Section margins           |
-| `--space-3xl` | `64px` / `4rem`   | Hero padding              |
-
-### Shadow Depths
-
-| Level         | Value                             | Usage                       |
-| ------------- | --------------------------------- | --------------------------- |
-| `--shadow-sm` | `2px 2px 0px 0px rgba(0,0,0,1)`   | Buttons, small inputs       |
-| `--shadow-md` | `4px 4px 0px 0px rgba(0,0,0,1)`   | Cards, standard components  |
-| `--shadow-lg` | `8px 8px 0px 0px rgba(0,0,0,1)`   | Modals, dropdowns           |
-| `--shadow-xl` | `12px 12px 0px 0px rgba(0,0,0,1)` | Hero images, featured cards |
+- **Vibe:** Clean but warm, scientific but organic, trustworthy.
+- **Organic Shapes:** Replace rigid lines with fluid, asymmetric curves. Use "living" shapes for decorative elements.
+- **Natural Textures:** Incorporate paper grain, linen, and subtle organic noise to add depth and realism.
+- **Minimalism:** Prioritize whitespace and essential elements; "organic design works best with minimalism."
+- **Inspiration:** Vintage apothecary labels, botanical encyclopedias, high-end skincare packaging.
+- **Key Characteristics:** Generous whitespace, "flowing" retro typography, organic shapes, and a desaturated "nature-first" palette.
 
 ---
 
-## Component Specs & Technology Stack
+## 🎨 Color Palette: The Apothecary Palette
 
-**UI Framework:** `shadcn/ui`
-**Icons:** `lucide-react` (Use exclusively)
-**Styling:** Tailwind CSS
+These map directly to your `globals.css` CSS variables for `shadcn/ui`.
 
-### General Styling Directives (Neo-Brutalist)
-
-- **Borders:** Thick solid black (`border-2 border-black` or `border-4 border-black` for emphasis).
-- **Shadows:** Hard black shadows (e.g., `shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]`).
-- **Transitions:** Snappy, instantaneous or very short `duration-150` with slight translate for press effects.
-
-### shadcn/ui Component Modifications
-
-**Buttons (`components/ui/button.tsx`)**
-
-- Modify default variants to include thick borders and hard shadows.
-- _Primary:_ `bg-primary text-primary-foreground border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-y-[4px] active:translate-x-[4px] active:shadow-none transition-all`
-- _Secondary:_ `bg-secondary text-secondary-foreground border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-y-[4px] active:translate-x-[4px] active:shadow-none transition-all`
-
-**Cards (`components/ui/card.tsx`)**
-
-- Apply uniform `border-2 border-black` and `shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]`.
-- Background should typically be `bg-card` (often white or pale yellow).
-- Rounded corners should be minimal to emphasize the brutalist feel, but can be slightly rounded (e.g., `rounded-xl`) if a "sticker" look is intended.
-
-**Inputs (`components/ui/input.tsx`)**
-
-- `border-2 border-black rounded-md focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]`
-
-**Icons (`lucide-react`)**
-
-- Always use `strokeWidth={2.5}` or `strokeWidth={3}` to match the heavy typography and thick borders.
+| Hex       | Role                       | shadcn mapping                |
+| --------- | -------------------------- | ----------------------------- |
+| `#FBF9F4` | Antique Paper / Background | `--background`                |
+| `#FFFFFF` | Sterile White / Surface    | `--card`, `--popover`         |
+| `#6B7F6A` | Desaturated Sage           | `--primary`                   |
+| `#A27FE2` | Lilac                      | `--secondary`, `--foreground` |
+| `#C48464` | Terracotta / Clay          | `--accent`                    |
+| `#1A1F1A` | Ink Black (Soft)           | `--foreground`                |
+| `#E2E2D5` | Linen                      | `--border`, `--input`         |
 
 ---
 
-## Style Guidelines
+## 🔡 Typography: Flowing & Precision
 
-**Style:** Vibrant & Block-based
+### Heading Font: **Fraunces** (Soft Serif)
 
-**Keywords:** Bold, energetic, playful, block layout, geometric shapes, high color contrast, duotone, modern, energetic
+- **Vibe:** "Flowing fonts" — Retro, editorial, human, flowing terminals.
+- **Usage:** Hero headlines, section titles.
+- **Styling:** `font-weight: 500-600`, `letter-spacing: -0.02em`.
+- **shadcn implementation:** Map to `--font-heading`.
 
-**Best For:** Startups, creative agencies, gaming, social media, youth-focused, entertainment, consumer
+### Body Font: **Public Sans** (Modernist Sans)
 
-**Key Effects:** Large sections (48px+ gaps), animated patterns, bold hover (color shift), scroll-snap, large type (32px+), 200-300ms
-
-### Page Pattern
-
-**Pattern Name:** Feature-Rich Showcase
-
-- **CTA Placement:** Above fold
-- **Section Order:** Hero > Features > CTA
-
----
-
-## Anti-Patterns (Do NOT Use)
-
-- ❌ Flat design without depth
-- ❌ Text-heavy pages
-
-### Additional Forbidden Patterns
-
-- ❌ **Emojis as icons** — Use SVG icons (Heroicons, Lucide, Simple Icons)
-- ❌ **Missing cursor:pointer** — All clickable elements must have cursor:pointer
-- ❌ **Layout-shifting hovers** — Avoid scale transforms that shift layout
-- ❌ **Low contrast text** — Maintain 4.5:1 minimum contrast ratio
-- ❌ **Instant state changes** — Always use transitions (150-300ms)
-- ❌ **Invisible focus states** — Focus states must be visible for a11y
+- **Vibe:** Clinical, functional, highly legible, "no-nonsense" information.
+- **Usage:** Body copy, labels, technical specs.
+- **Styling:** `line-height: 1.6`, `font-weight: 400`.
+- **shadcn implementation:** Map to `--font-sans`.
 
 ---
 
-## Pre-Delivery Checklist
+## 🏗️ shadcn/ui Component Guidelines
 
-Before delivering any UI code, verify:
+### Buttons (`Button`)
 
-- [ ] No emojis used as icons (use SVG instead)
-- [ ] All icons from consistent icon set (Heroicons/Lucide)
-- [ ] `cursor-pointer` on all clickable elements
-- [ ] Hover states with smooth transitions (150-300ms)
-- [ ] Light mode: text contrast 4.5:1 minimum
-- [ ] Focus states visible for keyboard navigation
-- [ ] `prefers-reduced-motion` respected
-- [ ] Responsive: 375px, 768px, 1024px, 1440px
-- [ ] No content hidden behind fixed navbars
-- [ ] No horizontal scroll on mobile
+- **Variant Link/Ghost:** Use for navigation to maintain "clean" aesthetic.
+- **Variant Default/Outline:** Always use `rounded-full` (Pill shape) to contrast the serif typography.
+- **Animation:** Use `duration-500` and `ease-out-expo` (cubic-bezier) for soft transitions.
+
+### Cards (`Card`)
+
+- **Border:** Use `border-border/30` or `border-none`.
+- **Shadow:** Use `shadow-md` or `shadow-lg` with a soft, natural blur.
+- **Shape:** Standardize on `rounded-[24px]`. Optionally use asymmetric radii for featured cards: `rounded-[30%_70%_70%_30%/50%_40%_60%_50%]`.
+- **Texture:** Apply a subtle paper grain background (`bg-paper-texture`).
+
+### Inputs (`Input` / `Select`)
+
+- **Focus Ring:** Use `--primary` with low opacity.
+- **Background:** Prefer `--bg-clinical` (white) to make form fields feel sterile and precise.
+
+---
+
+## 🌿 Lucide Iconography
+
+- **Stroke Width:** Standardize on `1.5px` (thin) to match the clinical feel.
+- **Color:** Always use `--primary` or `--secondary`. Avoid using brand-black for icons as it feels too "harsh".
+- **Interaction:** Icons inside buttons should have a subtle translate-y transition on hover.
+
+---
+
+## ✨ Interactions & Motion
+
+- **Entry:** Gentle fade-ins and subtle upwards drifts (`400ms`).
+- **Hover:** Soft color shifts (e.g., Sage to Forest) or subtle elevation change.
+- **Feedback:** Fluid, non-mechanical transitions. Avoid "snappy" or "bounce" effects.
+
+---
+
+## 🚫 Anti-Patterns (Avoid)
+
+- **No Neo-Brutalism:** NO thick black borders or hard/flat shadows.
+- **No Neon Colors:** Avoid bright cyans, oranges, or magentas.
+- **No Bubbly/Generic SaaS UI:** Avoid the blue/white "tech" look.
+- **No Cluttered Text:** Every block of text should breathe.

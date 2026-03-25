@@ -2,48 +2,56 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="mt-auto border-t-4 border-black bg-accent px-6 py-8 md:px-12 md:py-12">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
-        <div className="flex flex-col items-center text-center md:items-start md:text-left">
-          <h2 className="text-3xl font-bold uppercase tracking-tight">Zioo</h2>
-          <p className="mt-4 max-w-md text-sm font-medium tracking-tight md:text-base">
+    <footer className="mt-auto border-t border-border/20 bg-white px-6 py-12 md:px-12 md:py-20 lg:px-20">
+      <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-12 md:flex-row">
+        <div className="flex flex-col gap-6 max-w-lg">
+          <h2 className="text-4xl font-heading font-medium tracking-tight text-secondary">
+            Zioo
+          </h2>
+          <p className="text-lg font-sans leading-relaxed text-secondary/70">
             Produkty Zioo to wyłącznie{" "}
-            <span className="font-bold underline decoration-black decoration-2 underline-offset-2">
+            <span className="italic text-accent font-heading">
               herbaty ziołowe
             </span>{" "}
-            i{" "}
-            <span className="font-bold underline decoration-black decoration-2 underline-offset-2">
+            i&nbsp;
+            <span className="italic text-accent font-heading">
               mieszanki do aromatyzacji
             </span>
-            .
+            . Łączymy tradycyjną wiedzę botaniczną z&nbsp;nowoczesną precyzją.
           </p>
         </div>
 
-        <div className="flex flex-col gap-4 text-center text-sm font-bold uppercase tracking-wider md:flex-row md:text-left">
+        <div className="grid grid-cols-2 gap-x-16 gap-y-4 text-sm font-sans md:grid-cols-1">
           <Link
             href="/regulamin"
-            className="transition-transform hover:-translate-y-1 hover:underline hover:decoration-2 hover:underline-offset-4"
+            className="text-secondary/60 transition-organic hover:text-primary hover:translate-x-1"
           >
             Regulamin
           </Link>
           <Link
             href="/polityka-prywatnosci"
-            className="transition-transform hover:-translate-y-1 hover:underline hover:decoration-2 hover:underline-offset-4"
+            className="text-secondary/60 transition-organic hover:text-primary hover:translate-x-1"
           >
             Polityka
           </Link>
           <Link
             href="/kontakt"
-            className="transition-transform hover:-translate-y-1 hover:underline hover:decoration-2 hover:underline-offset-4"
+            className="text-secondary/60 transition-organic hover:text-primary hover:translate-x-1"
           >
             Kontakt
           </Link>
         </div>
       </div>
-      <div className="mx-auto mt-8 flex max-w-7xl flex-col items-center justify-between gap-4 border-t-2 border-black pt-8 text-xs font-bold uppercase md:flex-row">
+
+      <div className="mx-auto mt-16 flex max-w-7xl flex-col items-center justify-between gap-6 border-t border-border/10 pt-8 text-[10px] font-bold uppercase tracking-widest text-secondary/30 md:flex-row md:mt-24">
         <p>
           &copy; {new Date().getFullYear()} Zioo. Wszelkie prawa zastrzeżone.
         </p>
+        <div className="flex gap-4">
+          <span>Apothecary Quality</span>
+          <span>•</span>
+          <span>Botanical Precision</span>
+        </div>
       </div>
     </footer>
   );

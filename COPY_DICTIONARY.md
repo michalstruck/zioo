@@ -10,6 +10,7 @@ Do **NOT** use any of the follow terms or their derivatives under any circumstan
 - palić (to smoke)
 - waporyzacja (vaporization)
 - waporyzować (to vaporize)
+- inhalacja (inhalation)
 - dym (smoke)
 - bletki / bibułki (rolling papers)
 - tytoń (tobacco) - _never market or refer to our product as tobacco substitute or meant for combustion._

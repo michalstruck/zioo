@@ -5,7 +5,7 @@ We're marketing and selling herbal blends. These are healthier, less harsh and d
 
 Refer to `COPY_DICTIONARY.md` for strict rules on terminology used across the Zioo product, marketing.
 
-ALL copy on landing or else is in Polish.
+ALL copy is in Polish.
 
 Payments will be handled using Stripe.
 
@@ -14,29 +14,40 @@ Payments will be handled using Stripe.
 Use `ui-ux-pro-max` skill.
 For all UI/UX work, styling, and design-related decisions, you **MUST** read and strictly follow the design context outlined in `.impeccable.md`.
 
-Available blends (6 products total across 2 lines: Natural & Terpene-Infused):
+Available blends (7 products total across 2 lines: Natural & Terpene-Infused):
 
-"Deep Unwind" (Sleep & Relaxation)
-20.00% Damiana
-45.00% Dziewanna
-20.00% Malina
-15.00% Melisa
-Terpene (Infused Line Only) - Purple Punch
+Fresz
+20% Dziewanna
+20% Malina
+10% Pokrzywa
+10% Prawoślaz
+20% Szałwia
+20% Mięta
+No terpene infused line for this one
 
-"Social Spark" (Euphoria & Mood Enhancement)
-10.00% Róża
-45.00% Dziewanna
-10.00% Lawenda
-25.00% Prawoślaz
-10.00% Rumianek
-Terpene (Infused Line Only) - GSC
+Czill
+30% Dziewanna
+30% Malina
+20% Pokrzywa
+10% Lawenda
+10% Melisa
+Terpene (Infused Line Only) - Girl Scout Cookies
 
-"Clear Mind" (Focus & Clarity)
-15.00% Mięta
-40.00% Dziewanna
-20.00% Pokrzywa
-25.00% Malina
+Fokus
+30% Dziewanna
+30% Malina
+15% Pokrzywa
+15% Prawoślaz
+10% Mięta
 Terpene (Infused Line Only) - Lemon Skunk
+
+Slep
+30% Dziewanna
+30% Malina
+20% Pokrzywa
+5% Róża
+15% Melisa
+Terpene (Infused Line Only) - Purple Punch
 
 ## Commands
 

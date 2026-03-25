@@ -1,24 +1,24 @@
-import * as React from "react"
-import { cva, type VariantProps } from "class-variance-authority"
-import { Slot } from "radix-ui"
+import * as React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { Slot } from "radix-ui";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "group/button inline-flex shrink-0 cursor-pointer items-center justify-center rounded-xl border-2 border-black bg-clip-padding text-sm font-bold whitespace-nowrap transition-all duration-150 outline-none select-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  "group/button inline-flex shrink-0 cursor-pointer items-center justify-center rounded-xl border-1 border-foreground bg-clip-padding text-sm font-bold whitespace-nowrap transition-all duration-150 outline-none select-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-y-[4px] active:translate-x-[4px] active:shadow-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+          "bg-primary text-primary-foreground shadow-sm hover:-translate-y-px hover:shadow-md active:translate-y-px active:shadow-sm focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-2",
         secondary:
-          "bg-secondary text-secondary-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-y-[4px] active:translate-x-[4px] active:shadow-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+          "bg-secondary text-secondary-foreground shadow-sm hover:-translate-y-px hover:shadow-md active:translate-y-px active:shadow-sm focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-2",
         outline:
-          "bg-background text-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-y-[4px] active:translate-x-[4px] active:shadow-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+          "bg-background text-foreground shadow-sm hover:-translate-y-px hover:shadow-md active:translate-y-px active:shadow-sm focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-2",
         destructive:
-          "bg-destructive text-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-y-[4px] active:translate-x-[4px] active:shadow-none focus-visible:ring-2 focus-visible:ring-destructive focus-visible:ring-offset-2",
+          "bg-destructive text-white shadow-sm hover:-translate-y-px hover:shadow-md active:translate-y-px active:shadow-sm focus-visible:ring-1 focus-visible:ring-destructive focus-visible:ring-offset-2",
         ghost:
-          "border-transparent hover:bg-muted hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring",
+          "border-transparent hover:bg-muted hover:text-foreground focus-visible:ring-1 focus-visible:ring-ring",
         link: "border-transparent text-primary underline-offset-4 hover:underline",
       },
       size: {
@@ -37,8 +37,8 @@ const buttonVariants = cva(
       variant: "default",
       size: "default",
     },
-  }
-)
+  },
+);
 
 function Button({
   className,
@@ -48,9 +48,9 @@ function Button({
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
-    asChild?: boolean
+    asChild?: boolean;
   }) {
-  const Comp = asChild ? Slot.Root : "button"
+  const Comp = asChild ? Slot.Root : "button";
 
   return (
     <Comp
@@ -60,7 +60,7 @@ function Button({
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
     />
-  )
+  );
 }
 
-export { Button, buttonVariants }
+export { Button, buttonVariants };
