@@ -9,6 +9,13 @@ ALL copy is in Polish.
 
 Payments will be handled using Stripe.
 
+## Technology stack
+
+Next.js 16 (App Router)
+TypeScript
+Tailwind CSS
+Shadcn UI (Lucide, Radix)
+
 ## Design Context & Guidelines
 
 Use `ui-ux-pro-max` skill.

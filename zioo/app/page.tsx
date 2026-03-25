@@ -1,9 +1,5 @@
 import { Button } from "@/components/ui/button";
-import {
-  DeepUnwindIllustration,
-  SocialSparkIllustration,
-  ClearMindIllustration,
-} from "@/components/hero-illustration";
+import { AnimatedHeroCards } from "@/components/animated-hero-cards";
 import { Leaf, Smile, Droplets, ShieldCheck } from "lucide-react";
 
 export default function Home() {
@@ -55,33 +51,8 @@ export default function Home() {
           </div>
 
           {/* Illustrations column */}
-          <div className="grid grid-cols-3 gap-4 md:gap-5 lg:gap-8">
-            <div className="flex flex-col items-center gap-2">
-              <div className="card-organic p-4 transition-organic hover:scale-105">
-                <DeepUnwindIllustration />
-              </div>
-              <span className="text-[10px] font-bold uppercase tracking-widest text-secondary/60 pt-3">
-                Deep Unwind
-              </span>
-            </div>
-
-            <div className="flex flex-col items-center gap-2 pt-12 md:pt-16">
-              <div className="card-organic p-4 transition-organic hover:scale-105 bg-white/80">
-                <SocialSparkIllustration />
-              </div>
-              <span className="text-[10px] font-bold uppercase tracking-widest text-secondary/60 pt-3">
-                Social Spark
-              </span>
-            </div>
-
-            <div className="flex flex-col items-center gap-2">
-              <div className="card-organic p-4 transition-organic hover:scale-105">
-                <ClearMindIllustration />
-              </div>
-              <span className="text-[10px] font-bold uppercase tracking-widest text-secondary/60 pt-3">
-                Clear Mind
-              </span>
-            </div>
+          <div className="flex items-center justify-center mt-8 lg:mt-0">
+            <AnimatedHeroCards />
           </div>
         </div>
       </section>

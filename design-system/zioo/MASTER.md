@@ -15,15 +15,15 @@
 
 These map directly to your `globals.css` CSS variables for `shadcn/ui`.
 
-| Hex       | Role                       | shadcn mapping                |
-| --------- | -------------------------- | ----------------------------- |
-| `#FBF9F4` | Antique Paper / Background | `--background`                |
-| `#FFFFFF` | Sterile White / Surface    | `--card`, `--popover`         |
-| `#6B7F6A` | Desaturated Sage           | `--primary`                   |
-| `#A27FE2` | Lilac                      | `--secondary`, `--foreground` |
-| `#C48464` | Terracotta / Clay          | `--accent`                    |
-| `#1A1F1A` | Ink Black (Soft)           | `--foreground`                |
-| `#E2E2D5` | Linen                      | `--border`, `--input`         |
+| Hex       | Role                       | shadcn mapping        |
+| --------- | -------------------------- | --------------------- |
+| `#FBF9F4` | Antique Paper / Background | `--background`        |
+| `#FFFFFF` | Sterile White / Surface    | `--card`, `--popover` |
+| `#6B7F6A` | Desaturated Sage           | `--primary`           |
+| `#A27FE2` | Lilac                      | `--accent`            |
+| `#C48464` | Terracotta / Clay          | `--secondary`         |
+| `#121625` | Ink Black (Soft)           | `--foreground`        |
+| `#E2E2D5` | Linen                      | `--border`, `--input` |
 
 ---
 
