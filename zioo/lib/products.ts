@@ -91,7 +91,7 @@ export const products: Product[] = [
     description:
       "Katalizator skupienia i mentalnej przejrzystości. Autorski blend wspierający prace głęboką (deep work), w momentach kiedy musisz zablokować bodźce z zewnątrz i zanurzyć się w zadaniu z absolutną jasnością umysłu.",
     ingredientsDeepDive:
-      "Oparta o dziewannę która nadaje ramy i lekkość, dając gładki i przejrzysty dym lub napar. Pokrzywa działa jak stymulant odczulający system nerwowy, przy jednoczesnej eliminacji blokad, zaś odrobina liści malin dodaje balansu. Świeżość mięty aktywuje i pobudza koncentrację na niespotykanym dotąd poziomie, tworząc wyraźny profil sensoryczny, który zostaje z tobą.",
+      "Oparta o dziewannę która nadaje ramy i lekkość, dając gładki i przejrzysty aromat w naparze. Pokrzywa działa jak stymulant odczulający system nerwowy, przy jednoczesnej eliminacji blokad, zaś odrobina liści malin dodaje balansu. Świeżość mięty aktywuje i pobudza koncentrację na niespotykanym dotąd poziomie, tworząc wyraźny profil sensoryczny, który zostaje z tobą.",
     usageInstructions:
       "Używaj podczas pracy kreatywnej lub wymagającej intelektualnie. Najlepiej współdziała ze słuchawkami i dobrym ambientem.",
   },

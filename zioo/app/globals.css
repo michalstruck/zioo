@@ -99,7 +99,7 @@
   /* Organic Design Assets */
   --radius-organic: 30% 70% 70% 30% / 50% 40% 60% 50%;
   --paper-grain: rgba(0, 0, 0, 0.03);
-  --duration-clinical: 500ms;
+  --duration-organic: 500ms;
   --ease-expo-out: cubic-bezier(0.23, 1, 0.32, 1);
 
   /* Chart / Brand Extensions */
@@ -158,7 +158,7 @@
   /* Asymmetric Organic Card */
   .card-organic {
     @apply rounded-2xl border border-border/30 bg-white shadow-md overflow-hidden relative;
-    transition: all var(--duration-clinical) var(--ease-expo-out);
+    transition: all var(--duration-organic) var(--ease-expo-out);
   }
 
   .card-organic:hover {
@@ -175,4 +175,12 @@
   .shape-organic:hover {
     border-radius: 60% 40% 30% 70% / 40% 50% 50% 60%;
   }
+}
+
+@utility transition-organic {
+  transition-property:
+    color, background-color, border-color, text-decoration-color, fill, stroke,
+    opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-duration: var(--duration-organic);
+  transition-timing-function: var(--ease-expo-out);
 }

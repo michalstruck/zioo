@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { AnimatedHeroCards } from "@/components/animated-hero-cards";
-import { Leaf, Smile, Droplets, ShieldCheck } from "lucide-react";
+import { Leaf, Smile, Droplets, ShieldCheck, ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
@@ -8,15 +8,32 @@ export default function Home() {
       {/* ─── HERO ─────────────────────────────────────────── */}
       <section
         id="hero"
-        className="relative overflow-hidden px-5 pt-12 pb-16 md:px-12 md:pt-20 md:pb-24 lg:px-20"
+        className="relative overflow-hidden px-5 pt-16 pb-20 md:px-12 md:pt-24 md:pb-28 lg:px-20"
       >
-        {/* Organic Background */}
+        {/* Primary organic background — full bleed */}
         <div
-          className="absolute inset-0 z-0 opacity-20 mix-blend-multiply pointer-events-none bg-cover bg-center transition-all duration-1000"
+          className="absolute inset-0 z-0 opacity-25 mix-blend-multiply pointer-events-none bg-cover bg-center"
           style={{ backgroundImage: "url('/dark-moss-bg.png')" }}
         />
-        {/* Gradient transition to next section, avoiding tailwind opacity shorthands per instructions */}
-        <div className="absolute inset-x-0 bottom-0 h-32 z-0 bg-linear-to-t from-background to-transparent pointer-events-none" />
+        {/* Secondary organic layer — shifted for parallax depth */}
+        <div
+          className="absolute inset-0 z-0 opacity-10 mix-blend-multiply pointer-events-none bg-cover"
+          style={{
+            backgroundImage: "url('/dark-moss-bg.png')",
+            backgroundPosition: "30% 60%",
+            transform: "scale(1.3) rotate(180deg)",
+          }}
+        />
+        {/* Radial warmth in the upper-left to draw eye toward copy */}
+        <div
+          className="absolute inset-0 z-0 pointer-events-none opacity-40"
+          style={{
+            background:
+              "radial-gradient(ellipse 60% 50% at 20% 30%, rgba(196,132,100,0.12), transparent)",
+          }}
+        />
+        {/* Gradient transition to next section */}
+        <div className="absolute inset-x-0 bottom-0 h-40 z-0 bg-linear-to-t from-background to-transparent pointer-events-none" />
 
         <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
           {/* Copy column */}
@@ -31,14 +48,18 @@ export default function Home() {
             </h1>
 
             <p className="max-w-lg text-lg font-medium leading-relaxed text-foreground/80 md:text-xl">
-              Trzy mieszanki botaniczne z&nbsp;naturalnym profilem terpenowym.
-              Żaden dym, zero sztucznych dodatków. Zaparzone zioła
+              Mieszanki botaniczne z&nbsp;naturalnym profilem terpenowym.
+              Bez sztucznych dodatków — zaparzone zioła, napar
               i&nbsp;spokój.
             </p>
 
-            <div className="flex flex-wrap gap-4 pt-4">
+            <div className="flex flex-wrap gap-4 pt-6">
               <Button size="lg" className="px-8">
                 Poznaj mieszanki
+                <ArrowRight
+                  data-icon="inline-end"
+                  className="size-4 transition-transform duration-300 ease-out group-hover/button:translate-x-1"
+                />
               </Button>
               <Button
                 size="lg"
