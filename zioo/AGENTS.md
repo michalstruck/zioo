@@ -18,8 +18,7 @@ Shadcn UI (Lucide, Radix)
 
 ## Design Context & Guidelines
 
-Use `ui-ux-pro-max` skill.
-For all UI/UX work, styling, and design-related decisions, you **MUST** read and strictly follow the design context outlined in `.impeccable.md`.
+For all UI/UX work, styling, and design-related decisions, you **MUST** read and strictly follow the design context outlined in `design-system/zioo`
 
 Available blends (7 products total across 2 lines: Natural & Terpene-Infused):
 
