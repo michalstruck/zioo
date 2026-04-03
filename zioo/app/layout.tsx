@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Public_Sans } from "next/font/google";
 import { Providers } from "@/components/providers";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -33,11 +31,7 @@ export default function RootLayout({
 		<html lang="pl">
 			<body className={`${fraunces.variable} ${publicSans.variable} antialiased`}>
 				<Providers>
-					<div className="flex min-h-screen flex-col">
-						<Header />
-						<div className="flex-1">{children}</div>
-						<Footer />
-					</div>
+					{children}
 				</Providers>
 			</body>
 		</html>

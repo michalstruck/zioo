@@ -15,6 +15,7 @@ import {
 import { useCart } from "@/lib/cart-context";
 import { formatPrice } from "@/lib/utils";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export function CartDrawer() {
   const {
@@ -174,7 +175,9 @@ export function CartDrawer() {
               </span>
             </div>
             <Button size="lg" className="text-lg shadow-md">
-              Do kasy
+              <Link href="/checkout" prefetch>
+                Do kasy
+              </Link>
             </Button>
           </SheetFooter>
         )}

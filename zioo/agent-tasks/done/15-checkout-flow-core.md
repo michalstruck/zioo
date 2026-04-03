@@ -21,11 +21,12 @@ InPost udostępnia gotowy JavaScript widget (Geowidget) — interaktywna mapa z 
 
 ### Zadania
 
-- [ ] Załaduj InPost Geowidget JS (`next/script`)
-- [ ] Renderuj widget warunkowo (gdy wybrany "Paczkomat")
-- [ ] Nasłuchuj event `onSelect` → zapisz `name` + adres paczkomatu w state
-- [ ] Wyświetl wybrany paczkomat jako tekst z opcją "Zmień"
-- [ ] Responsive: widget musi działać na mobile
-- [ ] Z-index / modal handling: widget nie może być przycięty przez inne elementy
+- [x] Załaduj InPost Geowidget JS (`next/script`)
+- [x] Renderuj widget warunkowo (gdy wybrany "Paczkomat")
+- [x] Nie deloaduj widgetu przy zmianie sposobu dostawy, lub wybraniu paczkomatu (brak flickeringu)
+- [x] Nasłuchuj event `onSelect` → zapisz `name` i `adress_details`
+- [x] Wyświetl wybrany paczkomat jako tekst z opcją "Zmień"
+- [x] Responsive: widget musi działać na mobile
+- [x] Z-index / modal handling: widget nie może być przycięty przez inne elementy
 
 ---
