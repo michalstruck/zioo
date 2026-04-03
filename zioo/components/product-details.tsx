@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Product } from "@/lib/products";
+import { formatPrice } from "@/lib/utils";
 import { AddToCartButton } from "@/components/add-to-cart-button";
 import {
   Carousel,
@@ -134,16 +135,28 @@ export function ProductDetails({ product }: { product: Product }) {
               </div>
             )}
 
-            <h1
-              className="text-4xl lg:text-6xl font-heading font-black tracking-tighter mb-2 leading-[0.9]"
-              style={
-                product.terpeneStyle
-                  ? { color: product.terpeneStyle.primary }
-                  : {}
-              }
-            >
-              {product.name}
-            </h1>
+            <div className="flex items-start justify-between gap-4 mb-4">
+              <span
+                className="text-3xl lg:text-5xl font-heading font-black tracking-tighter"
+                style={
+                  product.terpeneStyle
+                    ? { color: product.terpeneStyle.primary }
+                    : {}
+                }
+              >
+                {product.name}
+              </span>
+              <span
+                className="text-3xl lg:text-5xl font-heading font-black whitespace-nowrap"
+                style={
+                  product.terpeneStyle
+                    ? { color: product.terpeneStyle.primary }
+                    : { color: "var(--primary)" }
+                }
+              >
+                {formatPrice(product.price)}
+              </span>
+            </div>
             <p className="text-xs font-sans text-muted-foreground font-black tracking-[0.3em] uppercase mb-10 opacity-70">
               {product.tagline}
             </p>

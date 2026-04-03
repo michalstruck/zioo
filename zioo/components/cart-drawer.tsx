@@ -13,6 +13,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { useCart } from "@/lib/cart-context";
+import { formatPrice } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 
 export function CartDrawer() {
@@ -26,6 +27,11 @@ export function CartDrawer() {
   } = useCart();
   const path = usePathname();
 
+  const subtotal = items.reduce(
+    (acc, { product, quantity }) => acc + product.price * quantity,
+    0,
+  );
+
   // show only on store page when empty
   if (cartCount === 0 && path !== "/store") return null;
 
@@ -36,7 +42,7 @@ export function CartDrawer() {
         <Button
           variant="default"
           size="lg"
-          className="relative flex items-center gap-3 px-6 h-12"
+          className="relative w-8 sm:w-auto"
           aria-label={`Koszyk (${cartCount})`}
         >
           <ShoppingCart className="size-4" />
@@ -111,29 +117,35 @@ export function CartDrawer() {
                   </p>
                 </div>
 
-                {/* Quantity controls */}
-                <div className="flex items-center gap-1 bg-muted/30 rounded-full p-1 border border-border/5">
-                  <Button
-                    variant="ghost"
-                    size="icon-xs"
-                    className="rounded-full size-7 hover:bg-white"
-                    onClick={() => updateQuantity(product.id, quantity - 1)}
-                    aria-label={`Zmniejsz ilość ${product.name}`}
-                  >
-                    <Minus className="size-3" />
-                  </Button>
-                  <span className="w-6 text-center text-xs font-bold font-mono">
-                    {quantity}
+                <div className="flex flex-col items-end gap-2">
+                  <span className="text-sm font-heading font-bold text-secondary px-1">
+                    {formatPrice(product.price * quantity)}
                   </span>
-                  <Button
-                    variant="ghost"
-                    size="icon-xs"
-                    className="rounded-full size-7 hover:bg-white"
-                    onClick={() => updateQuantity(product.id, quantity + 1)}
-                    aria-label={`Zwiększ ilość ${product.name}`}
-                  >
-                    <Plus className="size-3" />
-                  </Button>
+
+                  {/* Quantity controls */}
+                  <div className="flex items-center gap-1 bg-muted/30 rounded-full p-1 border border-border/5">
+                    <Button
+                      variant="ghost"
+                      size="icon-xs"
+                      className="rounded-full size-7 hover:bg-white"
+                      onClick={() => updateQuantity(product.id, quantity - 1)}
+                      aria-label={`Zmniejsz ilość ${product.name}`}
+                    >
+                      <Minus className="size-3" />
+                    </Button>
+                    <span className="w-6 text-center text-xs font-bold font-mono">
+                      {quantity}
+                    </span>
+                    <Button
+                      variant="ghost"
+                      size="icon-xs"
+                      className="rounded-full size-7 hover:bg-white"
+                      onClick={() => updateQuantity(product.id, quantity + 1)}
+                      aria-label={`Zwiększ ilość ${product.name}`}
+                    >
+                      <Plus className="size-3" />
+                    </Button>
+                  </div>
                 </div>
 
                 <Button
@@ -152,9 +164,17 @@ export function CartDrawer() {
 
         {/* Footer with checkout button */}
         {items.length > 0 && (
-          <SheetFooter className="border-t border-border/10 p-6 bg-white shadow-[0_-8px_30px_rgba(26,31,26,0.03)]">
-            <Button size="lg" className="h-14 w-full text-lg shadow-lg">
-              Przejdź do zamówienia
+          <SheetFooter className="border-t border-border/10 p-6 bg-white flex-col sm:flex-col sm:space-x-0 gap-4">
+            <div className="flex w-full items-center justify-between px-2">
+              <span className="text-sm font-sans uppercase tracking-widest font-bold text-secondary/80">
+                Wartość zamówienia
+              </span>
+              <span className="text-2xl font-heading font-black text-secondary whitespace-nowrap">
+                {formatPrice(subtotal)}
+              </span>
+            </div>
+            <Button size="lg" className="text-lg shadow-md">
+              Do kasy
             </Button>
           </SheetFooter>
         )}

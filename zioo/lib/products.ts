@@ -12,6 +12,7 @@ export type TerpeneStyle = {
 export type Product = {
   id: string;
   name: string;
+  price: number;
   tagline: string;
   blendProfile: BlendIngredient[];
   primaryTerpene?: string;
@@ -28,6 +29,7 @@ export const products: Product[] = [
   {
     id: "deep-unwind",
     name: "Slep",
+    price: 5.99,
     tagline: "Sen & Relaks",
     blendProfile: [
       { herb: "Dziewanna", pct: 30 },
@@ -52,6 +54,7 @@ export const products: Product[] = [
   {
     id: "social-spark",
     name: "Czill",
+    price: 5.99,
     tagline: "Euforia & Nastrój",
     blendProfile: [
       { herb: "Dziewanna", pct: 30 },
@@ -75,6 +78,7 @@ export const products: Product[] = [
   {
     id: "clear-mind",
     name: "Fokus",
+    price: 5.99,
     tagline: "Fokus & Klarowność",
     blendProfile: [
       { herb: "Dziewanna", pct: 30 },
@@ -95,10 +99,10 @@ export const products: Product[] = [
     usageInstructions:
       "Używaj podczas pracy kreatywnej lub wymagającej intelektualnie. Najlepiej współdziała ze słuchawkami i dobrym ambientem.",
   },
-
   {
     id: "social-spark-terpene",
     name: "Czill",
+    price: 7.99,
     tagline: "Euforia & Nastrój",
     blendProfile: [
       { herb: "Dziewanna", pct: 30 },
@@ -131,6 +135,7 @@ export const products: Product[] = [
   {
     id: "deep-unwind-terpene",
     name: "Slep",
+    price: 7.99,
     tagline: "Sen & Relaks",
     blendProfile: [
       { herb: "Dziewanna", pct: 30 },
@@ -162,6 +167,7 @@ export const products: Product[] = [
   {
     id: "clear-mind-terpene",
     name: "Fokus",
+    price: 7.99,
     tagline: "Fokus & Klarowność",
     blendProfile: [
       { herb: "Dziewanna", pct: 30 },
@@ -194,6 +200,7 @@ export const products: Product[] = [
   {
     id: "fresz",
     name: "Fresz",
+    price: 6.99,
     tagline: "Orzeźwienie & Balans",
     blendProfile: [
       { herb: "Dziewanna", pct: 20 },

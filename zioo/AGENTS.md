@@ -7,7 +7,7 @@ Refer to `COPY_DICTIONARY.md` for strict rules on terminology used across the Zi
 
 ALL copy is in Polish.
 
-Payments will be handled using Stripe.
+Payments will be handled using a payment aggregator that supports BLIK, Apple Pay, Google Pay, and card payments - Stripe
 
 ## Technology stack
 

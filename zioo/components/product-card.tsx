@@ -9,6 +9,7 @@ import { AddToCartButton } from "@/components/add-to-cart-button";
 import type { Product } from "@/lib/products";
 import Image from "next/image";
 import Link from "next/link";
+import { formatPrice } from "@/lib/utils";
 
 export function ProductCard({ product }: { product: Product }) {
   const isTerpene = !!product.terpeneStyle;
@@ -55,12 +56,20 @@ export function ProductCard({ product }: { product: Product }) {
 
       <CardHeader className="space-y-1">
         <Link href={`/store/product/${product.id}`} className="block">
-          <CardTitle
-            className="text-3xl font-heading group-hover:text-primary transition-colors"
-            style={isTerpene ? { color: product.terpeneStyle?.primary } : {}}
-          >
-            {product.name}
-          </CardTitle>
+          <div className="flex justify-between items-start gap-4">
+            <CardTitle
+              className="text-3xl font-heading group-hover:text-primary transition-colors"
+              style={isTerpene ? { color: product.terpeneStyle?.primary } : {}}
+            >
+              {product.name}
+            </CardTitle>
+            <span 
+              className="text-lg font-heading font-black mt-1"
+              style={isTerpene ? { color: product.terpeneStyle?.primary } : { color: "var(--primary)" }}
+            >
+              {formatPrice(product.price)}
+            </span>
+          </div>
           <p className="text-xs font-sans text-muted-foreground tracking-wide uppercase mt-1">
             {product.tagline}
           </p>
