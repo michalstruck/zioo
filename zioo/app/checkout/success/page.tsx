@@ -4,10 +4,21 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { useCart } from "@/lib/cart-context";
+import { useEffect, useRef } from "react";
 
 export default function CheckoutSuccessPage() {
   const searchParams = useSearchParams();
   const sessionId = searchParams.get("session_id");
+  const { clearCart } = useCart();
+  const cleared = useRef(false);
+
+  useEffect(() => {
+    if (!cleared.current) {
+      clearCart();
+      cleared.current = true;
+    }
+  }, [clearCart]);
 
   return (
     <div className="container max-w-2xl py-24 text-center mx-auto flex flex-col items-center">
@@ -36,3 +47,4 @@ export default function CheckoutSuccessPage() {
     </div>
   );
 }
+

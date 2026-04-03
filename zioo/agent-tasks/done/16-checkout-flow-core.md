@@ -21,18 +21,18 @@ Stripe Embedded Checkout = gotowy iframe z formularzem płatności. Stripe sam r
 
 ### Zadania
 
-- [ ] `bun add stripe @stripe/stripe-js @stripe/react-stripe-js`
-- [ ] Env: `STRIPE_SECRET_KEY`, `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` w `.env.local`
-- [ ] Server Action `createCheckoutSession`:
+- [x] `bun add stripe @stripe/stripe-js @stripe/react-stripe-js`
+- [x] Env: `STRIPE_SECRET_KEY`, `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` w `.env.local`
+- [x] Server Action `createCheckoutSession`:
   - `line_items` — produkty z koszyka (nazwa, cena, ilość)
   - Shipping cost jako osobny `line_item` lub `shipping_options`
   - `metadata` — dane kontaktowe, wybrany paczkomat/adres kuriera
   - `success_url` → `/checkout/success?session_id={CHECKOUT_SESSION_ID}`
   - `cancel_url` → `/checkout`
   - `mode: 'payment'`
-- [ ] Komponent `<EmbeddedCheckout />` — renderuje Stripe iframe po kliknięciu "Przejdź do płatności"
-- [ ] **Ceny walidowane server-side** (nigdy nie ufać klientowi)
-- [ ] Włącz w Stripe Dashboard: BLIK, P24, Apple Pay, Google Pay, karty
-- [ ] Wyczyść koszyk po udanej płatności (redirect na success)
+- [x] Komponent `<EmbeddedCheckout />` — renderuje Stripe iframe po kliknięciu "Przejdź do płatności"
+- [x] **Ceny walidowane server-side** (nigdy nie ufać klientowi)
+- [x] Włącz w Stripe Dashboard: BLIK, P24, Apple Pay, Google Pay, karty
+- [x] Wyczyść koszyk po udanej płatności (redirect na success)
 
 ---
