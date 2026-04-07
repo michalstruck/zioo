@@ -16,7 +16,7 @@ export function ProductCard({ product }: { product: Product }) {
 
   return (
     <Card
-      className={`flex flex-col group p-4 overflow-hidden relative transition-all duration-500`}
+      className={`justify-between group/card relative transition-all duration-500 pt-0`}
     >
       {/* Crooked Label for Terpene products */}
       {product.terpeneStyle && (
@@ -32,13 +32,12 @@ export function ProductCard({ product }: { product: Product }) {
           </span>
         </div>
       )}
-
       <Link
         href={`/store/product/${product.id}`}
-        className="block overflow-hidden relative group/link rounded-xl mt-4 mx-4 mb-2"
+        className="block overflow-hidden relative"
       >
         {product.images?.[0] ? (
-          <div className="aspect-4/3 w-full overflow-hidden rounded-xl bg-muted relative">
+          <div className="aspect-4/3 w-full overflow-hidden bg-muted relative">
             <Image
               src={product.images[0]}
               alt={product.name}
@@ -50,7 +49,7 @@ export function ProductCard({ product }: { product: Product }) {
             )}
           </div>
         ) : (
-          <div className="aspect-4/3 w-full bg-muted rounded-xl" />
+          <div className="aspect-4/3 w-full bg-muted rounded-md" />
         )}
       </Link>
 
@@ -63,44 +62,38 @@ export function ProductCard({ product }: { product: Product }) {
             >
               {product.name}
             </CardTitle>
-            <span 
-              className="text-lg font-heading font-black mt-1"
-              style={isTerpene ? { color: product.terpeneStyle?.primary } : { color: "var(--primary)" }}
-            >
-              {formatPrice(product.price)}
-            </span>
           </div>
           <p className="text-xs font-sans text-muted-foreground tracking-wide uppercase mt-1">
             {product.tagline}
           </p>
+
+          {/* Hero display for Terpene */}
+          {
+            <div
+              className="mt-2 flex flex-col items-start "
+              style={{
+                borderColor: product.terpeneStyle?.primary,
+                opacity: isTerpene ? 1 : 0,
+              }}
+            >
+              <span
+                className="text-xs font-black uppercase tracking-widest opacity-80"
+                style={{ color: product.terpeneStyle?.primary }}
+              >
+                Profil Terpenowy
+              </span>
+              <span
+                className="text-2xl font-heading font-black tracking-tight"
+                style={{ color: product.terpeneStyle?.primary }}
+              >
+                {product.primaryTerpene ?? "placeholder"}
+              </span>
+            </div>
+          }
         </Link>
-
-        {/* Hero display for Terpene */}
-        {isTerpene && (
-          <div
-            className="mt-2 flex flex-col items-start "
-            style={{
-              borderColor: product.terpeneStyle?.primary,
-            }}
-          >
-            <span
-              className="text-xs font-black uppercase tracking-widest opacity-80"
-              style={{ color: product.terpeneStyle?.primary }}
-            >
-              Profil Terpenowy
-            </span>
-            <span
-              className="text-2xl font-heading font-black tracking-tight"
-              style={{ color: product.terpeneStyle?.primary }}
-            >
-              {product.primaryTerpene}
-            </span>
-          </div>
-        )}
       </CardHeader>
-
-      <CardContent className="flex-1 mb-6">
-        <p
+      {/* <CardContent className="flex-1 mb-0"> */}
+      {/* <p
           className="mb-4 text-md font-heading font-bold italic uppercase tracking-widest"
           style={
             isTerpene
@@ -135,10 +128,10 @@ export function ProductCard({ product }: { product: Product }) {
               </div>
             </li>
           ))}
-        </ul>
-      </CardContent>
+        </ul> */}
+      {/* </CardContent> */}
 
-      <CardFooter className="border-t border-border p-6 bg-muted">
+      <CardFooter className="border-t border-border pt-0 bg-muted ">
         <AddToCartButton product={product} />
       </CardFooter>
     </Card>

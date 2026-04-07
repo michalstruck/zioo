@@ -29,11 +29,11 @@ export default function Store() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 md:mb-14">
             <h2 className="text-3xl font-heading font-medium tracking-tight text-secondary md:text-5xl lg:text-6xl">
-              Nasze mieszanki
+              Nasze mieszanki ziołowe
             </h2>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
+          <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-4 lg:gap-10">
             {products.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}

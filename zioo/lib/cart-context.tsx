@@ -4,11 +4,13 @@ import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
   useState,
   type ReactNode,
 } from "react";
 import type { Product } from "./products";
+import { LocalStorageCart } from "./local-storage";
 
 export type CartItem = {
   product: Product;
@@ -32,34 +34,56 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
-  const addToCart = useCallback((product: Product) => {
+  useEffect(() => {
+    setItems(LocalStorageCart.get() ?? []);
+  }, []);
+
+  const addToCart = (product: Product) => {
     setItems((prev) => {
-      const existing = prev.find((i) => i.product.id === product.id);
-      if (existing) {
-        return prev.map((i) =>
+      const isProductInCart = prev.find((i) => i.product.id === product.id);
+      if (isProductInCart) {
+        const newCart = prev.map((i) =>
           i.product.id === product.id ? { ...i, quantity: i.quantity + 1 } : i,
         );
+        LocalStorageCart.set(newCart);
+        return newCart;
       }
-      return [...prev, { product, quantity: 1 }];
+
+      const newCart = [...prev, { product, quantity: 1 }];
+      LocalStorageCart.set(newCart);
+      return newCart;
     });
-  }, []);
+  };
 
-  const removeFromCart = useCallback((productId: string) => {
-    setItems((prev) => prev.filter((i) => i.product.id !== productId));
-  }, []);
+  const removeFromCart = (productId: string) => {
+    setItems((prev) => {
+      const newCart = prev.filter((i) => i.product.id !== productId);
+      LocalStorageCart.set(newCart);
+      return newCart;
+    });
+  };
 
-  const updateQuantity = useCallback((productId: string, quantity: number) => {
+  const updateQuantity = (productId: string, quantity: number) => {
     if (quantity <= 0) {
-      setItems((prev) => prev.filter((i) => i.product.id !== productId));
+      setItems((prev) => {
+        const newCart = prev.filter((i) => i.product.id !== productId);
+        LocalStorageCart.set(newCart);
+        return newCart;
+      });
       return;
     }
-    setItems((prev) =>
-      prev.map((i) => (i.product.id === productId ? { ...i, quantity } : i)),
-    );
-  }, []);
+    setItems((prev) => {
+      const newCart = prev.map((i) =>
+        i.product.id === productId ? { ...i, quantity } : i,
+      );
+      LocalStorageCart.set(newCart);
+      return newCart;
+    });
+  };
 
   const clearCart = useCallback(() => {
     setItems([]);
+    LocalStorageCart.clear();
   }, []);
 
   const cartCount = useMemo(
