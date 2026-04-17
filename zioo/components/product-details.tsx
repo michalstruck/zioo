@@ -222,7 +222,7 @@ export function ProductDetails({ product }: { product: Product }) {
                           style={{
                             width: `${ingredient.pct}%`,
                             backgroundColor: product.terpeneStyle
-                              ? product.terpeneStyle.secondary
+                              ? product.terpeneStyle.primary
                               : "var(--secondary)",
                           }}
                         />
@@ -236,7 +236,7 @@ export function ProductDetails({ product }: { product: Product }) {
               <div
                 className="rounded-[2.5rem] p-8 md:p-10 border transform hover:-rotate-1 transition-transform duration-500 shadow-sm bg-white"
                 style={{
-                  borderColor: `${product.terpeneStyle?.secondary || "var(--border)"}40`,
+                  borderColor: `${product.terpeneStyle?.primary || "var(--border)"}40`,
                 }}
               >
                 <h3 className="text-[10px] font-heading font-black italic uppercase tracking-[0.4em] mb-6 flex items-center gap-4 text-secondary/40">

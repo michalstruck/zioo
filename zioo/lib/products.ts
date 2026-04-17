@@ -5,7 +5,6 @@ export type BlendIngredient = {
 
 export type TerpeneStyle = {
   primary: string; // Main accent (e.g., label bg)
-  secondary: string; // Secondary accent (e.g., progress bars)
   text: string; // Text color on primary background
 };
 
@@ -117,8 +116,7 @@ export const products: Product[] = [
     ],
     primaryTerpene: "Girl Scout Cookies",
     terpeneStyle: {
-      primary: "#A27FE2",
-      secondary: "#4ADE80",
+      primary: "#0F7B6E",
       text: "#ffffff",
     },
     images: [
@@ -151,8 +149,7 @@ export const products: Product[] = [
     ],
     primaryTerpene: "Purple Punch",
     terpeneStyle: {
-      primary: "#7C3AED",
-      secondary: "#F472B6",
+      primary: "#7A4E9A",
       text: "#ffffff",
     },
     images: [
@@ -184,9 +181,8 @@ export const products: Product[] = [
     ],
     primaryTerpene: "Lemon Skunk",
     terpeneStyle: {
-      primary: "#6ecf3e",
-      secondary: "#121625",
-      text: "#121625",
+      primary: "#5A8B17",
+      text: "#ffffff",
     },
     images: [
       "/clear_mind_blend.png",
@@ -320,8 +316,7 @@ export const products: Product[] = [
     ],
     primaryTerpene: "Girl Scout Cookies",
     terpeneStyle: {
-      primary: "#A27FE2",
-      secondary: "#4ADE80",
+      primary: "#0F7B6E",
       text: "#ffffff",
     },
     images: [
@@ -354,8 +349,7 @@ export const products: Product[] = [
     ],
     primaryTerpene: "Purple Punch",
     terpeneStyle: {
-      primary: "#7C3AED",
-      secondary: "#F472B6",
+      primary: "#7A4E9A",
       text: "#ffffff",
     },
     images: [
@@ -387,9 +381,8 @@ export const products: Product[] = [
     ],
     primaryTerpene: "Lemon Skunk",
     terpeneStyle: {
-      primary: "#6ecf3e",
-      secondary: "#121625",
-      text: "#121625",
+      primary: "#5A8B17",
+      text: "#ffffff",
     },
     images: [
       "/clear_mind_blend.png",
