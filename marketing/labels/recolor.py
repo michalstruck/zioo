@@ -6,14 +6,16 @@ def process_images():
     target_colors = {
         "sage": "#6b7f6a",
         "clay": "#c48464"
+        # "terpene": "#5A8B17"
     }
 
     images = glob.glob("blend-logo-*.png")
     
     for img_path in images:
-        if "sage-" in img_path or "clay-" in img_path:
+        if "sage" in img_path or "clay" in img_path or "terpene" in img_path:
             continue
-            
+        # if "focus" not in img_path:
+        #     continue
         print(f"Processing {img_path}...")
         try:
             img = Image.open(img_path).convert("RGBA")
