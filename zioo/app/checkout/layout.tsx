@@ -46,7 +46,9 @@ export default function CheckoutLayout({
           {/* Spacer for centering the logo on mobile */}
         </div>
       </header>
-      <main className="flex-1 flex flex-col pt-8 md:pt-12">{children}</main>
+      <main className="flex-1 flex flex-col pt-8 md:pt-12 px-5">
+        {children}
+      </main>
     </div>
   );
 }

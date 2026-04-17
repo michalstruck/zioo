@@ -16,6 +16,7 @@ import { useCart } from "@/lib/cart-context";
 import { formatPrice } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 export function CartDrawer() {
   const {
@@ -90,45 +91,37 @@ export function CartDrawer() {
             </p>
           </div>
         ) : (
-          <ul className="flex-1 space-y-4 overflow-y-auto px-6 py-6">
+          <ul className=" space-y-4 overflow-y-auto px-6 py-6">
             {items.map(({ product, quantity }) => (
               <li
                 key={product.id}
-                className="flex items-center gap-4 rounded-2xl border border-border/20 bg-white p-4 shadow-sm transition-organic hover:shadow-md"
+                className="flex items-center gap-4 p-2 rounded-sm border border-border/20 bg-white  shadow-sm transition-organic hover:shadow-md"
               >
-                {/* Color swatch - Botanical Icon placeholder */}
-                <div
-                  className="size-12 shrink-0 rounded-full border border-black/5 flex items-center justify-center"
-                  style={{
-                    backgroundColor: `${product.color}15`,
-                  }}
-                >
-                  <div
-                    className="size-3 rounded-full"
-                    style={{ backgroundColor: product.color }}
+                <div className="hidden sm:flex size-12 md:size-24 overflow-hidden rounded-full border border-black/5 items-center justify-center">
+                  <Image
+                    src={product.images?.[0]}
+                    alt={product.name}
+                    width={128}
+                    height={128}
                   />
                 </div>
 
-                <div className="flex-1 min-w-0">
+                <div className="flex-1">
                   <p className="truncate text-base font-heading font-medium text-secondary">
                     {product.name}
                   </p>
-                  <p className="text-xs font-sans text-primary/60 italic">
+                  <p className="text-xs font-sans text-primary/60 italic text-wrap whitespace-pre-wrap">
                     {product.primaryTerpene}
                   </p>
                 </div>
 
-                <div className="flex flex-col items-end gap-2">
-                  <span className="text-sm font-heading font-bold text-secondary px-1">
-                    {formatPrice(product.price * quantity)}
-                  </span>
-
+                <div className="flex flex-col items-center gap-4 mr-4">
                   {/* Quantity controls */}
-                  <div className="flex items-center gap-1 bg-muted/30 rounded-full p-1 border border-border/5">
+                  <div className="flex items-center gap-1 bg-muted/50 rounded-full border border-border/5">
                     <Button
                       variant="ghost"
                       size="icon-xs"
-                      className="rounded-full size-7 hover:bg-white"
+                      className="hover:bg-primary/30 bg-primary/20"
                       onClick={() => updateQuantity(product.id, quantity - 1)}
                       aria-label={`Zmniejsz ilość ${product.name}`}
                     >
@@ -140,19 +133,22 @@ export function CartDrawer() {
                     <Button
                       variant="ghost"
                       size="icon-xs"
-                      className="rounded-full size-7 hover:bg-white"
+                      className="hover:bg-primary/30 bg-primary/20"
                       onClick={() => updateQuantity(product.id, quantity + 1)}
                       aria-label={`Zwiększ ilość ${product.name}`}
                     >
                       <Plus className="size-3" />
                     </Button>
                   </div>
+                  <span className="text-sm font-heading font-bold text-secondary text-nowrap">
+                    {formatPrice(product.price * quantity)}
+                  </span>
                 </div>
 
                 <Button
                   variant="ghost"
                   size="icon-xs"
-                  className="rounded-full size-8 text-destructive/40 hover:text-destructive hover:bg-destructive/5"
+                  className="text-destructive/60 hover:text-destructive hover:bg-destructive/10 self-start"
                   onClick={() => removeFromCart(product.id)}
                   aria-label={`Usuń ${product.name}`}
                 >

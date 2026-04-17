@@ -13,7 +13,12 @@ export default function CheckoutPage() {
 
   useEffect(() => {
     if (cartCount === 0) {
-      router.push("/store");
+      const timer = setTimeout(() => {
+        if (cartCount === 0) {
+          router.push("/store");
+        }
+      }, 1);
+      return () => clearTimeout(timer);
     }
   }, [cartCount, router]);
 

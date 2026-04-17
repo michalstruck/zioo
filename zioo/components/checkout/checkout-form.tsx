@@ -19,6 +19,12 @@ import {
   EmbeddedCheckoutProvider,
   EmbeddedCheckout,
 } from "@stripe/react-stripe-js";
+import {
+  calculateShippingCost,
+  getIsFreeShipping,
+  SHIPPING_COST,
+} from "@/lib/consts";
+import Image from "next/image";
 
 const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string,
@@ -30,7 +36,7 @@ const formSchema = z
     lastName: z.string().min(2, "Nazwisko jest wymagane"),
     email: z.email("Nieprawidłowy adres email"),
     phone: z.string().optional(),
-    shippingMethod: z.enum(["inpost", "courier"], "Wybierz metodę wysyłki"),
+    shippingMethod: z.enum(["locker", "courier"], "Wybierz metodę wysyłki"),
     pointName: z.string().optional(),
     pointAddress: z.string().optional(),
     street: z.string().optional(),
@@ -41,7 +47,7 @@ const formSchema = z
       .refine((val) => val === true, "Akceptacja jest wymagana"),
   })
   .superRefine((data, ctx) => {
-    if (data.shippingMethod === "inpost" && !data.pointName) {
+    if (data.shippingMethod === "locker" && !data.pointName) {
       ctx.addIssue({
         code: "custom",
         message: "Wybierz paczkomat",
@@ -89,7 +95,7 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
       lastName: "",
       email: "",
       phone: "",
-      shippingMethod: "inpost",
+      shippingMethod: "locker",
       pointName: "",
       pointAddress: "",
       street: "",
@@ -116,17 +122,10 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
     (acc, { product, quantity }) => acc + product.price * quantity,
     0,
   );
-  const isFreeShipping = subtotal >= 99;
 
-  const shippingCosts = {
-    inpost: 13.99,
-    courier: 16.99,
-  };
-
-  const currentShippingCost = isFreeShipping
-    ? 0
-    : shippingCosts[shippingMethod as keyof typeof shippingCosts];
-  const total = subtotal + currentShippingCost;
+  const isFreeShipping = getIsFreeShipping(subtotal);
+  const shippingCost = calculateShippingCost(shippingMethod, subtotal);
+  const total = subtotal + shippingCost;
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
@@ -169,7 +168,7 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="grid gap-12 lg:grid-cols-12 items-start"
+      className="grid gap-12 lg:grid-cols-12 items-start max-w-sm md:max-w-lg lg:max-w-5xl"
     >
       <div className="lg:col-span-7 space-y-12">
         {/* Kontakt */}
@@ -269,12 +268,12 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
               >
                 <div className="relative flex">
                   <RadioGroupItem
-                    value="inpost"
-                    id="inpost"
+                    value="locker"
+                    id="locker"
                     className="peer sr-only"
                   />
                   <Label
-                    htmlFor="inpost"
+                    htmlFor="locker"
                     className="flex flex-1 cursor-pointer flex-col items-center justify-between rounded-xl border-2 border-muted bg-transparent p-4 hover:bg-muted/50 peer-data-[state=checked]:border-primary peer-data-[state=checked]:bg-primary/5 [&:has([data-state=checked])]:border-primary"
                   >
                     <MapPin className="mb-3 h-6 w-6" />
@@ -282,7 +281,7 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
                     <span className="text-sm text-muted-foreground mt-1">
                       {isFreeShipping
                         ? "Darmowa"
-                        : formatPrice(shippingCosts.inpost)}
+                        : formatPrice(SHIPPING_COST.locker)}
                     </span>
                   </Label>
                 </div>
@@ -301,7 +300,7 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
                     <span className="text-sm text-muted-foreground mt-1">
                       {isFreeShipping
                         ? "Darmowa"
-                        : formatPrice(shippingCosts.courier)}
+                        : formatPrice(SHIPPING_COST.courier)}
                     </span>
                   </Label>
                 </div>
@@ -311,7 +310,7 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
 
           <div
             className={`rounded-xl border bg-card text-card-foreground p-6 shadow-sm mb-4 transition-all ${
-              shippingMethod !== "inpost" ? "hidden" : "block"
+              shippingMethod !== "locker" ? "hidden" : "block"
             }`}
           >
             <h3 className="font-semibold font-heading mb-4 text-lg">
@@ -423,13 +422,12 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
           <ul className="space-y-4 mb-6">
             {items.map((item) => (
               <li key={item.product.id} className="flex items-center gap-4">
-                <div
-                  className="size-12 shrink-0 rounded-full border border-black/5 flex items-center justify-center flex-none"
-                  style={{ backgroundColor: `${item.product.color}15` }}
-                >
-                  <div
-                    className="size-3 rounded-full"
-                    style={{ backgroundColor: item.product.color }}
+                <div className="size-12 overflow-hidden rounded-full border border-black/5 items-center justify-center">
+                  <Image
+                    src={item.product.images?.[0]}
+                    alt={item.product.name}
+                    width={128}
+                    height={128}
                   />
                 </div>
                 <div className="flex-1 min-w-0">
@@ -455,7 +453,7 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
             <div className="flex items-center justify-between text-sm">
               <span className="text-muted-foreground">
                 Dostawa{" "}
-                {shippingMethod === "inpost" ? "(Paczkomat 24/7)" : "(Kurier)"}
+                {shippingMethod === "locker" ? "(Paczkomat 24/7)" : "(Kurier)"}
               </span>
               <span
                 className={
@@ -465,7 +463,7 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
                 {isFreeShipping
                   ? "Darmowa"
                   : formatPrice(
-                      shippingCosts[shippingMethod as "inpost" | "courier"],
+                      SHIPPING_COST[shippingMethod as "locker" | "courier"],
                     )}
               </span>
             </div>

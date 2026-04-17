@@ -9,7 +9,6 @@ import { AddToCartButton } from "@/components/add-to-cart-button";
 import type { Product } from "@/lib/products";
 import Image from "next/image";
 import Link from "next/link";
-import { formatPrice } from "@/lib/utils";
 
 export function ProductCard({ product }: { product: Product }) {
   const isTerpene = !!product.terpeneStyle;
@@ -86,51 +85,13 @@ export function ProductCard({ product }: { product: Product }) {
                 className="text-2xl font-heading font-black tracking-tight"
                 style={{ color: product.terpeneStyle?.primary }}
               >
+                {/* TODO: remove placeholder because i didn't want to spend time styling */}
                 {product.primaryTerpene ?? "placeholder"}
               </span>
             </div>
           }
         </Link>
       </CardHeader>
-      {/* <CardContent className="flex-1 mb-0"> */}
-      {/* <p
-          className="mb-4 text-md font-heading font-bold italic uppercase tracking-widest"
-          style={
-            isTerpene
-              ? { color: product.terpeneStyle?.primary }
-              : { color: "var(--primary)" }
-          }
-        >
-          Receptura
-        </p>
-        <ul className="space-y-3">
-          {product.blendProfile.map((ingredient) => (
-            <li key={ingredient.herb} className="flex flex-col gap-1">
-              <div className="flex items-baseline justify-between">
-                <span className="text-sm font-mono heading text-secondary/90">
-                  {ingredient.herb}
-                </span>
-                <span className="text-xs font-heading font-bold opacity-70">
-                  {ingredient.pct}%
-                </span>
-              </div>
-              <div className="h-1.5 w-full rounded-full bg-muted/30 overflow-hidden">
-                <div
-                  className="h-full rounded-full transition-all duration-1000"
-                  style={{
-                    width: `${ingredient.pct}%`,
-                    backgroundColor: isTerpene
-                      ? product.terpeneStyle?.secondary
-                      : "var(--secondary)",
-                    opacity: 0.8,
-                  }}
-                />
-              </div>
-            </li>
-          ))}
-        </ul> */}
-      {/* </CardContent> */}
-
       <CardFooter className="border-t border-border pt-0 bg-muted ">
         <AddToCartButton product={product} />
       </CardFooter>
