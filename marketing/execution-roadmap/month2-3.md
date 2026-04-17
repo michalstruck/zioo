@@ -230,7 +230,7 @@ Both get a reward
 
 | Who                          | Reward                                             | Why this amount                                                                  |
 | ---------------------------- | -------------------------------------------------- | -------------------------------------------------------------------------------- |
-| Referrer (existing customer) | Free blend sample (2-3g) added to their next order | Near-zero cost (~10gr), tangible, encourages repeat purchase                     |
+| Referrer (existing customer) | Free blend sachet (0.5g) added to their next order | Near-zero cost (~10gr), tangible, encourages repeat purchase                     |
 | Referred friend              | 10% off first order                                | Low enough to not destroy margins, meaningful enough to tip a buyer on the fence |
 
 **Implementation options (cheapest first):**

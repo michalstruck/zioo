@@ -24,7 +24,7 @@
 ### Phase 0: Packaging & Launch Prep (Weeks 1-2)
 
 - **Objective:** Finalize packaging design and label content to have a shippable product.
-- **Current state:** 8x8cm green mylar bags, 2-3g per unit. Printed labels (transparent or colored) applied on both sides.
+- **Current state:** Single-use 0.5g sachets in two formats: Natural line in 5×7cm glossy white bags, Terpene-Infused line in 5×8cm matte black bags. Printed labels applied on both sides.
 - **Key Initiatives:**
   - **Initiative 1 - Label Design:** Decide between transparent vs. colored labels. Transparent shows the herb (builds trust, "look what's inside"), colored is more brandable. Recommendation: **transparent front, branded back**. Front shows the blend, back carries the Zioo logo, blend name, ingredient list, and a QR code to the product page.
   - **Initiative 2 - Label Content:** Per label: blend name (Fresz/Czill/Fokus/Slep), full ingredient list in Polish, net weight, "Mieszanka do aromatyzacji / Herbata ziołowa" descriptor, Zioo logo, QR code. No health claims. No combustion references.
@@ -36,7 +36,7 @@
 - **Channels:** Organic TikTok/Reels, Instagram stories, Reddit (r/Polska, r/PolskaNielegalna, niche communities), Telegram/Discord groups in the scene.
 - **Budget allocation:** 0 PLN (pure organic + free product seeding)
 - **Key Initiatives:**
-  - **Initiative 1 - "Więcej niż zioła" Content Series:** Short-form video content (TikTok/Reels) showing the aesthetic unboxing, blend ingredients, and the "Clinical Naturalism" vibe. Focus on ASMR-style close-ups of herbs, pouring into cups/diffusers, the green mylar packaging. No faces needed initially — product-focused.
+  - **Initiative 1 - "Więcej niż zioła" Content Series:** Short-form video content (TikTok/Reels) showing the aesthetic unboxing, blend ingredients, and the "Clinical Naturalism" vibe. Focus on ASMR-style close-ups of herbs, pouring into cups/diffusers, the white and black sachets. No faces needed initially — product-focused.
   - **Initiative 2 - Terpene Education:** 3-4 carousel posts / short videos explaining what terpenes are (mircen, limonen, linalol), how they create "efekt entourage", and why Zioo's infused line is unique in Poland.
   - **Initiative 3 - Micro-Seeding (Free Product):** At ~10 groszy per unit, send free samples to 20-30 people in the target scene (friends of friends, local creatives, DJs, skaters). No formal "influencer deal" — just "hey, spróbuj i powiedz co myślisz." Word of mouth is the engine here. Cost: effectively zero.
 

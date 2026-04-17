@@ -68,7 +68,8 @@ Available marketing agent skills that should be invoked at appropriate stages:
 
 **Physical specs:**
 
-- Bag: 8×8cm green mylar, 2-3g per unit
+- Natural line bag: 5×7cm glossy white, 0.5g per unit
+- Terpene-Infused line bag: 5×8cm matte black, 0.5g per unit
 - Labels: printed, applied on both sides (front + back), fully colored both sides on transparent background
 
 **Front label must contain:**
@@ -82,7 +83,7 @@ Available marketing agent skills that should be invoked at appropriate stages:
 - Zioo logo
 - Blend name
 - Full ingredient list in Polish, no percentages (e.g., "Dziewanna, Malina, Pokrzywa, Lawenda, Melisa")
-- Net weight (e.g., "2g netto")
+- Net weight ("0,5g netto")
 - Product descriptor: "Mieszanka do aromatyzacji / Herbata ziołowa"
 - For terpene line: terpene profile name (e.g., "Profil terpenowy: Girl Scout Cookies")
 - QR code linking to the product page on zioo.pl
@@ -117,7 +118,7 @@ Available marketing agent skills that should be invoked at appropriate stages:
 **Deliverables:**
 
 - [ ] Design mockup for CEO review
-- [ ] Print-ready files (PDF or AI) at exact label dimensions
+- [ ] Concise and clear instructions for refining designs, with sections clearly defining elements (visually) that can be used to redesign said elements.
 - [ ] Font files and color codes documented
 
 ---
@@ -135,7 +136,7 @@ This is the single most important asset for everything downstream (website, ads,
 
 | Shot type           | Description                                                      | Qty per blend |
 | ------------------- | ---------------------------------------------------------------- | ------------- |
-| Packshot (front)    | Mylar with label, clean white/neutral bg                         | 1             |
+| Packshot (front)    | Sachet with label, clean white/neutral bg (shoot both white and black bags) | 1             |
 | Packshot (back)     | Label visible, clean bg                                          | 1             |
 | Loose herb          | Herbs spilled artistically on surface (marble, wood, dark slate) | 1-2           |
 | Scale shot          | Product in hand, or next to common object for size reference     | 1             |

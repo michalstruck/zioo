@@ -25,10 +25,10 @@ Available blends (7 products total across 2 lines: Natural & Terpene-Infused):
 Fresz
 20% Dziewanna
 20% Malina
-10% Pokrzywa
-10% Prawoślaz
 20% Szałwia
 20% Mięta
+10% Pokrzywa
+10% Prawoślaz
 No terpene infused line for this one
 
 Czill
@@ -51,8 +51,8 @@ Slep
 30% Dziewanna
 30% Malina
 20% Pokrzywa
-5% Róża
 15% Melisa
+5% Róża
 Terpene (Infused Line Only) - Purple Punch
 
 ## Commands

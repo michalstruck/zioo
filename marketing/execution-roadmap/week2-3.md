@@ -132,12 +132,12 @@ This is the first content your audience will ever see. It sets the tone. It must
 | Format   | Vertical video, 9:16, 1080×1920px                                      |
 | Duration | 15-25 seconds                                                          |
 | Platform | Post to TikTok first, then IG Reel                                     |
-| Sound    | Original ASMR audio (crinkling mylar, herbs pouring). No music needed. |
+| Sound    | Original ASMR audio (crinkling sachet, herbs pouring). No music needed. |
 
 Script outline:
 
-1. (0-3s) HOOK: Close-up of hand holding sealed green mylar. Text overlay: "Co jest w środku?" or sound of package crinkling
-2. (3-10s) Tear open the mylar slowly. Camera catches the herbs spilling or being poured onto a marble/wood surface
+1. (0-3s) HOOK: Close-up of hand holding sealed sachet (white for Natural, black for Terpene). Text overlay: "Co jest w środku?" or sound of package crinkling
+2. (3-10s) Tear open the sachet slowly. Camera catches the herbs spilling or being poured onto a marble/wood surface
 3. (10-18s) Close-up of the loose herb blend — show texture, colors, individual ingredients recognizable
 4. (18-25s) Pull back to reveal the label. End frame: blend name visible, Zioo logo
 
@@ -204,7 +204,7 @@ Design rules for carousels:
 
 Script outline:
 
-1. (0-3s) HOOK: Text overlay "Herbata z Czill 🌿" while opening the mylar pack
+1. (0-3s) HOOK: Text overlay "Herbata z Czill 🌿" while opening the sachet
 2. (3-12s) Pinch-pour herbs into an infuser/teacup. Show the water being poured. Steam rising.
 3. (12-20s) Let it steep. Show the color change in the cup.
 4. (20-30s) First sip reaction. Smile, nod, or a simple "Dobra." — keep it real, not acted.
@@ -226,7 +226,7 @@ Story sequence:
 1. Shot of raw herb ingredients laid out on a table — text: "Dzisiejszy blend: Fokus"
 2. Weighing herbs on a precision scale — text: "30% dziewanna, 30% malina..."
 3. Mixing/blending in a bowl — show the hands, the texture
-4. Packing into mylar — quick clip, satisfying
+4. Packing into sachets — quick clip, satisfying
 5. Final shot: labeled product on a clean surface — poll sticker: "Który blend chcecie zobaczyć następny?"
 
 Purpose: builds transparency, shows craftsmanship, drives engagement (poll). Stories disappear in 24h but the content can be reused as Highlights.
