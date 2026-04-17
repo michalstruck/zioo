@@ -24,7 +24,7 @@
 ### Phase 0: Packaging & Launch Prep (Weeks 1-2)
 
 - **Objective:** Finalize packaging design and label content to have a shippable product.
-- **Current state:** Single-use 0.5g sachets in two formats: Natural line in 5×7cm glossy white bags, Terpene-Infused line in 5×8cm matte black bags. Printed labels applied on both sides.
+- **Current state:** Single-use 0.5g sachets in two formats: Natural line in 5×8cm matte white bags, Terpene-Infused line in 5×8cm matte black bags. Printed labels applied on both sides.
 - **Key Initiatives:**
   - **Initiative 1 - Label Design:** Decide between transparent vs. colored labels. Transparent shows the herb (builds trust, "look what's inside"), colored is more brandable. Recommendation: **transparent front, branded back**. Front shows the blend, back carries the Zioo logo, blend name, ingredient list, and a QR code to the product page.
   - **Initiative 2 - Label Content:** Per label: blend name (Fresz/Czill/Fokus/Slep), full ingredient list in Polish, net weight, "Mieszanka do aromatyzacji / Herbata ziołowa" descriptor, Zioo logo, QR code. No health claims. No combustion references.
@@ -84,15 +84,15 @@
 
 Given the 1500 PLN budget, here are **realistic** targets:
 
-| KPI | Target (Month 1-2) | Target (Month 3-6) |
-|---|---|---|
-| **CAC (paid)** | < 50 PLN | < 30 PLN |
-| **Blended CAC (incl. organic)** | < 25 PLN | < 15 PLN |
-| **ROAS (paid only)** | 1.5x - 2.0x | 2.5x - 3.0x |
-| **Store CVR** | 1.5% - 2.5% | 2.5% - 3.5% |
-| **AOV** | 40 - 60 PLN | 60 - 80 PLN |
-| **60-day repeat rate** | 15% (baseline) | 25%+ |
-| **Organic traffic share** | 30% | 50%+ |
+| KPI                             | Target (Month 1-2) | Target (Month 3-6) |
+| ------------------------------- | ------------------ | ------------------ |
+| **CAC (paid)**                  | < 50 PLN           | < 30 PLN           |
+| **Blended CAC (incl. organic)** | < 25 PLN           | < 15 PLN           |
+| **ROAS (paid only)**            | 1.5x - 2.0x        | 2.5x - 3.0x        |
+| **Store CVR**                   | 1.5% - 2.5%        | 2.5% - 3.5%        |
+| **AOV**                         | 35 - 45 PLN        | 45 - 65 PLN        |
+| **60-day repeat rate**          | 15% (baseline)     | 25%+               |
+| **Organic traffic share**       | 30%                | 50%+               |
 
 - **Month 1-2 realistic sales goal:** 30-60 orders. At this budget, we're optimizing for learning, not scale.
 - **LTV target (6-month):** > 120 PLN per customer through repeat purchases and referrals.
@@ -113,11 +113,13 @@ Given the 1500 PLN budget, here are **realistic** targets:
 **Straight talk:** 1500 PLN is tight, but it's not a dealbreaker for a product like this. Here's why:
 
 **What it CAN do:**
+
 - Fund 2 months of micro-targeted Meta/Google ads to learn which audience converts
 - Get enough data to calculate your real CAC and ROAS
 - Drive 30-60 initial orders if CVR is reasonable
 
 **What it CANNOT do:**
+
 - Scale. This is a testing budget, not a growth budget.
 - Run multiple channels simultaneously at meaningful spend levels.
 

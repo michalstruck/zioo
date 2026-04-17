@@ -68,7 +68,7 @@ Available marketing agent skills that should be invoked at appropriate stages:
 
 **Physical specs:**
 
-- Natural line bag: 5×7cm glossy white, 0.5g per unit
+- Natural line bag: 5×8cm matte white, 0.5g per unit
 - Terpene-Infused line bag: 5×8cm matte black, 0.5g per unit
 - Labels: printed, applied on both sides (front + back), fully colored both sides on transparent background
 
@@ -134,13 +134,13 @@ This is the single most important asset for everything downstream (website, ads,
 
 **Shot list per blend (Fresz, Czill, Fokus, Slep — regular + terpene = up to 8 variants):**
 
-| Shot type           | Description                                                      | Qty per blend |
-| ------------------- | ---------------------------------------------------------------- | ------------- |
+| Shot type           | Description                                                                 | Qty per blend |
+| ------------------- | --------------------------------------------------------------------------- | ------------- |
 | Packshot (front)    | Sachet with label, clean white/neutral bg (shoot both white and black bags) | 1             |
-| Packshot (back)     | Label visible, clean bg                                          | 1             |
-| Loose herb          | Herbs spilled artistically on surface (marble, wood, dark slate) | 1-2           |
-| Scale shot          | Product in hand, or next to common object for size reference     | 1             |
-| Lifestyle - relaxed | Product on desk, nightstand, coffee table with tea/diffuser      | 2-3           |
+| Packshot (back)     | Label visible, clean bg                                                     | 1             |
+| Loose herb          | Herbs spilled artistically on surface (marble, wood, dark slate)            | 1-2           |
+| Scale shot          | Product in hand, or next to common object for size reference                | 1             |
+| Lifestyle - relaxed | Product on desk, nightstand, coffee table with tea/diffuser                 | 2-3           |
 
 **Lifestyle scenes (shared across blends):**
 

@@ -215,7 +215,7 @@ Headline 1: Mieszanki Ziołowe — Zioo
 Headline 2: Naturalne Kompozycje Botaniczne
 Headline 3: Od 19 PLN — Zamów Online
 Description 1: Autorskie blendy z dziewanny, maliny, pokrzywy i szałwii. Wzbogacone terpenami. Sprawdź nasze 4 kompozycje.
-Description 2: Idealne jako herbata ziołowa lub mieszanka do aromatyzacji. Darmowa dostawa od [X] PLN.
+Description 2: Idealne jako herbata ziołowa lub mieszanka do aromatyzacji. Darmowa dostawa od 34,99 PLN.
 ```
 
 Ad Group 3 (Problem):
