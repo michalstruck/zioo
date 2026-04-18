@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Zioo — Blog",
+  title: "zioo — Blog",
   description: "Wiedza o ziołach, terpenach i relaksie.",
 };
 

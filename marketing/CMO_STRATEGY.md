@@ -1,8 +1,8 @@
-# CMO Strategy & Directives: Zioo Launch & Growth
+# CMO Strategy & Directives: zioo Launch & Growth
 
 ## 1. High-Level Marketing Vision & Brand Identity
 
-- **Vision:** Zioo to pierwsze w Polsce premium herbal blends — kompozycje botaniczne, które definiują nową kategorię: zdrowy, bezuzależnieniowy rytuał relaksacji. Marka dla pokolenia, które stawia na świadome wybory.
+- **Vision:** zioo to pierwsze w Polsce premium herbal blends — kompozycje botaniczne, które definiują nową kategorię: zdrowy, bezuzależnieniowy rytuał relaksacji. Marka dla pokolenia, które stawia na świadome wybory.
 - **Brand Voice & Identity:**
   - **Tone:** Punchy, direct, surfer-chill, bold, confident, youth-focused. Not artificial or overly corporate "lab-like".
   - **Aesthetic:** Clinical Naturalism
@@ -26,8 +26,8 @@
 - **Objective:** Finalize packaging design and label content to have a shippable product.
 - **Current state:** Single-use 0.5g sachets in two formats: Natural line in 5×8cm matte white bags, Terpene-Infused line in 5×8cm matte black bags. Printed labels applied on both sides.
 - **Key Initiatives:**
-  - **Initiative 1 - Label Design:** Decide between transparent vs. colored labels. Transparent shows the herb (builds trust, "look what's inside"), colored is more brandable. Recommendation: **transparent front, branded back**. Front shows the blend, back carries the Zioo logo, blend name, ingredient list, and a QR code to the product page.
-  - **Initiative 2 - Label Content:** Per label: blend name (Fresh/Chill/Focus/Sleep), full ingredient list in Polish, net weight, "Mieszanka do aromatyzacji / Herbata ziołowa" descriptor, Zioo logo, QR code. No health claims. No combustion references.
+  - **Initiative 1 - Label Design:** Decide between transparent vs. colored labels. Transparent shows the herb (builds trust, "look what's inside"), colored is more brandable. Recommendation: **transparent front, branded back**. Front shows the blend, back carries the zioo logo, blend name, ingredient list, and a QR code to the product page.
+  - **Initiative 2 - Label Content:** Per label: blend name (Fresh/Chill/Focus/Sleep), full ingredient list in Polish, net weight, "Mieszanka do aromatyzacji / Herbata ziołowa" descriptor, zioo logo, QR code. No health claims. No combustion references.
   - **Initiative 3 - Pictograms (optional):** Minimalist icons for the blend's "mood" (e.g., leaf for Fresh, moon for Sleep). Keeps it premium without needing full custom print yet.
 
 ### Phase 1: Organic Tease & Educate (Weeks 1-4)
@@ -37,7 +37,7 @@
 - **Budget allocation:** 0 PLN (pure organic + free product seeding)
 - **Key Initiatives:**
   - **Initiative 1 - "Więcej niż zioła" Content Series:** Short-form video content (TikTok/Reels) showing the aesthetic unboxing, blend ingredients, and the "Clinical Naturalism" vibe. Focus on ASMR-style close-ups of herbs, pouring into cups/diffusers, the white and black sachets. No faces needed initially — product-focused.
-  - **Initiative 2 - Terpene Education:** 3-4 carousel posts / short videos explaining what terpenes are (mircen, limonen, linalol), how they create "efekt entourage", and why Zioo's infused line is unique in Poland.
+  - **Initiative 2 - Terpene Education:** 3-4 carousel posts / short videos explaining what terpenes are (mircen, limonen, linalol), how they create "efekt entourage", and why zioo's infused line is unique in Poland.
   - **Initiative 3 - Micro-Seeding (Free Product):** At ~10 groszy per unit, send free samples to 20-30 people in the target scene (friends of friends, local creatives, DJs, skaters). No formal "influencer deal" — just "hey, spróbuj i powiedz co myślisz." Word of mouth is the engine here. Cost: effectively zero.
 
 ### Phase 2: First Paid Tests & Broad Appeal (Months 1-3)
@@ -47,7 +47,7 @@
 - **Budget allocation:** 1500 PLN total across 2 months (~750 PLN/month, ~25 PLN/day)
 - **Key Initiatives:**
   - **Initiative 1 - "Twój rytuał" Ad Tests (Meta):** 2-3 ad creatives showing the product in lifestyle contexts (desk setup, evening chill, nature). Use best-performing organic content as ad creatives to save production costs. A/B test audiences: wellness interest vs. streetwear/music culture vs. broad 18-30. Budget: ~800 PLN.
-  - **Initiative 2 - Google Search (Intent Capture):** Branded search ("Zioo", "zioo zioła") + 2-3 high-intent keywords ("zioła na relaks", "mieszanki ziołowe Polska"). Budget: ~400 PLN.
+  - **Initiative 2 - Google Search (Intent Capture):** Branded search ("zioo", "zioo zioła") + 2-3 high-intent keywords ("zioła na relaks", "mieszanki ziołowe Polska"). Budget: ~400 PLN.
   - **Initiative 3 - SEO & Content:** Publish 3-5 blog posts / landing pages targeting "zioła na relaks", "aromaterapia ziołowa", "terpeny w aromaterapii". Cost: 0 PLN (we write them). Long-term organic traffic play.
   - **Initiative 4 - Retargeting:** Reserve ~300 PLN for retargeting website visitors who didn't purchase. This is the highest-ROAS spend you can make.
 
@@ -56,9 +56,9 @@
 - **Objective:** Double down on the highest-performing audience from Phase 2, optimize LTV, build community.
 - **Channels:** Email/SMS Marketing, community (Discord/Telegram), referral program.
 - **Key Initiatives:**
-  - **Initiative 1 - Referral Program:** "Poleć Zioo znajomemu – oboje dostajecie darmową próbkę." Product cost is negligible, and referrals are the cheapest acquisition channel.
+  - **Initiative 1 - Referral Program:** "Poleć zioo znajomemu – oboje dostajecie darmową próbkę." Product cost is negligible, and referrals are the cheapest acquisition channel.
   - **Initiative 2 - Email/SMS Flows:** Post-purchase thank you → usage tips → "spróbuj inny blend" cross-sell → repeat purchase nudge at day 14/30. Use free-tier tools (Mailchimp free up to 500 contacts, or Brevo).
-  - **Initiative 3 - Community Building:** Build a small Discord/Telegram where early adopters can share feedback, vote on new blends, get early access. This is the "Zioo Crew" — organic, not paid.
+  - **Initiative 3 - Community Building:** Build a small Discord/Telegram where early adopters can share feedback, vote on new blends, get early access. This is the "zioo Crew" — organic, not paid.
   - **Initiative 4 - Co-Branded Drops (later):** Once cash flow allows, partner with local streetwear brands, artists, or music collectives for limited-edition labels or merch.
 
 ---

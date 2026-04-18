@@ -53,7 +53,7 @@ export function AnimatedHeroCards() {
   return (
     <div
       className="relative flex items-end justify-center w-80 h-[380px] max-sm:w-[260px] max-sm:h-[310px]"
-      aria-label="Zioo product card fan"
+      aria-label="zioo product card fan"
     >
       {CARDS.map((card, i) => {
         const isHovered = hovered === i;

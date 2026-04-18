@@ -4,10 +4,10 @@
 
 **From:** Brand Manager
 **To:** Designer
-**Subject:** Zioo Packaging & Label Design - Phase 1
+**Subject:** zioo Packaging & Label Design - Phase 1
 
 **Context:**
-We are defining the physical identity of Zioo. We operate under the aesthetic of "Clinical Naturalism" — it must feel premium, clean, botanical, but sterile enough to evoke trustworthiness and modern wellness. We have two bag formats: 5×8cm matte white (Natural line) and 5×8cm matte black (Terpene-Infused line), each holding a single-use 0.5g sachet. We need print-ready label designs (front and back) for each format that act as the primary visual touchpoint for our customers.
+We are defining the physical identity of zioo. We operate under the aesthetic of "Clinical Naturalism" — it must feel premium, clean, botanical, but sterile enough to evoke trustworthiness and modern wellness. We have two bag formats: 5×8cm matte white (Natural line) and 5×8cm matte black (Terpene-Infused line), each holding a single-use 0.5g sachet. We need print-ready label designs (front and back) for each format that act as the primary visual touchpoint for our customers.
 
 **Constraints & Requirements:**
 
@@ -19,7 +19,7 @@ We are defining the physical identity of Zioo. We operate under the aesthetic of
   - Minimalist mood icon (e.g., leaf, moon, abstract wave).
   - Keep it extraordinarily clean. White space is our friend.
 - **Back Label Elements:**
-  - Zioo logo.
+  - zioo logo.
   - Blend name.
   - Full ingredient list in Polish (e.g., "Dziewanna, Malina, Pokrzywa, Lawenda, Melisa").
   - Net weight ("0,5g netto").
@@ -40,7 +40,7 @@ Designer, please provide the structural mockups for these labels, the documented
 
 **From:** Designer
 **To:** Brand Manager & CEO
-**Subject:** Re: Zioo Packaging & Label Design - Phase 1 Execution
+**Subject:** Re: zioo Packaging & Label Design - Phase 1 Execution
 
 ### A. Design Mockups (Conceptual Structural Layout & Pre-Renders)
 
@@ -51,13 +51,13 @@ Designer, please provide the structural mockups for these labels, the documented
 - **Center (Y: 50%):** Blend Name in Fraunces (Italicized, 28pt), centered, in Soft Ink Black (`#121625`).
 - **Bottom-Center (Y: 85%):** Subtle accent line / border element in Linen (`#E2E2D5`), separating the name from the bottom edge.
 
-![Zioo Fresh Front Label Concept](./fresh_label_front_1775319044283.png)
-![Zioo Sleep Front Label Concept](./sleep_label_front_1775319069082.png)
+![zioo Fresh Front Label Concept](./fresh_label_front_1775319044283.png)
+![zioo Sleep Front Label Concept](./sleep_label_front_1775319069082.png)
 
 **Back Label Architecture (Natural line: ~4×5.5cm / Terpene line: ~4×6.5cm)**
 
 - **Base Layer:** Background filled with Antique Paper (`#FBF9F4`).
-- **Top-Center (Y: 10%):** Zioo Logo in Soft Ink Black (`#121625`), utilizing Public Sans (Bold).
+- **Top-Center (Y: 10%):** zioo Logo in Soft Ink Black (`#121625`), utilizing Public Sans (Bold).
 - **Top-Mid (Y: 25%):** Blend Name (Fraunces, 14pt) + Product Descriptor: "Mieszanka do aromatyzacji / Herbata ziołowa" (Public Sans, Regular, 7pt, all-caps, tracked out).
 - **Center Block (Y: 40-55%):**
   - Ingredients: "Dziewanna, Malina, Pokrzywa..." (Public Sans, Regular, 8pt).
@@ -65,7 +65,7 @@ Designer, please provide the structural mockups for these labels, the documented
 - **Bottom-Left (Y: 75%):** Net weight ("0,5g netto") and Batch Number box (A small unfilled rectangle with a Linen `#E2E2D5` 1px border).
 - **Bottom-Right (Y: 75%):** Scalable vector QR Code pointing to zioo.pl product URL (1x1cm).
 
-![Zioo Fresh Back Label Concept](./fresh_back_label_1775319090488.png)
+![zioo Fresh Back Label Concept](./fresh_back_label_1775319090488.png)
 
 ---
 
@@ -103,7 +103,7 @@ If you need to iterate or update the labels locally, use the following visual co
    - **Constraint:** Icons must be scalable SVGs with a stroke width of 1.5px - 2px max. Keep them open and breathable.
 3. **Refining Copy / Ingredients:**
    - **Rule:** If ingredients change or lines wrap, adjust line-height (leading) rather than squishing the font horizontally. Public Sans needs room to breathe.
-   - **Hierarchy Edit:** Never make the ingredients visually larger or bolder than the blend name or "Zioo" logo. Keep body text between 7pt and 8pt.
+   - **Hierarchy Edit:** Never make the ingredients visually larger or bolder than the blend name or "zioo" logo. Keep body text between 7pt and 8pt.
 4. **Modifying the QR Code / Batch Field:**
    - Ensure there is a minimum of 2mm "quiet zone" (white/negative space) around the QR code, otherwise it will fail to scan.
    - Do not make the batch box smaller than 1.5cm width to ensure human handwriting fits.

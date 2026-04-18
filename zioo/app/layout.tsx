@@ -17,23 +17,23 @@ const publicSans = Public_Sans({
 });
 
 export const metadata: Metadata = {
-	title: "Zioo — Herbal Blends",
-	description:
-		"Premium botanical blends for relaxation, mood, and clarity. Herbata ziołowa crafted with care.",
+  title: "zioo — Herbal Blends",
+  description:
+    "Premium botanical blends for relaxation, mood, and clarity. Herbata ziołowa crafted with care.",
 };
 
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-	return (
-		<html lang="pl">
-			<body className={`${fraunces.variable} ${publicSans.variable} antialiased`}>
-				<Providers>
-					{children}
-				</Providers>
-			</body>
-		</html>
-	);
+  return (
+    <html lang="pl">
+      <body
+        className={`${fraunces.variable} ${publicSans.variable} antialiased`}
+      >
+        <Providers>{children}</Providers>
+      </body>
+    </html>
+  );
 }

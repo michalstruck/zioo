@@ -6,10 +6,10 @@ export function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-12 md:flex-row">
         <div className="flex flex-col gap-6 max-w-lg">
           <h2 className="text-4xl font-heading font-medium tracking-tight text-secondary">
-            Zioo
+            zioo
           </h2>
           <p className="text-lg font-sans leading-relaxed text-secondary/70">
-            Produkty Zioo to wyłącznie{" "}
+            Produkty zioo to wyłącznie{" "}
             <span className="italic text-accent font-heading">
               herbaty ziołowe
             </span>{" "}
@@ -45,7 +45,7 @@ export function Footer() {
 
       <div className="mx-auto mt-16 flex max-w-7xl flex-col items-center justify-between gap-6 border-t border-border/10 pt-8 text-[10px] font-bold uppercase tracking-widest text-secondary/30 md:flex-row md:mt-24">
         <p>
-          &copy; {new Date().getFullYear()} Zioo. Wszelkie prawa zastrzeżone.
+          &copy; {new Date().getFullYear()} zioo. Wszelkie prawa zastrzeżone.
         </p>
         <div className="flex gap-4">
           <span>Apothecary Quality</span>

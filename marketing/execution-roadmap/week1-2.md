@@ -80,7 +80,7 @@ Available marketing agent skills that should be invoked at appropriate stages:
 
 **Back label must contain:**
 
-- Zioo logo
+- zioo logo
 - Blend name
 - Full ingredient list in Polish, no percentages (e.g., "Dziewanna, Malina, Pokrzywa, Lawenda, Melisa")
 - Net weight ("0,5g netto")
@@ -147,7 +147,7 @@ This is the single most important asset for everything downstream (website, ads,
 | Scene         | Props                                           | Mood              |
 | ------------- | ----------------------------------------------- | ----------------- |
 | Evening chill | Candle, book, soft light, ceramic cup           | Warm, calm        |
-| Desk setup    | Laptop, plant, Zioo blend, minimalist workspace | Focused, creative |
+| Desk setup    | Laptop, plant, zioo blend, minimalist workspace | Focused, creative |
 | Outdoor       | Blanket, nature, daylight, thermos              | Free, fresh       |
 | Social        | Two people, patio/balcony, city background      | Community, vibe   |
 

@@ -16,13 +16,13 @@ export default function RegulaminPage() {
             Sklep internetowy działający pod adresem:{" "}
             <strong>https://zioo.pl</strong> (dalej: „Sklep”) prowadzony jest
             przez: <br />
-            <strong>Zioo Sp. z o.o.</strong>, wpisaną do Centralnej Ewidencji i
+            <strong>zioo Sp. z o.o.</strong>, wpisaną do Centralnej Ewidencji i
             Informacji o Działalności Gospodarczej (CEIDG). <br />
             <strong>NIP:</strong> 5851536048, <strong>REGON:</strong> 527287447
             <br />
             <strong>Adres siedziby (rejestrowy):</strong> Błotna 69/1, 81-853
             Sopot, Polska <br />
-            <strong>Adres korespondencyjny / zwroty i reklamacje:</strong> Zioo
+            <strong>Adres korespondencyjny / zwroty i reklamacje:</strong> zioo
             Sp. z o.o., Błotna 69/1, 81-853 Sopot, Polska
           </li>
           <li>
@@ -409,7 +409,7 @@ export default function RegulaminPage() {
               <li>
                 pisemnie:
                 <strong>
-                  Zioo Sp. z o.o., Błotna 69/1, 81-853 Sopot, Polska
+                  zioo Sp. z o.o., Błotna 69/1, 81-853 Sopot, Polska
                 </strong>
               </li>
             </ul>
@@ -610,7 +610,7 @@ export default function RegulaminPage() {
         </p>
         <pre className="whitespace-pre-wrap">
           {`
-		  Adresat: Zioo Sp. z o.o., Błotna 69/1, 81-853 Sopot, Polska. 
+		  Adresat: zioo Sp. z o.o., Błotna 69/1, 81-853 Sopot, Polska. 
 		  e-mail: kontakt@zioo.pl 
 		  
 		  Ja/My(*) niniejszym informuję/informujemy(*) o

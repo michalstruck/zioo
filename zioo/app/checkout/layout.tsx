@@ -40,7 +40,7 @@ export default function CheckoutLayout({
             href="/"
             className="font-heading text-xl font-bold tracking-tight"
           >
-            Zioo.
+            zioo
           </Link>
           <div className="w-24" />{" "}
           {/* Spacer for centering the logo on mobile */}

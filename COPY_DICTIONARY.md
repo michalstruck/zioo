@@ -1,6 +1,6 @@
-# Zioo Copy Dictionary
+# zioo Copy Dictionary
 
-This dictionary defines strict rules for terminology used across the Zioo product, marketing, and UI. We operate under strict Polish market regulations, which means our products must be positioned clearly as botanical blends, not for combustion.
+This dictionary defines strict rules for terminology used across the zioo product, marketing, and UI. We operate under strict Polish market regulations, which means our products must be positioned clearly as botanical blends, not for combustion.
 
 ## 🚫 BANNED TERMS
 

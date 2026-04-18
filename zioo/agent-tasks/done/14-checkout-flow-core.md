@@ -59,7 +59,7 @@ Skill: **signup-flow-cro**, **form-cro** — minimalizacja pól, redukcja fricti
 
 #### 2.5 Stylowanie
 
-- [ ] Design zgodny z design systemem Zioo (Clinical Naturalism)
+- [ ] Design zgodny z design systemem zioo (Clinical Naturalism)
 - [ ] Trust signals: ikony bezpieczeństwa, loga metod płatności (BLIK, Visa, MC, Apple Pay)
 - [ ] Micro-animacje przy przejściach
 - [ ] Responsive — mobile first

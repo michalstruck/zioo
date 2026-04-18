@@ -17,7 +17,7 @@ export default function RegulaminPage() {
       <h2>1. Administrator danych</h2>
       <p>
         Administratorem Twoich danych osobowych jest{" "}
-        <strong>Zioo Sp. z o.o.</strong>
+        <strong>zioo Sp. z o.o.</strong>
         <br />
         <strong>NIP:</strong> 5851536048, <strong>REGON:</strong> 527287447
         <br />
@@ -28,7 +28,7 @@ export default function RegulaminPage() {
         <strong>Kontakt:</strong> kontakt@zioo.pl
       </p>
       <p>
-        <strong>Adres korespondencyjny:</strong> Zioo Sp. z o.o. Błotna 69/1,
+        <strong>Adres korespondencyjny:</strong> zioo Sp. z o.o. Błotna 69/1,
         81-853 Sopot, Polska
       </p>
 

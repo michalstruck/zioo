@@ -9,7 +9,7 @@ export function Header() {
           href="/"
           className="text-2xl font-heading font-medium tracking-tight sm:text-3xl md:text-4xl hover:text-primary transition-organic"
         >
-          Zioo.
+          zioo
         </Link>
         <nav className="gap-8 flex">
           <Link

@@ -1,9 +1,9 @@
 # AGENTS.md
 
-The business we're running in called Zioo. It's targeting the Polish market only.
+The business we're running in called zioo. It's targeting the Polish market only.
 We're marketing and selling herbal blends. These are healthier, less harsh and don't make you have a bad trip. We also have a line of cannabis-derived, terpene infused blends. We do not sell other products (NO rolling papers, bags, cbd, humidity packs).
 
-Refer to `COPY_DICTIONARY.md` for strict rules on terminology used across the Zioo product, marketing.
+Refer to `COPY_DICTIONARY.md` for strict rules on terminology used across the zioo product, marketing.
 
 ALL copy is in Polish.
 

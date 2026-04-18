@@ -67,8 +67,8 @@ This is NOT an influencer campaign. No contracts, no rates, no briefs sent to cr
 | Item             | Details                                                                                                                                         |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | Product          | 2-3 different blends per person (let them compare). Include at least 1 terpene-infused variant.                                                 |
-| Handwritten note | "Cześć! To Zioo — mieszanki ziołowe z terpnami z konopi. Spróbuj i daj znać co myślisz 🌿" Keep it casual, personal.                            |
-| Brand card       | Small card (business card size) with: Zioo logo, @zioo.pl Instagram handle, QR code → store, one-liner: "Kompozycje botaniczne. Wysyłka w 24h." |
+| Handwritten note | "Cześć! To zioo — mieszanki ziołowe z terpnami z konopi. Spróbuj i daj znać co myślisz 🌿" Keep it casual, personal.                            |
+| Brand card       | Small card (business card size) with: zioo logo, @zioo.pl Instagram handle, QR code → store, one-liner: "Kompozycje botaniczne. Wysyłka w 24h." |
 
 **What NOT to send:**
 
@@ -98,7 +98,7 @@ This is NOT an influencer campaign. No contracts, no rates, no briefs sent to cr
 
 **UGC repost protocol:**
 
-- If someone posts about Zioo, DM them: "Dzięki za share! Możemy to udostępnić?" (ask permission)
+- If someone posts about zioo, DM them: "Dzięki za share! Możemy to udostępnić?" (ask permission)
 - Repost to Stories with credit tag
 - If it's a Reel or high-quality feed post, ask if you can pin it or use in paid ads later (with credit)
 - Save ALL UGC in a dedicated folder — this becomes ad creative in Month 1-2
@@ -129,7 +129,7 @@ If the CEO prefers Discord (e.g., for richer moderation tools or voice channels 
 
 | Channel/Topic     | Purpose                                               |
 | ----------------- | ----------------------------------------------------- |
-| #witamy (Welcome) | Pinned message: what Zioo is, group rules, store link |
+| #witamy (Welcome) | Pinned message: what zioo is, group rules, store link |
 | #blendy (Blends)  | Discussion about blends, flavor profiles, preferences |
 | #feedback         | Product feedback, complaints, suggestions             |
 | #pomysły (Ideas)  | Vote on new blend names, flavors, limited editions.   |
@@ -138,7 +138,7 @@ If the CEO prefers Discord (e.g., for richer moderation tools or voice channels 
 **Pinned welcome message (Polish):**
 
 ```
-Hej! 👋 Witamy w społeczności Zioo.
+Hej! 👋 Witamy w społeczności zioo.
 To miejsce dla ludzi, którzy cenią botaniczne kompozycje i naturalny relaks.
 
 Co tu robimy:

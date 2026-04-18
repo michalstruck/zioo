@@ -26,7 +26,7 @@ Stripe webhook powiadamia o udanej płatności. Wysyłamy email do klienta + do 
 - [ ] Event `checkout.session.completed`:
   - [ ] Wyślij email potwierdzenia do klienta (Resend / Nodemailer)
   - [ ] Wyślij email z detalami zamówienia do sprzedawcy (wewnętrzny)
-- [ ] Email template: prosty, responsywny, z logo Zioo, po polsku
+- [ ] Email template: prosty, responsywny, z logo zioo, po polsku
 - [ ] Stripe CLI do testowania webhooków lokalnie (`stripe listen --forward-to`)
 - [ ] Fallback: jeśli email się nie wyśle → loguj błąd (nie blokuj flow)
 

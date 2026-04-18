@@ -58,7 +58,7 @@ This is NOT a brand awareness campaign. This is a surgical test to find product-
 **Campaign architecture:**
 
 ```
-Campaign: Zioo — Conversions — Purchase
+Campaign: zioo — Conversions — Purchase
 ├── Ad Set 1: Wellness (budget: ~270 PLN / ~9 PLN/day)
 │   ├── Audience: Interests → wellness, zdrowy styl życia, yoga, medytacja
 │   ├── Age: 18-30, Poland, Polish language
@@ -81,7 +81,7 @@ Don't produce new content. Re-use the top organic content from Brief #5 as ads. 
 
 | Ad # | Source                          | Format | Primary text (Polish)                                                                  | Headline           | CTA      |
 | ---- | ------------------------------- | ------ | -------------------------------------------------------------------------------------- | ------------------ | -------- |
-| Ad 1 | Best-performing Reel (unboxing) | Video  | "Mieszanki ziołowe z terpenami z konopi. Naturalna kompozycja botaniczna."             | "Odkryj Zioo"      | Shop Now |
+| Ad 1 | Best-performing Reel (unboxing) | Video  | "Mieszanki ziołowe z terpenami z konopi. Naturalna kompozycja botaniczna."             | "Odkryj zioo"      | Shop Now |
 | Ad 2 | Lifestyle flat-lay photo        | Image  | "Chill — mieszanka na wieczorny relaks. Dziewanna, malina, pokrzywa, lawenda, melisa." | "Zamów swój blend" | Shop Now |
 | Ad 3 | Brewing Reel                    | Video  | "Herbata z czegoś nowego. Spróbuj mieszanki z terpenami."                              | "Sprawdź"          | Shop Now |
 
@@ -168,7 +168,7 @@ Google Search captures intent — people actively looking for what you sell. Thi
 **Campaign architecture:**
 
 ```
-Campaign: Zioo — Search — Poland
+Campaign: zioo — Search — Poland
 ├── Ad Group 1: Branded (budget: ~100 PLN)
 │   ├── Keywords: "zioo", "zioo zioła", "zioo sklep", "zioo mieszanki"
 │   ├── Match type: Exact + Phrase
@@ -178,7 +178,7 @@ Campaign: Zioo — Search — Poland
 │   ├── Keywords: "mieszanki ziołowe", "zioła na relaks", "mieszanka do aromatyzacji",
 │   │   "herbata ziołowa na spokój", "zioła do aromatyzacji"
 │   ├── Match type: Phrase + Broad (with careful monitoring)
-│   └── Purpose: Capture people searching for what we sell but who don't know Zioo yet
+│   └── Purpose: Capture people searching for what we sell but who don't know zioo yet
 │
 └── Ad Group 3: Problem Intent (budget: ~100 PLN)
     ├── Keywords: "naturalny relaks", "zioła na stres", "naturalna alternatywa"
@@ -201,7 +201,7 @@ Update this list weekly based on search terms report.
 Ad Group 1 (Branded):
 
 ```
-Headline 1: Zioo — Mieszanki Ziołowe
+Headline 1: zioo — Mieszanki Ziołowe
 Headline 2: Kompozycje Botaniczne z Terpenami
 Headline 3: Wysyłka w 24h z InPost
 Description 1: Naturalne mieszanki ziołowe. 4 unikalne blendy. Zamów online na zioo.pl.
@@ -211,7 +211,7 @@ Description 2: Fresh, Chill, Focus, Sleep — odkryj swój ulubiony blend. Bezpi
 Ad Group 2 (Category):
 
 ```
-Headline 1: Mieszanki Ziołowe — Zioo
+Headline 1: Mieszanki Ziołowe — zioo
 Headline 2: Naturalne Kompozycje Botaniczne
 Headline 3: Od 19 PLN — Zamów Online
 Description 1: Autorskie blendy z dziewanny, maliny, pokrzywy i szałwii. Wzbogacone terpenami. Sprawdź nasze 4 kompozycje.
@@ -222,7 +222,7 @@ Ad Group 3 (Problem):
 
 ```
 Headline 1: Naturalny Relaks z Ziołami
-Headline 2: Mieszanki Ziołowe Zioo
+Headline 2: Mieszanki Ziołowe zioo
 Headline 3: Bez Chemii, Bez Uzależnienia
 Description 1: Szukasz naturalnej alternatywy? Nasze mieszanki botaniczne pomagają się odprężyć. Zamów na zioo.pl.
 Description 2: Kompozycje z dziewanny, pokrzywy i terpnów. Sprawdź 4 unikalne blendy.
@@ -295,7 +295,7 @@ Retargeting is the highest-ROI ad spend. These people already visited zioo.pl �
 **Campaign setup:**
 
 ```
-Campaign: Zioo — Retargeting
+Campaign: zioo — Retargeting
 ├── Ad Set 1: Cart Abandoners (budget: ~120 PLN / ~4 PLN/day)
 │   ├── Audience: Custom audience — add_to_cart event, last 14 days
 │   ├── Exclude: purchase event
@@ -318,7 +318,7 @@ Campaign: Zioo — Retargeting
 | --------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------------- |
 | Cart abandoners | "Twój blend czeka 🌿 Dokończ zamówienie na zioo.pl"             | Product photo from their viewed product (or generic if dynamic isn't possible) | "Zamów teraz" |
 | Product viewers | "Chill, Fresh, Focus czy Sleep? Znajdź swój blend."             | Carousel of 4 blend photos                                                     | "Sprawdź"     |
-| All visitors    | "Mieszanki ziołowe z terpenami z konopi. Naturalna kompozycja." | Lifestyle photo or best-performing organic video                               | "Odkryj Zioo" |
+| All visitors    | "Mieszanki ziołowe z terpenami z konopi. Naturalna kompozycja." | Lifestyle photo or best-performing organic video                               | "Odkryj zioo" |
 
 **Frequency cap:** 3-5 impressions per person per week. More than that feels stalky and annoys people. Small retargeting audiences burn out fast.
 

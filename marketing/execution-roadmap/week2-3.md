@@ -85,7 +85,7 @@ zioo.pl
 - Run through `humanizer` — must feel like a person wrote it, not a marketing dept
 - Apply `COPY_DICTIONARY.md` — zero banned terms
 
-**Profile photo:** Zioo logo on `#FBF9F4` (Antique Paper) background. Ensure it's legible at 110×110px (IG thumbnail size).
+**Profile photo:** zioo logo on `#FBF9F4` (Antique Paper) background. Ensure it's legible at 110×110px (IG thumbnail size).
 
 **Visual grid strategy (Instagram):**
 
@@ -139,7 +139,7 @@ Script outline:
 1. (0-3s) HOOK: Close-up of hand holding sealed sachet (white for Natural, black for Terpene). Text overlay: "Co jest w środku?" or sound of package crinkling
 2. (3-10s) Tear open the sachet slowly. Camera catches the herbs spilling or being poured onto a marble/wood surface
 3. (10-18s) Close-up of the loose herb blend — show texture, colors, individual ingredients recognizable
-4. (18-25s) Pull back to reveal the label. End frame: blend name visible, Zioo logo
+4. (18-25s) Pull back to reveal the label. End frame: blend name visible, zioo logo
 
 What NOT to do: don't show the product near rolling papers, a lighter, or anything combustion-related. Don't add commentary about how to "use" it. Let the visual speak.
 
@@ -340,7 +340,7 @@ H2: FAQ
 
 - `FAQPage` schema on the FAQ section
 - `Article` schema with author, datePublished, dateModified
-- Meta title: [Primary keyword] — Zioo (max 60 chars)
+- Meta title: [Primary keyword] — zioo (max 60 chars)
 - Meta description: direct benefit statement + CTA (max 155 chars)
 - OG image: use a product photo or branded graphic (1200×630px)
 - Internal links: every post links to 1-2 product pages and 1-2 other blog posts (builds topic cluster)

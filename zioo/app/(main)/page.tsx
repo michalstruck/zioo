@@ -48,9 +48,8 @@ export default function Home() {
             </h1>
 
             <p className="max-w-lg text-lg font-medium leading-relaxed text-foreground/80 md:text-xl">
-              Mieszanki botaniczne z&nbsp;naturalnym profilem terpenowym.
-              Bez sztucznych dodatków — zaparzone zioła, napar
-              i&nbsp;spokój.
+              Mieszanki botaniczne z&nbsp;naturalnym profilem terpenowym. Bez
+              sztucznych dodatków — zaparzone zioła, napar i&nbsp;spokój.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-6">
@@ -85,7 +84,7 @@ export default function Home() {
       >
         <div className="mx-auto max-w-7xl">
           <h2 className="mb-10 text-3xl font-heading font-medium tracking-tight text-secondary md:mb-14 md:text-5xl lg:text-6xl">
-            Czemu Zioo?
+            Czemu zioo?
           </h2>
 
           <div className="grid gap-8 sm:grid-cols-2 lg:gap-12">

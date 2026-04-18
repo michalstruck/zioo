@@ -63,7 +63,7 @@ This is the most important brief in the entire roadmap. Without disciplined anal
 **Monthly performance report template:**
 
 ```markdown
-# Month [X] Performance Report — Zioo
+# Month [X] Performance Report — zioo
 
 ## Executive Summary
 
@@ -185,13 +185,13 @@ If already using another tool, that's fine — the email content is platform-agn
 | 3   | Day 5                  | "Jak smakuje [blend name]?"                       | Check-in. Ask for feedback (reply-to or quick poll). Include a tip: "Najlepszy efekt? Zalej 80°C wodą i odczekaj 5 minut." Link to blog post about terpenes.                            | Engage, educate, get feedback         |
 | 4   | Day 14                 | "Spróbowałeś [current blend]? Sprawdź pozostałe." | Cross-sell. If they bought Chill, suggest Focus or Fresh. "Każdy blend to inna historia." Show other blends with links.                                                                 | Increase basket, drive repeat         |
 | 5   | Day 30                 | "Czas na doładowanie? 🌿"                         | Repeat purchase nudge. "Twój blend pewnie się kończy. Zamów ponownie — wiesz już co lubisz." Optional: include a small incentive (10% off next order, or free blend sample with order). | Drive repeat purchase                 |
-| 6   | Day 45                 | "Mamy coś nowego w Zioo"                          | Product update or new blend announcement (if applicable). If no new product, share a blog post or behind-the-scenes story.                                                              | Stay top of mind                      |
+| 6   | Day 45                 | "Mamy coś nowego w zioo"                          | Product update or new blend announcement (if applicable). If no new product, share a blog post or behind-the-scenes story.                                                              | Stay top of mind                      |
 
 **Email design rules:**
 
 - Plain-ish design. Not heavy HTML newsletters. Text-forward, like a friend's email.
 - Brand colors for subtle accents only (sage green `#6B7F6A` highlights, not full-color headers)
-- Sender name: "Zioo" or "Michał z Zioo" (personal feels better for small brands)
+- Sender name: "zioo" or "Michał z zioo" (personal feels better for small brands)
 - Reply-to: a real monitored inbox (kontakt@zioo.pl)
 - All copy in Polish, run through `humanizer`
 - Apply `COPY_DICTIONARY.md` — zero banned terms
@@ -248,7 +248,7 @@ Both get a reward
 In post-purchase email #5 (Day 30), add:
 
 ```
-Podoba Ci się Zioo? Poleć nas znajomemu.
+Podoba Ci się zioo? Poleć nas znajomemu.
 Oboje dostajecie coś ekstra:
 🌿 Ty: darmowa próbka blenda do następnego zamówienia
 💰 Twój znajomy: 10% zniżki na pierwsze zamówienie
