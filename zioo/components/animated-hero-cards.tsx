@@ -21,7 +21,7 @@ const CARDS: Card[] = [
   {
     src: "/deep_unwind_blend.png",
     alt: "Deep Unwind blend",
-    label: "Slep",
+    label: "Sleep",
     rotate: -14,
     translateY: 18,
     translateX: -72,
@@ -30,7 +30,7 @@ const CARDS: Card[] = [
   {
     src: "/clear_mind_blend.png",
     alt: "Clear Mind blend",
-    label: "Fokus",
+    label: "Focus",
     rotate: 0,
     translateY: 0,
     translateX: 0,
@@ -39,7 +39,7 @@ const CARDS: Card[] = [
   {
     src: "/social_spark_blend.png",
     alt: "Social Spark blend",
-    label: "Fresz",
+    label: "Fresh",
     rotate: 14,
     translateY: 18,
     translateX: 72,

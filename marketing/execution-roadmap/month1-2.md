@@ -82,7 +82,7 @@ Don't produce new content. Re-use the top organic content from Brief #5 as ads. 
 | Ad # | Source                          | Format | Primary text (Polish)                                                                  | Headline           | CTA      |
 | ---- | ------------------------------- | ------ | -------------------------------------------------------------------------------------- | ------------------ | -------- |
 | Ad 1 | Best-performing Reel (unboxing) | Video  | "Mieszanki ziołowe z terpenami z konopi. Naturalna kompozycja botaniczna."             | "Odkryj Zioo"      | Shop Now |
-| Ad 2 | Lifestyle flat-lay photo        | Image  | "Czill — mieszanka na wieczorny relaks. Dziewanna, malina, pokrzywa, lawenda, melisa." | "Zamów swój blend" | Shop Now |
+| Ad 2 | Lifestyle flat-lay photo        | Image  | "Chill — mieszanka na wieczorny relaks. Dziewanna, malina, pokrzywa, lawenda, melisa." | "Zamów swój blend" | Shop Now |
 | Ad 3 | Brewing Reel                    | Video  | "Herbata z czegoś nowego. Spróbuj mieszanki z terpenami."                              | "Sprawdź"          | Shop Now |
 
 **Ad copy rules:**
@@ -205,7 +205,7 @@ Headline 1: Zioo — Mieszanki Ziołowe
 Headline 2: Kompozycje Botaniczne z Terpenami
 Headline 3: Wysyłka w 24h z InPost
 Description 1: Naturalne mieszanki ziołowe. 4 unikalne blendy. Zamów online na zioo.pl.
-Description 2: Fresz, Czill, Fokus, Slep — odkryj swój ulubiony blend. Bezpieczna płatność BLIK/kartą.
+Description 2: Fresh, Chill, Focus, Sleep — odkryj swój ulubiony blend. Bezpieczna płatność BLIK/kartą.
 ```
 
 Ad Group 2 (Category):
@@ -317,7 +317,7 @@ Campaign: Zioo — Retargeting
 | Ad Set          | Message (Polish)                                                | Visual                                                                         | CTA           |
 | --------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------------- |
 | Cart abandoners | "Twój blend czeka 🌿 Dokończ zamówienie na zioo.pl"             | Product photo from their viewed product (or generic if dynamic isn't possible) | "Zamów teraz" |
-| Product viewers | "Czill, Fresz, Fokus czy Slep? Znajdź swój blend."              | Carousel of 4 blend photos                                                     | "Sprawdź"     |
+| Product viewers | "Chill, Fresh, Focus czy Sleep? Znajdź swój blend."             | Carousel of 4 blend photos                                                     | "Sprawdź"     |
 | All visitors    | "Mieszanki ziołowe z terpenami z konopi. Naturalna kompozycja." | Lifestyle photo or best-performing organic video                               | "Odkryj Zioo" |
 
 **Frequency cap:** 3-5 impressions per person per week. More than that feels stalky and annoys people. Small retargeting audiences burn out fast.

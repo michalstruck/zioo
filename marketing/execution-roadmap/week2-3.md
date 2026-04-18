@@ -127,11 +127,11 @@ This is the first content your audience will ever see. It sets the tone. It must
 
 **Piece 1-2: "Co jest w środku?" unboxing (Reel/TikTok)**
 
-| Spec     | Value                                                                  |
-| -------- | ---------------------------------------------------------------------- |
-| Format   | Vertical video, 9:16, 1080×1920px                                      |
-| Duration | 15-25 seconds                                                          |
-| Platform | Post to TikTok first, then IG Reel                                     |
+| Spec     | Value                                                                   |
+| -------- | ----------------------------------------------------------------------- |
+| Format   | Vertical video, 9:16, 1080×1920px                                       |
+| Duration | 15-25 seconds                                                           |
+| Platform | Post to TikTok first, then IG Reel                                      |
 | Sound    | Original ASMR audio (crinkling sachet, herbs pouring). No music needed. |
 
 Script outline:
@@ -204,7 +204,7 @@ Design rules for carousels:
 
 Script outline:
 
-1. (0-3s) HOOK: Text overlay "Herbata z Czill 🌿" while opening the sachet
+1. (0-3s) HOOK: Text overlay "Herbata z Chill 🌿" while opening the sachet
 2. (3-12s) Pinch-pour herbs into an infuser/teacup. Show the water being poured. Steam rising.
 3. (12-20s) Let it steep. Show the color change in the cup.
 4. (20-30s) First sip reaction. Smile, nod, or a simple "Dobra." — keep it real, not acted.
@@ -223,7 +223,7 @@ This video does two things: shows the tea use case (compliance) and looks genuin
 
 Story sequence:
 
-1. Shot of raw herb ingredients laid out on a table — text: "Dzisiejszy blend: Fokus"
+1. Shot of raw herb ingredients laid out on a table — text: "Dzisiejszy blend: Focus"
 2. Weighing herbs on a precision scale — text: "30% dziewanna, 30% malina..."
 3. Mixing/blending in a bowl — show the hands, the texture
 4. Packing into sachets — quick clip, satisfying
@@ -247,7 +247,7 @@ Scene: product on a nightstand or desk with complementary props (candle, book, p
 Caption framework:
 
 ```
-[Short, punchy statement about the mood — e.g., "Wieczór z Czill."]
+[Short, punchy statement about the mood — e.g., "Wieczór z Chill."]
 [1 sentence about the blend — what it is, how it smells, what it's for]
 [CTA or conversational closer — "A Ty, jak relaksujesz się wieczorem?"]
 
@@ -300,7 +300,7 @@ These blog posts serve three purposes: (1) capture organic search traffic for re
 | 2   | "Mieszanki ziołowe — naturalny sposób na relaks" | mieszanki ziołowe    | zioła na relaks, herbata ziołowa                       | All product pages              |
 | 3   | "Aromaterapia ziołowa — jak to działa?"          | aromaterapia ziołowa | mieszanka do aromatyzacji, relaks z ziołami            | Product pages + Post #1        |
 | 4   | "Efekt entourage — co to jest i jak działa?"     | efekt entourage      | terpeny, konopie, synergia                             | Post #1 + Terpene products     |
-| 5   | "Jak wybrać mieszankę ziołową dla siebie?"       | mieszanka ziołowa    | porównanie mieszanek, relaks, fokus, sen               | All product pages (comparison) |
+| 5   | "Jak wybrać mieszankę ziołową dla siebie?"       | mieszanka ziołowa    | porównanie mieszanek, relaks, focus, sen               | All product pages (comparison) |
 
 **Article structure (apply to every post):**
 

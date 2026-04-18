@@ -27,9 +27,9 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    id: "slep-single",
+    id: "sleep-single",
     type: "single",
-    name: "Slep",
+    name: "Sleep",
     price: 6.99,
     tagline: "Sen & Relaks",
     blendProfile: [
@@ -52,9 +52,9 @@ export const products: Product[] = [
       "Inhaluj lub zaparz jako napar pod koniec dnia. Aby w pełni docenić właściwości odprężające, sugerujemy stosowanie w wyciszonym otoczeniu, w cyklu przed snem.",
   },
   {
-    id: "czill-single",
+    id: "chill-single",
     type: "single",
-    name: "Czill",
+    name: "Chill",
     price: 6.99,
     tagline: "Euforia & Nastrój",
     blendProfile: [
@@ -77,11 +77,11 @@ export const products: Product[] = [
       "Zażyj wedle preferencji przed wyjściem na miasto lub w momencie kiedy potrzebujesz delikatnego, trwałego wyrzutu pozytywnej energii.",
   },
   {
-    id: "fokus-single",
+    id: "focus-single",
     type: "single",
-    name: "Fokus",
+    name: "Focus",
     price: 6.99,
-    tagline: "Fokus & Klarowność",
+    tagline: "Focus & Klarowność",
     blendProfile: [
       { herb: "Dziewanna", pct: 30 },
       { herb: "Malina", pct: 30 },
@@ -102,9 +102,9 @@ export const products: Product[] = [
       "Używaj podczas pracy kreatywnej lub wymagającej intelektualnie. Najlepiej współdziała ze słuchawkami i dobrym ambientem.",
   },
   {
-    id: "czill-terpene-single",
+    id: "chill-terpene-single",
     type: "single",
-    name: "Czill",
+    name: "Chill",
     price: 9.99,
     tagline: "Euforia & Nastrój",
     blendProfile: [
@@ -135,9 +135,9 @@ export const products: Product[] = [
       "Dobry wybór na spotkania ze znajomymi lub chwile twórcze.",
   },
   {
-    id: "slep-terpene-single",
+    id: "sleep-terpene-single",
     type: "single",
-    name: "Slep",
+    name: "Sleep",
     price: 9.99,
     tagline: "Sen & Relaks",
     blendProfile: [
@@ -167,11 +167,11 @@ export const products: Product[] = [
     usageInstructions: "Zarezerwowane na wieczory i chwile pełnego chillu.",
   },
   {
-    id: "fokus-terpene-single",
+    id: "focus-terpene-single",
     type: "single",
-    name: "Fokus",
+    name: "Focus",
     price: 9.99,
-    tagline: "Fokus & Klarowność",
+    tagline: "Focus & Klarowność",
     blendProfile: [
       { herb: "Dziewanna", pct: 30 },
       { herb: "Malina", pct: 30 },
@@ -200,9 +200,9 @@ export const products: Product[] = [
       "Poranny rozruch lub wsparcie na długi dystans przy pracy umysłowej.",
   },
   {
-    id: "fresz-single",
+    id: "fresh-single",
     type: "single",
-    name: "Fresz",
+    name: "Fresh",
     price: 6.99,
     tagline: "Orzeźwienie & Balans",
     blendProfile: [
@@ -227,9 +227,9 @@ export const products: Product[] = [
   },
   // bundles
   {
-    id: "slep-three-bundle",
+    id: "sleep-three-bundle",
     type: "bundle",
-    name: "Zestaw Slep 3x",
+    name: "Zestaw Sleep 3x",
     price: 14.99,
     tagline: "Sen & Relaks",
     blendProfile: [
@@ -252,9 +252,9 @@ export const products: Product[] = [
       "Inhaluj lub zaparz jako napar pod koniec dnia. Aby w pełni docenić właściwości odprężające, sugerujemy stosowanie w wyciszonym otoczeniu, w cyklu przed snem.",
   },
   {
-    id: "czill-three-bundle",
+    id: "chill-three-bundle",
     type: "bundle",
-    name: "Zestaw Czill 3x",
+    name: "Zestaw Chill 3x",
     price: 14.99,
     tagline: "Euforia & Nastrój",
     blendProfile: [
@@ -277,11 +277,11 @@ export const products: Product[] = [
       "Zażyj wedle preferencji przed wyjściem na miasto lub w momencie kiedy potrzebujesz delikatnego, trwałego wyrzutu pozytywnej energii.",
   },
   {
-    id: "fokus-three-bundle",
+    id: "focus-three-bundle",
     type: "bundle",
-    name: "Zestaw Fokus 3x",
+    name: "Zestaw Focus 3x",
     price: 14.99,
-    tagline: "Fokus & Klarowność",
+    tagline: "Focus & Klarowność",
     blendProfile: [
       { herb: "Dziewanna", pct: 30 },
       { herb: "Malina", pct: 30 },
@@ -302,9 +302,9 @@ export const products: Product[] = [
       "Używaj podczas pracy kreatywnej lub wymagającej intelektualnie. Najlepiej współdziała ze słuchawkami i dobrym ambientem.",
   },
   {
-    id: "czill-terpene-three-bundle",
+    id: "chill-terpene-three-bundle",
     type: "bundle",
-    name: "Zestaw Czill 3x",
+    name: "Zestaw Chill 3x",
     price: 24.99,
     tagline: "Euforia & Nastrój",
     blendProfile: [
@@ -335,9 +335,9 @@ export const products: Product[] = [
       "Dobry wybór na spotkania ze znajomymi lub chwile twórcze.",
   },
   {
-    id: "slep-terpene-three-bundle",
+    id: "sleep-terpene-three-bundle",
     type: "bundle",
-    name: "Zestaw Slep 3x",
+    name: "Zestaw Sleep 3x",
     price: 24.99,
     tagline: "Sen & Relaks",
     blendProfile: [
@@ -367,11 +367,11 @@ export const products: Product[] = [
     usageInstructions: "Zarezerwowane na wieczory i chwile pełnego chillu.",
   },
   {
-    id: "fokus-terpene-three-bundle",
+    id: "focus-terpene-three-bundle",
     type: "bundle",
-    name: "Zestaw Fokus 3x",
+    name: "Zestaw Focus 3x",
     price: 24.99,
-    tagline: "Fokus & Klarowność",
+    tagline: "Focus & Klarowność",
     blendProfile: [
       { herb: "Dziewanna", pct: 30 },
       { herb: "Malina", pct: 30 },
@@ -400,9 +400,9 @@ export const products: Product[] = [
       "Poranny rozruch lub wsparcie na długi dystans przy pracy umysłowej.",
   },
   {
-    id: "fresz-three-bundle",
+    id: "fresh-three-bundle",
     type: "bundle",
-    name: "Zestaw Fresz 3x",
+    name: "Zestaw Fresh 3x",
     price: 14.99,
     tagline: "Orzeźwienie & Balans",
     blendProfile: [

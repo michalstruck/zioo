@@ -27,8 +27,8 @@
 - **Current state:** Single-use 0.5g sachets in two formats: Natural line in 5×8cm matte white bags, Terpene-Infused line in 5×8cm matte black bags. Printed labels applied on both sides.
 - **Key Initiatives:**
   - **Initiative 1 - Label Design:** Decide between transparent vs. colored labels. Transparent shows the herb (builds trust, "look what's inside"), colored is more brandable. Recommendation: **transparent front, branded back**. Front shows the blend, back carries the Zioo logo, blend name, ingredient list, and a QR code to the product page.
-  - **Initiative 2 - Label Content:** Per label: blend name (Fresz/Czill/Fokus/Slep), full ingredient list in Polish, net weight, "Mieszanka do aromatyzacji / Herbata ziołowa" descriptor, Zioo logo, QR code. No health claims. No combustion references.
-  - **Initiative 3 - Pictograms (optional):** Minimalist icons for the blend's "mood" (e.g., leaf for Fresz, moon for Slep). Keeps it premium without needing full custom print yet.
+  - **Initiative 2 - Label Content:** Per label: blend name (Fresh/Chill/Focus/Sleep), full ingredient list in Polish, net weight, "Mieszanka do aromatyzacji / Herbata ziołowa" descriptor, Zioo logo, QR code. No health claims. No combustion references.
+  - **Initiative 3 - Pictograms (optional):** Minimalist icons for the blend's "mood" (e.g., leaf for Fresh, moon for Sleep). Keeps it premium without needing full custom print yet.
 
 ### Phase 1: Organic Tease & Educate (Weeks 1-4)
 
@@ -73,7 +73,7 @@
 - **Cultural positioning (aesthetic, vibe, channels, visual language):** The target audience recognizes the product for what it is through context, not words. We don't say it; we show it through:
   - Channel selection (posting where the audience already is)
   - Visual language (lifestyle shots that resonate with the scene, not stock-photo tea ceremonies)
-  - Product naming (Fresz, Czill, Fokus, Slep — these names speak for themselves)
+  - Product naming (Fresh, Chill, Focus, Sleep — these names speak for themselves)
   - Terpene strain names (Girl Scout Cookies, Lemon Skunk, Purple Punch — instant recognition for the target audience)
 
 **The tea angle is not fake** — these herbs genuinely make good tea. It's a real secondary use case that gives us regulatory cover AND an additional selling point. Some customers will literally brew it. That's fine — it's a bonus.

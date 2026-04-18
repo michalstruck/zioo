@@ -74,7 +74,7 @@ Available marketing agent skills that should be invoked at appropriate stages:
 
 **Front label must contain:**
 
-- Blend name (Fresz / Czill / Fokus / Slep)
+- Blend name (Fresh / Chill / Focus / Sleep)
 - Optional: minimalist mood icon (leaf, moon, etc.)
 - Keep it clean and minimal
 
@@ -132,7 +132,7 @@ Available marketing agent skills that should be invoked at appropriate stages:
 
 This is the single most important asset for everything downstream (website, ads, social). Bad photos kill conversions. Good photos sell the product.
 
-**Shot list per blend (Fresz, Czill, Fokus, Slep — regular + terpene = up to 8 variants):**
+**Shot list per blend (Fresh, Chill, Focus, Sleep — regular + terpene = up to 8 variants):**
 
 | Shot type           | Description                                                                 | Qty per blend |
 | ------------------- | --------------------------------------------------------------------------- | ------------- |

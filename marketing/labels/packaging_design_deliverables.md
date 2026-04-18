@@ -15,7 +15,7 @@ We are defining the physical identity of Zioo. We operate under the aesthetic of
 - **Background:** Labels must be fully colored on both sides (refer to the Antique Paper #FBF9F4 or Desaturated Sage #6B7F6A as base background colors).
 - **Typography:** Public Sans for primary text, Fraunces for accents (product names or mood words).
 - **Front Label Elements:**
-  - Blend Name (Fresz, Czill, Fokus, Slep).
+  - Blend Name (Fresh, Chill, Focus, Sleep).
   - Minimalist mood icon (e.g., leaf, moon, abstract wave).
   - Keep it extraordinarily clean. White space is our friend.
 - **Back Label Elements:**
@@ -47,12 +47,12 @@ Designer, please provide the structural mockups for these labels, the documented
 **Front Label Architecture (Natural line: ~4×5.5cm / Terpene line: ~4×6.5cm)**
 
 - **Base Layer:** Background filled with Antique Paper (`#FBF9F4`) — contrasts cleanly against the matte white bag (Natural) and provides warmth against the matte black bag (Terpene).
-- **Top-Center (Y: 15%):** Minimalist Mood Icon (e.g., a fluid, organic crescent moon for _Slep_, an abstract botanical wave for _Fresz_) rendered in Soft Ink Black (`#121625`).
+- **Top-Center (Y: 15%):** Minimalist Mood Icon (e.g., a fluid, organic crescent moon for _Sleep_, an abstract botanical wave for _Fresh_) rendered in Soft Ink Black (`#121625`).
 - **Center (Y: 50%):** Blend Name in Fraunces (Italicized, 28pt), centered, in Soft Ink Black (`#121625`).
 - **Bottom-Center (Y: 85%):** Subtle accent line / border element in Linen (`#E2E2D5`), separating the name from the bottom edge.
 
-![Zioo Fresz Front Label Concept](./fresz_label_front_1775319044283.png)
-![Zioo Slep Front Label Concept](./slep_label_front_1775319069082.png)
+![Zioo Fresh Front Label Concept](./fresh_label_front_1775319044283.png)
+![Zioo Sleep Front Label Concept](./sleep_label_front_1775319069082.png)
 
 **Back Label Architecture (Natural line: ~4×5.5cm / Terpene line: ~4×6.5cm)**
 
@@ -65,7 +65,7 @@ Designer, please provide the structural mockups for these labels, the documented
 - **Bottom-Left (Y: 75%):** Net weight ("0,5g netto") and Batch Number box (A small unfilled rectangle with a Linen `#E2E2D5` 1px border).
 - **Bottom-Right (Y: 75%):** Scalable vector QR Code pointing to zioo.pl product URL (1x1cm).
 
-![Zioo Fresz Back Label Concept](./fresz_back_label_1775319090488.png)
+![Zioo Fresh Back Label Concept](./fresh_back_label_1775319090488.png)
 
 ---
 
@@ -76,8 +76,8 @@ Designer, please provide the structural mockups for these labels, the documented
 - **`#FBF9F4` (Antique Paper):** Primary background color for labels. Provides warmth and organic texture — contrasts cleanly against the matte white bag (Natural) and pops against the matte black bag (Terpene).
 - **`#FFFFFF` (Sterile White):** Reserved for surface highlights or QR code backgrounds (to ensure scannability).
 - **`#6B7F6A` (Desaturated Sage):** Primary brand accent color. Used for highlighting the terpene profile text and subtle iconography.
-- **`#A27FE2` (Lilac):** Secondary accent. Used specifically for the _Slep_ / _Czill_ mood variations to evoke relaxation.
-- **`#C48464` (Terracotta / Clay):** Secondary accent. Used for _Fokus_ / _Fresz_ to evoke earthiness and energy.
+- **`#A27FE2` (Lilac):** Secondary accent. Used specifically for the _Sleep_ / _Chill_ mood variations to evoke relaxation.
+- **`#C48464` (Terracotta / Clay):** Secondary accent. Used for _Focus_ / _Fresh_ to evoke earthiness and energy.
 - **`#121625` (Soft Ink Black):** Primary typography and logo color. Softer than pure black to maintain the Clinical Naturalism feel.
 - **`#E2E2D5` (Linen):** Used strictly for borders, batch number boxes, and subtle dividing lines.
 
@@ -87,7 +87,7 @@ Designer, please provide the structural mockups for these labels, the documented
    - Use: Body copy, ingredients, net weight, descriptors, batch tags.
    - Weights: Regular (400) for body, Bold (700) for primary functional text. All-caps with high tracking (letter-spacing) for micro-copy (e.g., descriptors).
 2. **Fraunces:**
-   - Use: Product/Blend Names (Fresz, Czill, Fokus, Slep), Hero accents.
+   - Use: Product/Blend Names (Fresh, Chill, Focus, Sleep), Hero accents.
    - Weights: Italicized/Regular (400). Provides an apothecary, premium elegance to counterbalance the sterile Public Sans.
 
 ---

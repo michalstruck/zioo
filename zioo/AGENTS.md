@@ -22,7 +22,7 @@ For all UI/UX work, styling, and design-related decisions, you **MUST** read and
 
 Available blends (7 products total across 2 lines: Natural & Terpene-Infused):
 
-Fresz
+Fresh
 20% Dziewanna
 20% Malina
 20% Szałwia
@@ -31,7 +31,7 @@ Fresz
 10% Prawoślaz
 No terpene infused line for this one
 
-Czill
+Chill
 30% Dziewanna
 30% Malina
 20% Pokrzywa
@@ -39,7 +39,7 @@ Czill
 10% Melisa
 Terpene (Infused Line Only) - Girl Scout Cookies
 
-Fokus
+Focus
 30% Dziewanna
 30% Malina
 15% Pokrzywa
@@ -47,7 +47,7 @@ Fokus
 10% Mięta
 Terpene (Infused Line Only) - Lemon Skunk
 
-Slep
+Sleep
 30% Dziewanna
 30% Malina
 20% Pokrzywa
