@@ -18,6 +18,13 @@ export function ProductDetails({ product }: { product: Product }) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [api, setApi] = useState<any>();
+  const [selectedBundleId, setSelectedBundleId] = useState<string>(
+    product.bundles[0]?.id,
+  );
+
+  const selectedBundle =
+    product.bundles.find((b) => b.id === selectedBundleId) ||
+    product.bundles[0];
 
   return (
     <>
@@ -154,12 +161,58 @@ export function ProductDetails({ product }: { product: Product }) {
                     : { color: "var(--primary)" }
                 }
               >
-                {formatPrice(product.price)}
+                {formatPrice(selectedBundle?.price || 0)}
               </span>
             </div>
-            <p className="text-xs font-sans text-muted-foreground font-black tracking-[0.3em] uppercase mb-10 opacity-70">
+            <p className="text-xs font-sans text-muted-foreground font-black tracking-widest uppercase mb-10 opacity-70">
               {product.tagline}
             </p>
+
+            {/* Bundle Selector */}
+            {product.bundles.length > 1 && (
+              <div className="mb-10">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-sm font-sans uppercase font-bold tracking-widest text-secondary">
+                    Wybierz ilość
+                  </span>
+                </div>
+                <div className="flex gap-3">
+                  {product.bundles.map((bundle) => (
+                    <button
+                      key={bundle.id}
+                      onClick={() => setSelectedBundleId(bundle.id)}
+                      className={`flex-1 py-3 px-2 sm:px-4 rounded-xl border-2 transition-all flex flex-col items-center gap-1 cursor-pointer ease-out-expo duration-300 ${
+                        selectedBundleId === bundle.id
+                          ? "border-primary bg-primary/10 scale-100 shadow-sm"
+                          : "border-border/50 hover:border-border scale-[0.98] opacity-70 hover:opacity-100"
+                      }`}
+                      style={
+                        selectedBundleId === bundle.id && product.terpeneStyle
+                          ? {
+                              borderColor: product.terpeneStyle.primary,
+                              backgroundColor: `${product.terpeneStyle.primary}08`,
+                            }
+                          : {}
+                      }
+                    >
+                      <span
+                        className="font-heading font-black text-xl"
+                        style={
+                          selectedBundleId === bundle.id && product.terpeneStyle
+                            ? { color: product.terpeneStyle.primary }
+                            : {}
+                        }
+                      >
+                        {bundle.size} szt.
+                      </span>
+                      <span className="text-xs font-sans font-medium whitespace-nowrap opacity-80">
+                        {formatPrice(bundle.price)}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Main Description */}
             <p
@@ -253,7 +306,7 @@ export function ProductDetails({ product }: { product: Product }) {
 
           {/* Sticky footer for Add to Cart */}
           <div className="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-background via-background/95 to-transparent pt-12">
-            <AddToCartButton product={product} />
+            <AddToCartButton product={product} bundle={selectedBundle} />
           </div>
         </div>
       </div>

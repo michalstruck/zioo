@@ -8,11 +8,17 @@ export type TerpeneStyle = {
   text: string; // Text color on primary background
 };
 
+export type ProductBundleId = "3-pack" | "5-pack" | "7-pack";
+
+export type ProductBundle = {
+  id: ProductBundleId;
+  size: number;
+  price: number;
+};
+
 export type Product = {
   id: string;
-  type: "single" | "bundle";
   name: string;
-  price: number;
   tagline: string;
   blendProfile: BlendIngredient[];
   primaryTerpene?: string;
@@ -23,15 +29,18 @@ export type Product = {
   description: string;
   ingredientsDeepDive: string;
   usageInstructions: string;
+  bundles: ProductBundle[];
 };
 
 export const products: Product[] = [
   {
-    id: "sleep-single",
-    type: "single",
+    id: "sleep",
     name: "Sleep",
-    price: 6.99,
     tagline: "Sen & Relaks",
+    bundles: [
+      { id: "3-pack", size: 3, price: 9.99 },
+      { id: "5-pack", size: 5, price: 14.99 },
+    ],
     blendProfile: [
       { herb: "Dziewanna", pct: 30 },
       { herb: "Malina", pct: 30 },
@@ -52,11 +61,13 @@ export const products: Product[] = [
       "Inhaluj lub zaparz jako napar pod koniec dnia. Aby w pełni docenić właściwości odprężające, sugerujemy stosowanie w wyciszonym otoczeniu, w cyklu przed snem.",
   },
   {
-    id: "chill-single",
-    type: "single",
+    id: "chill",
     name: "Chill",
-    price: 6.99,
     tagline: "Euforia & Nastrój",
+    bundles: [
+      { id: "3-pack", size: 3, price: 9.99 },
+      { id: "5-pack", size: 5, price: 14.99 },
+    ],
     blendProfile: [
       { herb: "Dziewanna", pct: 30 },
       { herb: "Malina", pct: 30 },
@@ -77,11 +88,13 @@ export const products: Product[] = [
       "Zażyj wedle preferencji przed wyjściem na miasto lub w momencie kiedy potrzebujesz delikatnego, trwałego wyrzutu pozytywnej energii.",
   },
   {
-    id: "focus-single",
-    type: "single",
+    id: "focus",
     name: "Focus",
-    price: 6.99,
     tagline: "Focus & Klarowność",
+    bundles: [
+      { id: "3-pack", size: 3, price: 9.99 },
+      { id: "5-pack", size: 5, price: 14.99 },
+    ],
     blendProfile: [
       { herb: "Dziewanna", pct: 30 },
       { herb: "Malina", pct: 30 },
@@ -102,109 +115,13 @@ export const products: Product[] = [
       "Używaj podczas pracy kreatywnej lub wymagającej intelektualnie. Najlepiej współdziała ze słuchawkami i dobrym ambientem.",
   },
   {
-    id: "chill-terpene-single",
-    type: "single",
-    name: "Chill",
-    price: 9.99,
-    tagline: "Euforia & Nastrój",
-    blendProfile: [
-      { herb: "Dziewanna", pct: 30 },
-      { herb: "Malina", pct: 30 },
-      { herb: "Pokrzywa", pct: 20 },
-      { herb: "Lawenda", pct: 10 },
-      { herb: "Melisa", pct: 10 },
-    ],
-    primaryTerpene: "Girl Scout Cookies",
-    terpeneStyle: {
-      primary: "#0F7B6E",
-      text: "#ffffff",
-    },
-    images: [
-      "/social_spark_blend.png",
-      "/social_spark_blend.png",
-      "/social_spark_blend.png",
-      "/social_spark_blend.png",
-      "/social_spark_blend.png",
-      "/social_spark_blend.png",
-    ],
-    description:
-      "Rozpal swoją kreatywność w nowym, naturalnym wymiarze, okraszonym profilem terpenowym słynnego GSC. Euforyczna poprawa nastroju, rozluźnienie i skok inspiracji.",
-    ingredientsDeepDive:
-      "Dziewanna daje wsparcie objętościowe, zaś prawoślaz i lawenda uspokajają przed bodźcami. Zastosowaliśmy profil terpenowy inspirowany szczepem GSC (Mircen, Kariofilen, i Limonen) aby wzmocnić efekt działania ziół. Rezultatem jest przyjemne i wyraziste poczucie podwyższonej świadomości.",
-    usageInstructions:
-      "Dobry wybór na spotkania ze znajomymi lub chwile twórcze.",
-  },
-  {
-    id: "sleep-terpene-single",
-    type: "single",
-    name: "Sleep",
-    price: 9.99,
-    tagline: "Sen & Relaks",
-    blendProfile: [
-      { herb: "Dziewanna", pct: 30 },
-      { herb: "Malina", pct: 30 },
-      { herb: "Pokrzywa", pct: 20 },
-      { herb: "Róża", pct: 5 },
-      { herb: "Melisa", pct: 15 },
-    ],
-    primaryTerpene: "Purple Punch",
-    terpeneStyle: {
-      primary: "#7A4E9A",
-      text: "#ffffff",
-    },
-    images: [
-      "/deep_unwind_blend.png",
-      "/deep_unwind_blend.png",
-      "/deep_unwind_blend.png",
-      "/deep_unwind_blend.png",
-      "/deep_unwind_blend.png",
-      "/deep_unwind_blend.png",
-    ],
-    description:
-      "Głęboki relaks wsparty wyjątkowym, słodko-kadzidłowym profilem terpenowym Purple Punch. Twój bilet do najgłębszych zakamarków spokoju i regeneracyjnej nocy.",
-    ingredientsDeepDive:
-      "Damiana i Męczennica zdejmują blokady psychiczne, zaś profil Purple Punch z dominującym Kariofilenem potęguje stan błogiego zawieszenia w chmurach. Jest to profil idealny dla zmęczonych rutyną, chcących silnego odcięcia od dnia.",
-    usageInstructions: "Zarezerwowane na wieczory i chwile pełnego chillu.",
-  },
-  {
-    id: "focus-terpene-single",
-    type: "single",
-    name: "Focus",
-    price: 9.99,
-    tagline: "Focus & Klarowność",
-    blendProfile: [
-      { herb: "Dziewanna", pct: 30 },
-      { herb: "Malina", pct: 30 },
-      { herb: "Pokrzywa", pct: 15 },
-      { herb: "Prawoślaz", pct: 15 },
-      { herb: "Mięta", pct: 10 },
-    ],
-    primaryTerpene: "Lemon Skunk",
-    terpeneStyle: {
-      primary: "#5A8B17",
-      text: "#ffffff",
-    },
-    images: [
-      "/clear_mind_blend.png",
-      "/clear_mind_blend.png",
-      "/clear_mind_blend.png",
-      "/clear_mind_blend.png",
-      "/clear_mind_blend.png",
-      "/clear_mind_blend.png",
-    ],
-    description:
-      "Jasność umysłu nabierająca tempa niczym sycylijska cytryna. Mięta w parze z fuzją terpenową Lemon Skunk to pewność ostrego focusu i niewyczerpanej fali energii.",
-    ingredientsDeepDive:
-      "Baza wspierana cytrusowo-ostrym profilem Lemon Skunku budzi zmysły znacznie mocniej niż standardowe warianty. Terpeny Limonen i Pinen stanowią perfekcyjne dopełnienie dla orzeźwiającej mięty, dostarczając impuls dla kory mózgowej bez nadreaktywności kofeinowej.",
-    usageInstructions:
-      "Poranny rozruch lub wsparcie na długi dystans przy pracy umysłowej.",
-  },
-  {
-    id: "fresh-single",
-    type: "single",
+    id: "fresh",
     name: "Fresh",
-    price: 6.99,
     tagline: "Orzeźwienie & Balans",
+    bundles: [
+      { id: "3-pack", size: 3, price: 9.99 },
+      { id: "5-pack", size: 5, price: 14.99 },
+    ],
     blendProfile: [
       { herb: "Dziewanna", pct: 20 },
       { herb: "Malina", pct: 20 },
@@ -225,88 +142,14 @@ export const products: Product[] = [
     usageInstructions:
       "Inhaluj lub parz jako napar w dowolnym momencie dnia dla uzyskania efektu natychmiastowej świeżości i lekkości.",
   },
-  // bundles
   {
-    id: "sleep-three-bundle",
-    type: "bundle",
-    name: "Zestaw Sleep 3x",
-    price: 14.99,
-    tagline: "Sen & Relaks",
-    blendProfile: [
-      { herb: "Dziewanna", pct: 30 },
-      { herb: "Malina", pct: 30 },
-      { herb: "Pokrzywa", pct: 20 },
-      { herb: "Róża", pct: 5 },
-      { herb: "Melisa", pct: 15 },
-    ],
-    images: [
-      "/deep_unwind_blend.png",
-      "/deep_unwind_blend.png",
-      "/deep_unwind_blend.png",
-    ],
-    description:
-      "Zanurz się w głębokim śnie i pełnym relaksie z naszą nocną mieszanką ziołową. Formuła zaprojektowana by uspokoić umysł, zmniejszyć napięcie nerwowe i ułatwić wejście w najgłębszą fazę snu bez syntetycznych dodatków.",
-    ingredientsDeepDive:
-      "Dziewanna otwiera drogi oddechowe i delikatnie wycisza układ nerwowy, tworząc bezpieczną bazę naszej fuzji. Damiana pomaga rozładować nagromadzone napięcie w ciele, podczas gdy liść maliny działa tonizująco. Melisa to klasyk w farmakognozji snu radzący sobie z lękiem i natłokiem myśli. Wyselekcjonowaliśmy certyfikowane, organiczne surowce o wysokiej zawartości olejków eterycznych.",
-    usageInstructions:
-      "Inhaluj lub zaparz jako napar pod koniec dnia. Aby w pełni docenić właściwości odprężające, sugerujemy stosowanie w wyciszonym otoczeniu, w cyklu przed snem.",
-  },
-  {
-    id: "chill-three-bundle",
-    type: "bundle",
-    name: "Zestaw Chill 3x",
-    price: 14.99,
+    id: "chill-terpene",
+    name: "Chill Terpene",
     tagline: "Euforia & Nastrój",
-    blendProfile: [
-      { herb: "Dziewanna", pct: 30 },
-      { herb: "Malina", pct: 30 },
-      { herb: "Pokrzywa", pct: 20 },
-      { herb: "Lawenda", pct: 10 },
-      { herb: "Melisa", pct: 10 },
+    bundles: [
+      { id: "3-pack", size: 3, price: 14.99 },
+      { id: "5-pack", size: 5, price: 22.99 },
     ],
-    images: [
-      "/social_spark_blend.png",
-      "/social_spark_blend.png",
-      "/social_spark_blend.png",
-    ],
-    description:
-      "Rozpal swoją kreatywność i towarzyski potencjał w naturalny sposób. Social Spark to blend podnoszący nastrój, redukujący napięcie społeczne i promujący otwartą postawę w interakcjach z ludźmi – to twoja nowa, zdrowa alternatywa dla popołudniowej kawy lub alkoholu.",
-    ingredientsDeepDive:
-      "Dziewanna dostarcza gładkiej bazy i usprawnia przepływ. Prawoślaz chroni drogi oddechowe swoją delikatną powłoką, ułatwiając swobodną inhalację. Róża, lawenda i rumianek to starannie zbalansowane nuty kwiatowe działające antydepresyjnie i euforyzująco. Synergia tych ziół sprawia, że czujesz się swobodnie a twoje zmysły ożywają.",
-    usageInstructions:
-      "Zażyj wedle preferencji przed wyjściem na miasto lub w momencie kiedy potrzebujesz delikatnego, trwałego wyrzutu pozytywnej energii.",
-  },
-  {
-    id: "focus-three-bundle",
-    type: "bundle",
-    name: "Zestaw Focus 3x",
-    price: 14.99,
-    tagline: "Focus & Klarowność",
-    blendProfile: [
-      { herb: "Dziewanna", pct: 30 },
-      { herb: "Malina", pct: 30 },
-      { herb: "Pokrzywa", pct: 15 },
-      { herb: "Prawoślaz", pct: 15 },
-      { herb: "Mięta", pct: 10 },
-    ],
-    images: [
-      "/clear_mind_blend.png",
-      "/clear_mind_blend.png",
-      "/clear_mind_blend.png",
-    ],
-    description:
-      "Katalizator skupienia i mentalnej przejrzystości. Autorski blend wspierający prace głęboką (deep work), w momentach kiedy musisz zablokować bodźce z zewnątrz i zanurzyć się w zadaniu z absolutną jasnością umysłu.",
-    ingredientsDeepDive:
-      "Oparta o dziewannę która nadaje ramy i lekkość, dając gładki i przejrzysty aromat w naparze. Pokrzywa działa jak stymulant odczulający system nerwowy, przy jednoczesnej eliminacji blokad, zaś odrobina liści malin dodaje balansu. Świeżość mięty aktywuje i pobudza koncentrację na niespotykanym dotąd poziomie, tworząc wyraźny profil sensoryczny, który zostaje z tobą.",
-    usageInstructions:
-      "Używaj podczas pracy kreatywnej lub wymagającej intelektualnie. Najlepiej współdziała ze słuchawkami i dobrym ambientem.",
-  },
-  {
-    id: "chill-terpene-three-bundle",
-    type: "bundle",
-    name: "Zestaw Chill 3x",
-    price: 24.99,
-    tagline: "Euforia & Nastrój",
     blendProfile: [
       { herb: "Dziewanna", pct: 30 },
       { herb: "Malina", pct: 30 },
@@ -325,7 +168,6 @@ export const products: Product[] = [
       "/social_spark_blend.png",
       "/social_spark_blend.png",
       "/social_spark_blend.png",
-      "/social_spark_blend.png",
     ],
     description:
       "Rozpal swoją kreatywność w nowym, naturalnym wymiarze, okraszonym profilem terpenowym słynnego GSC. Euforyczna poprawa nastroju, rozluźnienie i skok inspiracji.",
@@ -335,11 +177,13 @@ export const products: Product[] = [
       "Dobry wybór na spotkania ze znajomymi lub chwile twórcze.",
   },
   {
-    id: "sleep-terpene-three-bundle",
-    type: "bundle",
-    name: "Zestaw Sleep 3x",
-    price: 24.99,
+    id: "sleep-terpene",
+    name: "Sleep Terpene",
     tagline: "Sen & Relaks",
+    bundles: [
+      { id: "3-pack", size: 3, price: 14.99 },
+      { id: "5-pack", size: 5, price: 22.99 },
+    ],
     blendProfile: [
       { herb: "Dziewanna", pct: 30 },
       { herb: "Malina", pct: 30 },
@@ -358,7 +202,6 @@ export const products: Product[] = [
       "/deep_unwind_blend.png",
       "/deep_unwind_blend.png",
       "/deep_unwind_blend.png",
-      "/deep_unwind_blend.png",
     ],
     description:
       "Głęboki relaks wsparty wyjątkowym, słodko-kadzidłowym profilem terpenowym Purple Punch. Twój bilet do najgłębszych zakamarków spokoju i regeneracyjnej nocy.",
@@ -367,11 +210,13 @@ export const products: Product[] = [
     usageInstructions: "Zarezerwowane na wieczory i chwile pełnego chillu.",
   },
   {
-    id: "focus-terpene-three-bundle",
-    type: "bundle",
-    name: "Zestaw Focus 3x",
-    price: 24.99,
+    id: "focus-terpene",
+    name: "Focus Terpene",
     tagline: "Focus & Klarowność",
+    bundles: [
+      { id: "3-pack", size: 3, price: 14.99 },
+      { id: "5-pack", size: 5, price: 22.99 },
+    ],
     blendProfile: [
       { herb: "Dziewanna", pct: 30 },
       { herb: "Malina", pct: 30 },
@@ -390,7 +235,6 @@ export const products: Product[] = [
       "/clear_mind_blend.png",
       "/clear_mind_blend.png",
       "/clear_mind_blend.png",
-      "/clear_mind_blend.png",
     ],
     description:
       "Jasność umysłu nabierająca tempa niczym sycylijska cytryna. Mięta w parze z fuzją terpenową Lemon Skunk to pewność ostrego focusu i niewyczerpanej fali energii.",
@@ -400,29 +244,21 @@ export const products: Product[] = [
       "Poranny rozruch lub wsparcie na długi dystans przy pracy umysłowej.",
   },
   {
-    id: "fresh-three-bundle",
-    type: "bundle",
-    name: "Zestaw Fresh 3x",
-    price: 14.99,
-    tagline: "Orzeźwienie & Balans",
-    blendProfile: [
-      { herb: "Dziewanna", pct: 20 },
-      { herb: "Malina", pct: 20 },
-      { herb: "Pokrzywa", pct: 10 },
-      { herb: "Prawoślaz", pct: 10 },
-      { herb: "Szałwia", pct: 20 },
-      { herb: "Mięta", pct: 20 },
-    ],
+    id: "discovery-pack",
+    name: "Zestaw Startowy",
+    tagline: "Poznaj zioo",
+    bundles: [{ id: "7-pack", size: 7, price: 24.99 }],
+    blendProfile: [],
     images: [
-      "/clear_mind_blend.png",
-      "/clear_mind_blend.png",
+      "/deep_unwind_blend.png",
+      "/social_spark_blend.png",
       "/clear_mind_blend.png",
     ],
     description:
-      "Poczuj przypływ naturalnej świeżości. Idealnie zbalansowana mieszanka ziół z wyraźną nutą mięty i szałwii, stworzona by oczyścić zmysły i dodać lekkości każdemu dniu.",
+      "Nie wiesz co wybrać? Zestaw Startowy zawiera wszystkie 4 nasze flagowe naturalne blendy i po 1 sztuce każdego wariantu terpenowego w poręcznym opakowaniu The Discovery Pack.",
     ingredientsDeepDive:
-      "Unikalne połączenie mięty i szałwii zapewnia intensywne doznania sensoryczne, podczas gdy pokrzywa i prawoślaz wspierają naturalną równowagę organizmu. Baza z dziewanny i liści malin gwarantuje aksamitną gładkość i doskonałe dopełnienie profilu.",
+      "Znajdziesz tu pełen przekrój naszych innowacyjnych aromatyzacji, zaprojektowanych specjalnie pod codzienne wyzwania, tak abyś na każdym szczeblu swojego dnia znalazł idealny odpowiednik w smaku zioo.",
     usageInstructions:
-      "Inhaluj lub parz jako napar w dowolnym momencie dnia dla uzyskania efektu natychmiastowej świeżości i lekkości.",
+      "Wybierz i ciesz się w zależności od nastroju - rano, po południu czy wieczorem.",
   },
 ];

@@ -29,10 +29,11 @@ export function CartDrawer() {
   } = useCart();
   const path = usePathname();
 
-  const subtotal = items.reduce(
-    (acc, { product, quantity }) => acc + product.price * quantity,
-    0,
-  );
+  const subtotal = items.reduce((acc, { product, bundleId, quantity }) => {
+    const bundle =
+      product.bundles.find((b) => b.id === bundleId) || product.bundles[0];
+    return acc + bundle.price * quantity;
+  }, 0);
 
   // show only on store page when empty
   if (cartCount === 0 && path !== "/store") return null;
@@ -92,70 +93,82 @@ export function CartDrawer() {
           </div>
         ) : (
           <ul className=" space-y-4 overflow-y-auto px-6 py-6">
-            {items.map(({ product, quantity }) => (
-              <li
-                key={product.id}
-                className="flex items-center gap-4 p-2 rounded-sm border border-border/20 bg-white  shadow-sm transition-organic hover:shadow-md"
-              >
-                <div className="hidden sm:flex size-12 md:size-24 overflow-hidden rounded-full border border-black/5 items-center justify-center">
-                  <Image
-                    src={product.images?.[0]}
-                    alt={product.name}
-                    width={128}
-                    height={128}
-                  />
-                </div>
-
-                <div className="flex-1">
-                  <p className="truncate text-base font-heading font-medium text-secondary">
-                    {product.name}
-                  </p>
-                  <p className="text-xs font-sans text-primary/60 italic text-wrap whitespace-pre-wrap">
-                    {product.primaryTerpene}
-                  </p>
-                </div>
-
-                <div className="flex flex-col items-center gap-4 mr-4">
-                  {/* Quantity controls */}
-                  <div className="flex items-center gap-1 bg-muted/50 rounded-full border border-border/5">
-                    <Button
-                      variant="ghost"
-                      size="icon-xs"
-                      className="hover:bg-primary/30 bg-primary/20"
-                      onClick={() => updateQuantity(product.id, quantity - 1)}
-                      aria-label={`Zmniejsz ilość ${product.name}`}
-                    >
-                      <Minus className="size-3" />
-                    </Button>
-                    <span className="w-6 text-center text-xs font-bold font-mono">
-                      {quantity}
-                    </span>
-                    <Button
-                      variant="ghost"
-                      size="icon-xs"
-                      className="hover:bg-primary/30 bg-primary/20"
-                      onClick={() => updateQuantity(product.id, quantity + 1)}
-                      aria-label={`Zwiększ ilość ${product.name}`}
-                    >
-                      <Plus className="size-3" />
-                    </Button>
-                  </div>
-                  <span className="text-sm font-heading font-bold text-secondary text-nowrap">
-                    {formatPrice(product.price * quantity)}
-                  </span>
-                </div>
-
-                <Button
-                  variant="ghost"
-                  size="icon-xs"
-                  className="text-destructive/60 hover:text-destructive hover:bg-destructive/10 self-start"
-                  onClick={() => removeFromCart(product.id)}
-                  aria-label={`Usuń ${product.name}`}
+            {items.map(({ product, bundleId, quantity }) => {
+              const bundle =
+                product.bundles.find((b) => b.id === bundleId) ||
+                product.bundles[0];
+              return (
+                <li
+                  key={`${product.id}-${bundleId}`}
+                  className="flex items-center gap-4 p-2 rounded-sm border border-border/20 bg-white  shadow-sm transition-organic hover:shadow-md"
                 >
-                  <Trash2 className="size-4" />
-                </Button>
-              </li>
-            ))}
+                  <div className="hidden sm:flex size-12 md:size-24 overflow-hidden rounded-full border border-black/5 items-center justify-center bg-muted/20">
+                    <Image
+                      src={product.images?.[0]}
+                      alt={product.name}
+                      width={128}
+                      height={128}
+                    />
+                  </div>
+
+                  <div className="flex-1">
+                    <p className="truncate text-base font-heading font-medium text-secondary">
+                      {product.name}
+                    </p>
+                    <p className="text-xs font-sans text-primary/80 font-bold mb-1">
+                      {bundle.size}-pack
+                    </p>
+                    <p className="text-xs font-sans text-primary/60 italic text-wrap whitespace-pre-wrap">
+                      {product.primaryTerpene}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col items-center gap-4 mr-4">
+                    {/* Quantity controls */}
+                    <div className="flex items-center gap-1 bg-muted/50 rounded-full border border-border/5">
+                      <Button
+                        variant="ghost"
+                        size="icon-xs"
+                        className="hover:bg-primary/30 bg-primary/20"
+                        onClick={() =>
+                          updateQuantity(product.id, bundleId, quantity - 1)
+                        }
+                        aria-label={`Zmniejsz ilość ${product.name}`}
+                      >
+                        <Minus className="size-3" />
+                      </Button>
+                      <span className="w-6 text-center text-xs font-bold font-mono">
+                        {quantity}
+                      </span>
+                      <Button
+                        variant="ghost"
+                        size="icon-xs"
+                        className="hover:bg-primary/30 bg-primary/20"
+                        onClick={() =>
+                          updateQuantity(product.id, bundleId, quantity + 1)
+                        }
+                        aria-label={`Zwiększ ilość ${product.name}`}
+                      >
+                        <Plus className="size-3" />
+                      </Button>
+                    </div>
+                    <span className="text-sm font-heading font-bold text-secondary text-nowrap">
+                      {formatPrice(bundle.price * quantity)}
+                    </span>
+                  </div>
+
+                  <Button
+                    variant="ghost"
+                    size="icon-xs"
+                    className="text-destructive/60 hover:text-destructive hover:bg-destructive/10 self-start"
+                    onClick={() => removeFromCart(product.id, bundleId)}
+                    aria-label={`Usuń ${product.name}`}
+                  >
+                    <Trash2 className="size-4" />
+                  </Button>
+                </li>
+              );
+            })}
           </ul>
         )}
 
@@ -170,7 +183,7 @@ export function CartDrawer() {
                 {formatPrice(subtotal)}
               </span>
             </div>
-            <Button size="lg" className="text-lg shadow-md">
+            <Button size="lg" className="text-lg shadow-md" asChild>
               <Link href="/checkout" prefetch>
                 Do kasy
               </Link>

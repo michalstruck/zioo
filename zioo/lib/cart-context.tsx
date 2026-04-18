@@ -14,15 +14,16 @@ import { LocalStorageCart } from "./local-storage";
 
 export type CartItem = {
   product: Product;
+  bundleId: string;
   quantity: number;
 };
 
 type CartContextValue = {
   items: CartItem[];
   cartCount: number;
-  addToCart: (product: Product) => void;
-  removeFromCart: (productId: string) => void;
-  updateQuantity: (productId: string, quantity: number) => void;
+  addToCart: (product: Product, bundleId: string) => void;
+  removeFromCart: (productId: string, bundleId: string) => void;
+  updateQuantity: (productId: string, bundleId: string, quantity: number) => void;
   clearCart: () => void;
   isCartOpen: boolean;
   setIsCartOpen: (open: boolean) => void;
@@ -38,35 +39,43 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setItems(LocalStorageCart.get() ?? []);
   }, []);
 
-  const addToCart = (product: Product) => {
+  const addToCart = (product: Product, bundleId: string) => {
     setItems((prev) => {
-      const isProductInCart = prev.find((i) => i.product.id === product.id);
+      const isProductInCart = prev.find(
+        (i) => i.product.id === product.id && i.bundleId === bundleId
+      );
       if (isProductInCart) {
         const newCart = prev.map((i) =>
-          i.product.id === product.id ? { ...i, quantity: i.quantity + 1 } : i,
+          i.product.id === product.id && i.bundleId === bundleId
+            ? { ...i, quantity: i.quantity + 1 }
+            : i
         );
         LocalStorageCart.set(newCart);
         return newCart;
       }
 
-      const newCart = [...prev, { product, quantity: 1 }];
+      const newCart = [...prev, { product, bundleId, quantity: 1 }];
       LocalStorageCart.set(newCart);
       return newCart;
     });
   };
 
-  const removeFromCart = (productId: string) => {
+  const removeFromCart = (productId: string, bundleId: string) => {
     setItems((prev) => {
-      const newCart = prev.filter((i) => i.product.id !== productId);
+      const newCart = prev.filter(
+        (i) => !(i.product.id === productId && i.bundleId === bundleId)
+      );
       LocalStorageCart.set(newCart);
       return newCart;
     });
   };
 
-  const updateQuantity = (productId: string, quantity: number) => {
+  const updateQuantity = (productId: string, bundleId: string, quantity: number) => {
     if (quantity <= 0) {
       setItems((prev) => {
-        const newCart = prev.filter((i) => i.product.id !== productId);
+        const newCart = prev.filter(
+          (i) => !(i.product.id === productId && i.bundleId === bundleId)
+        );
         LocalStorageCart.set(newCart);
         return newCart;
       });
@@ -74,7 +83,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
     }
     setItems((prev) => {
       const newCart = prev.map((i) =>
-        i.product.id === productId ? { ...i, quantity } : i,
+        i.product.id === productId && i.bundleId === bundleId
+          ? { ...i, quantity }
+          : i,
       );
       LocalStorageCart.set(newCart);
       return newCart;

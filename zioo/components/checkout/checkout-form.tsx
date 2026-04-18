@@ -118,10 +118,11 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
   const selectedPoint = watch("pointName");
   const selectedPointAddress = watch("pointAddress");
 
-  const subtotal = items.reduce(
-    (acc, { product, quantity }) => acc + product.price * quantity,
-    0,
-  );
+  const subtotal = items.reduce((acc, { product, bundleId, quantity }) => {
+    const bundle =
+      product.bundles.find((b) => b.id === bundleId) || product.bundles[0];
+    return acc + bundle.price * quantity;
+  }, 0);
 
   const isFreeShipping = getIsFreeShipping(subtotal);
   const shippingCost = calculateShippingCost(shippingMethod, subtotal);
@@ -420,29 +421,38 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
           </h2>
 
           <ul className="space-y-4 mb-6">
-            {items.map((item) => (
-              <li key={item.product.id} className="flex items-center gap-4">
-                <div className="size-12 overflow-hidden rounded-full border border-black/5 items-center justify-center">
-                  <Image
-                    src={item.product.images?.[0]}
-                    alt={item.product.name}
-                    width={128}
-                    height={128}
-                  />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="font-medium text-sm text-secondary truncate">
-                    {item.product.name}
-                  </p>
-                  <p className="text-xs text-muted-foreground">
-                    Ilość: {item.quantity}
-                  </p>
-                </div>
-                <div className="font-semibold text-sm whitespace-nowrap">
-                  {formatPrice(item.product.price * item.quantity)}
-                </div>
-              </li>
-            ))}
+            {items.map((item) => {
+              // todo: improve undefined behavior
+              const bundle =
+                item.product.bundles.find((b) => b.id === item.bundleId) ||
+                item.product.bundles[0];
+              return (
+                <li
+                  key={`${item.product.id}-${item.bundleId}`}
+                  className="flex items-center gap-4"
+                >
+                  <div className="size-12 overflow-hidden rounded-full border border-black/5 items-center justify-center bg-muted/20">
+                    <Image
+                      src={item.product.images?.[0]}
+                      alt={item.product.name}
+                      width={128}
+                      height={128}
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="font-medium text-sm text-secondary truncate">
+                      {item.product.name}
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      Ilość: {item.quantity} &times; {bundle.size} szt.
+                    </p>
+                  </div>
+                  <div className="font-semibold text-sm whitespace-nowrap">
+                    {formatPrice(bundle.price * item.quantity)}
+                  </div>
+                </li>
+              );
+            })}
           </ul>
 
           <div className="space-y-3 border-t border-border/20 pt-6 mb-6">
