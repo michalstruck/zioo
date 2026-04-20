@@ -221,7 +221,7 @@ export function ProductDetails({ product }: { product: Product }) {
                 borderColor: product.terpeneStyle?.primary || "var(--primary)",
               }}
             >
-              {product.description}
+              {product.subheadline}
             </p>
 
             <div className="space-y-10">
@@ -249,7 +249,7 @@ export function ProductDetails({ product }: { product: Product }) {
                   <span className="h-px flex-1 bg-primary"></span>
                 </h3>
                 <p className="text-secondary/80 leading-relaxed text-md mb-8 font-medium">
-                  {product.ingredientsDeepDive}
+                  {product.ingredientsDescription}
                 </p>
 
                 <ul className="space-y-5">

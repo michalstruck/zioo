@@ -37,7 +37,7 @@ export function CartDrawer() {
 
   // show only on store page when empty
   if (cartCount === 0 && path !== "/store") return null;
-
+  console.log(items);
   return (
     <Sheet open={isCartOpen} onOpenChange={setIsCartOpen}>
       {/* Header-integrated trigger */}
@@ -100,9 +100,9 @@ export function CartDrawer() {
               return (
                 <li
                   key={`${product.id}-${bundleId}`}
-                  className="flex items-center gap-4 p-2 rounded-sm border border-border/20 bg-white  shadow-sm transition-organic hover:shadow-md"
+                  className="flex items-center gap-4 p-2 rounded-sm border border-border/20 bg-white shadow-sm transition-organic hover:shadow-md"
                 >
-                  <div className="hidden sm:flex size-12 md:size-24 overflow-hidden rounded-full border border-black/5 items-center justify-center bg-muted/20">
+                  <div className="hidden xs:flex size-12 sm:size-24 overflow-hidden rounded-full border border-black/5 items-center justify-center bg-muted/20">
                     <Image
                       src={product.images?.[0]}
                       alt={product.name}
@@ -112,13 +112,27 @@ export function CartDrawer() {
                   </div>
 
                   <div className="flex-1">
-                    <p className="truncate text-base font-heading font-medium text-secondary">
+                    <p
+                      className="truncate text-base font-heading font-medium text-secondary"
+                      style={
+                        product.terpeneStyle?.primary
+                          ? { color: product.terpeneStyle.primary }
+                          : {}
+                      }
+                    >
                       {product.name}
                     </p>
                     <p className="text-xs font-sans text-primary/80 font-bold mb-1">
-                      {bundle.size}-pack
+                      {bundle.size} szt.
                     </p>
-                    <p className="text-xs font-sans text-primary/60 italic text-wrap whitespace-pre-wrap">
+                    <p
+                      className="text-xs font-sans text-primary/60 italic text-wrap whitespace-pre-wrap"
+                      style={
+                        product.terpeneStyle?.primary
+                          ? { color: product.terpeneStyle.primary }
+                          : {}
+                      }
+                    >
                       {product.primaryTerpene}
                     </p>
                   </div>

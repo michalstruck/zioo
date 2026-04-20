@@ -169,7 +169,7 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="grid gap-12 lg:grid-cols-12 items-start max-w-sm md:max-w-lg lg:max-w-5xl"
+      className="grid gap-12 lg:grid-cols-12 items-start max-w-md md:max-w-lg lg:max-w-5xl"
     >
       <div className="lg:col-span-7 space-y-12">
         {/* Kontakt */}
