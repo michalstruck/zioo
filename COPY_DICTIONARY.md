@@ -21,12 +21,14 @@ Use the following terms to describe our products and their usage:
 
 - herbata ziołowa (herbal tea)
 - mieszanka do aromatyzacji (aromatization blend)
+- mieszanka ziołowa (herbal blend)
 - napar (infusion / brew)
 - relaks (relaxation)
 - odprężenie (unwinding)
 - aromaterapia (aromatherapy)
 - profil terpenowy (terpene profile) - _for the infused line_
-- kompozycja botaniczna (botanical composition)
+- mentions of chemical compounds found in herbs
+- effects of chemical compounds found in herbs
 
 ---
 

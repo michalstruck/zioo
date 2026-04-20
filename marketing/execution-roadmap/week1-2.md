@@ -192,8 +192,8 @@ Each blend needs a Polish-language product description. Structure:
 
 1. **Headline** (blend name + one-liner benefit) — max 8 words
 2. **Subheadline** — 1 sentence expanding on the mood/use case
-3. **Ingredient list** — with percentages, presented cleanly
-4. **Terpene profile section** (infused line only) — terpene name, aroma description, expected "efekt entourage" benefit
+3. **Terpene profile section (infused line only) / Ingredient benefits (regular line)** — benefits of herbs (for regular line) AND terpene name, aroma description, expected "efekt entourage" benefit (for infused line only). Terpene line extend the regular line.
+4. **Ingredient list** — with percentages, presented cleanly
 5. **Usage suggestions** — "Idealne jako herbata ziołowa lub mieszanka do aromatyzacji." Keep it light, compliant, dual-positioned.
 6. **CTA** — "Dodaj do koszyka" (Add to cart)
 
