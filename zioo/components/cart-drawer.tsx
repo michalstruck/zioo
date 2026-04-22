@@ -122,9 +122,6 @@ export function CartDrawer() {
                     >
                       {product.name}
                     </p>
-                    <p className="text-xs font-sans text-primary/80 font-bold mb-1">
-                      {bundle.size} szt.
-                    </p>
                     <p
                       className="text-xs font-sans text-primary/60 italic text-wrap whitespace-pre-wrap"
                       style={
@@ -134,6 +131,10 @@ export function CartDrawer() {
                       }
                     >
                       {product.primaryTerpene}
+                    </p>
+
+                    <p className="text-xs font-sans text-primary/80 font-bold mb-1">
+                      {bundle.size} szt.
                     </p>
                   </div>
 

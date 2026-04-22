@@ -420,7 +420,10 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
             Twoje zamówienie
           </h2>
 
-          <ul className="space-y-4 mb-6">
+          <ul
+            className="space-y-4 mb-6 ps-0.5"
+            style={{ paddingInlineStart: "0.125rem" }}
+          >
             {items.map((item) => {
               // todo: improve undefined behavior
               const bundle =
@@ -440,11 +443,28 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
                     />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="font-medium text-sm text-secondary truncate">
+                    <p
+                      className="truncate text-base font-heading font-medium text-secondary"
+                      style={
+                        item.product.terpeneStyle?.primary
+                          ? { color: item.product.terpeneStyle.primary }
+                          : {}
+                      }
+                    >
                       {item.product.name}
                     </p>
+                    <p
+                      className="text-xs font-sans text-primary/60 italic text-wrap whitespace-pre-wrap"
+                      style={
+                        item.product.terpeneStyle?.primary
+                          ? { color: item.product.terpeneStyle.primary }
+                          : {}
+                      }
+                    >
+                      {item.product.primaryTerpene}
+                    </p>
                     <p className="text-xs text-muted-foreground">
-                      Ilość: {item.quantity} &times; {bundle.size} szt.
+                      {item.quantity} &times; {bundle.size} szt.
                     </p>
                   </div>
                   <div className="font-semibold text-sm whitespace-nowrap">
@@ -536,7 +556,7 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
             <Button
               type="submit"
               size="lg"
-              className="w-full text-lg shadow-xl"
+              className="w-full text-lg"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Przetwarzanie..." : "Przejdź do płatności"}
