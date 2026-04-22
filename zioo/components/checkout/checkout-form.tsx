@@ -36,7 +36,10 @@ const formSchema = z
     lastName: z.string().min(2, "Nazwisko jest wymagane"),
     email: z.email("Nieprawidłowy adres email"),
     phone: z.string().optional(),
-    shippingMethod: z.enum(["locker", "courier"], "Wybierz metodę wysyłki"),
+    shippingMethod: z.enum(
+      ["inpostLocker", "inpostCourier"],
+      "Wybierz metodę wysyłki",
+    ),
     pointName: z.string().optional(),
     pointAddress: z.string().optional(),
     street: z.string().optional(),
@@ -47,14 +50,14 @@ const formSchema = z
       .refine((val) => val === true, "Akceptacja jest wymagana"),
   })
   .superRefine((data, ctx) => {
-    if (data.shippingMethod === "locker" && !data.pointName) {
+    if (data.shippingMethod === "inpostLocker" && !data.pointName) {
       ctx.addIssue({
         code: "custom",
         message: "Wybierz paczkomat",
         path: ["pointName"],
       });
     }
-    if (data.shippingMethod === "courier") {
+    if (data.shippingMethod === "inpostCourier") {
       if (!data.street)
         ctx.addIssue({
           code: "custom",
@@ -95,7 +98,7 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
       lastName: "",
       email: "",
       phone: "",
-      shippingMethod: "locker",
+      shippingMethod: "inpostLocker",
       pointName: "",
       pointAddress: "",
       street: "",
@@ -227,7 +230,7 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
             <div className="space-y-2 sm:col-span-2">
               <Label htmlFor="phone">
                 Telefon{" "}
-                {shippingMethod !== "courier" && (
+                {shippingMethod !== "inpostCourier" && (
                   <span className="text-muted-foreground font-normal">
                     (Opcjonalny)
                   </span>
@@ -269,12 +272,12 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
               >
                 <div className="relative flex">
                   <RadioGroupItem
-                    value="locker"
-                    id="locker"
+                    value="inpostLocker"
+                    id="inpostLocker"
                     className="peer sr-only"
                   />
                   <Label
-                    htmlFor="locker"
+                    htmlFor="inpostLocker"
                     className="flex flex-1 cursor-pointer flex-col items-center justify-between rounded-xl border-2 border-muted bg-transparent p-4 hover:bg-muted/50 peer-data-[state=checked]:border-primary peer-data-[state=checked]:bg-primary/5 [&:has([data-state=checked])]:border-primary"
                   >
                     <MapPin className="mb-3 h-6 w-6" />
@@ -282,18 +285,18 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
                     <span className="text-sm text-muted-foreground mt-1">
                       {isFreeShipping
                         ? "Darmowa"
-                        : formatPrice(SHIPPING_COST.locker)}
+                        : formatPrice(SHIPPING_COST.inpostLocker)}
                     </span>
                   </Label>
                 </div>
                 <div className="relative flex">
                   <RadioGroupItem
-                    value="courier"
-                    id="courier"
+                    value="inpostCourier"
+                    id="inpostCourier"
                     className="peer sr-only"
                   />
                   <Label
-                    htmlFor="courier"
+                    htmlFor="inpostCourier"
                     className="flex flex-1 cursor-pointer flex-col items-center justify-between rounded-xl border-2 border-muted bg-transparent p-4 hover:bg-muted/50 peer-data-[state=checked]:border-primary peer-data-[state=checked]:bg-primary/5 [&:has([data-state=checked])]:border-primary"
                   >
                     <Truck className="mb-3 h-6 w-6" />
@@ -301,7 +304,7 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
                     <span className="text-sm text-muted-foreground mt-1">
                       {isFreeShipping
                         ? "Darmowa"
-                        : formatPrice(SHIPPING_COST.courier)}
+                        : formatPrice(SHIPPING_COST.inpostCourier)}
                     </span>
                   </Label>
                 </div>
@@ -311,7 +314,7 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
 
           <div
             className={`rounded-xl border bg-card text-card-foreground p-6 shadow-sm mb-4 transition-all ${
-              shippingMethod !== "locker" ? "hidden" : "block"
+              shippingMethod !== "inpostLocker" ? "hidden" : "block"
             }`}
           >
             <h3 className="font-semibold font-heading mb-4 text-lg">
@@ -361,7 +364,7 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
             </div>
           </div>
 
-          {shippingMethod === "courier" && (
+          {shippingMethod === "inpostCourier" && (
             <div className="grid gap-4 mt-4 animate-in fade-in slide-in-from-top-4">
               <div className="space-y-2">
                 <Label htmlFor="street">Ulica i numer domu/mieszkania</Label>
@@ -483,7 +486,9 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
             <div className="flex items-center justify-between text-sm">
               <span className="text-muted-foreground">
                 Dostawa{" "}
-                {shippingMethod === "locker" ? "(Paczkomat 24/7)" : "(Kurier)"}
+                {shippingMethod === "inpostLocker"
+                  ? "(Paczkomat 24/7)"
+                  : "(Kurier)"}
               </span>
               <span
                 className={
@@ -493,7 +498,9 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
                 {isFreeShipping
                   ? "Darmowa"
                   : formatPrice(
-                      SHIPPING_COST[shippingMethod as "locker" | "courier"],
+                      SHIPPING_COST[
+                        shippingMethod as "inpostLocker" | "inpostCourier"
+                      ],
                     )}
               </span>
             </div>

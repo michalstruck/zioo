@@ -30,11 +30,11 @@ const customerSchema = z.object({
   email: z.string().email("Email jest wymagany"),
   // it's optional, but if present it should be a valid phone number
   phone: z.string().optional(),
-  shippingMethod: z.enum(["locker", "courier"]),
-  // locker
+  shippingMethod: z.enum(["inpostLocker", "inpostCourier"]),
+  // inpostLocker
   pointName: z.string().optional(),
   pointAddress: z.string().optional(),
-  // courier
+  // inpostCourier
   street: z.string().optional(),
   zip: z.string().optional(),
   city: z.string().optional(),
@@ -82,7 +82,7 @@ export async function POST(req: Request) {
         price_data: {
           currency: "pln",
           product_data: {
-            name: `${product.name} (${bundle.id})`,
+            name: `${product.name} ${bundle.size} szt.`,
             description: product.primaryTerpene,
           },
           unit_amount: Math.round(bundle.price * 100),
@@ -109,7 +109,7 @@ export async function POST(req: Request) {
         price_data: {
           currency: "pln",
           product_data: {
-            name: `Dostawa: ${customer.shippingMethod === "locker" ? "Paczkomat 24/7" : "Kurier InPost"}`,
+            name: `Dostawa: ${customer.shippingMethod === "inpostLocker" ? "Paczkomat 24/7" : "Kurier InPost"}`,
           },
           unit_amount: Math.round(shippingCost * 100),
         },
@@ -120,7 +120,7 @@ export async function POST(req: Request) {
         price_data: {
           currency: "pln",
           product_data: {
-            name: `Darmowa dostawa: ${customer.shippingMethod === "locker" ? "Paczkomat 24/7" : "Kurier InPost"}`,
+            name: `Darmowa dostawa: ${customer.shippingMethod === "inpostLocker" ? "Paczkomat 24/7" : "Kurier InPost"}`,
           },
           unit_amount: 0,
         },
