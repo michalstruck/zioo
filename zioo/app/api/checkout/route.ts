@@ -4,9 +4,7 @@ import { products } from "@/lib/products";
 import { calculateShippingCost, SHIPPING_METHOD } from "@/lib/consts";
 import z from "zod";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
-  apiVersion: "2024-12-18.acacia",
-});
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
 
 const productMap = new Map(products.map((p) => [p.id, p]));
 
@@ -77,17 +75,25 @@ export async function POST(req: Request) {
           { status: 400 },
         );
       }
-
+      // TODO - use stripe built in Products to handle this - this will create mess in the future
       lineItems.push({
         price_data: {
           currency: "pln",
           product_data: {
-            name: `${product.name} ${bundle.size} szt.`,
-            description: product.primaryTerpene,
+            name: `${product.name} (${product.primaryTerpene}) ${bundle.size} szt.`,
+            images: [
+              // TODO actual images
+              "https://localhost:3000/clear_mind_blend.png",
+              "https://localhost:3000/clear_mind_blend.png",
+            ],
           },
           unit_amount: Math.round(bundle.price * 100),
         },
         quantity: item.quantity,
+        metadata: {
+          zioo_product_id: product.id,
+          zioo_bundle_id: bundle.id,
+        },
       });
     }
 
