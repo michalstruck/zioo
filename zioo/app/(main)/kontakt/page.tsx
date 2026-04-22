@@ -2,7 +2,7 @@ export default function KontaktPage() {
   return (
     <main className="container mx-auto px-4 py-16 md:py-24 max-w-4xl">
       <h1>Kontakt</h1>
-      <div className="prose prose-lg dark:prose-invert max-w-none">
+      <div className="prose prose-lg dark:prose-invert max-w-lg">
         <p>
           Masz pytania, sugestie lub po prostu chcesz się z nami skontaktować?
           Napisz do nas wiadomość na poniższy adres e-mail, odpowiemy w

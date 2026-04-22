@@ -3,7 +3,7 @@ import { CartDrawer } from "./cart-drawer";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 flex h-16 w-full items-center justify-between border-b border-border/10 bg-white backdrop-blur-md px-5 md:h-20 md:px-12 lg:px-20">
+    <header className="sticky top-0 z-50 flex h-16 w-full items-center justify-between border-b border-border/10 bg-white backdrop-blur supports-backdrop-filter:bg-background/60 px-5 md:h-20 md:px-12 lg:px-20">
       <div className="flex items-center gap-6 md:gap-12">
         <Link
           href="/"

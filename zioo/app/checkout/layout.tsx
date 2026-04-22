@@ -28,22 +28,20 @@ export default function CheckoutLayout({
         href="https://geowidget.inpost.pl/inpost-geowidget.css"
       />
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
+        <div className="container flex h-16 items-center justify-center">
           <Link
             href="/store"
-            className="flex items-center gap-2 text-sm font-medium transition-colors hover:text-primary"
+            className="flex items-center flex-1 justify-start ml-4 gap-2 text-md font-medium transition-colors hover:text-primary"
           >
-            <ArrowLeft className="h-4 w-4" />
+            <ArrowLeft className="size-6" />
             Wróć do sklepu
           </Link>
           <Link
             href="/"
-            className="font-heading text-xl font-bold tracking-tight"
+            className="text-2xl flex-1 font-heading font-medium tracking-tight sm:text-3xl md:text-4xl hover:text-primary transition-organic"
           >
             zioo
           </Link>
-          <div className="w-24" />{" "}
-          {/* Spacer for centering the logo on mobile */}
         </div>
       </header>
       <main className="flex-1 flex flex-col pt-8 md:pt-12 px-5">
