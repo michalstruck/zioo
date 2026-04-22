@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Kontakt | zioo",
+  description:
+    "Masz pytania o nasze mieszanki ziołowe, profile terpenowe lub swoje zamówienie? Skontaktuj się z nami. Jesteśmy tu, by pomóc Ci złapać oddech.",
+};
+
 export default function KontaktPage() {
   return (
     <main className="container mx-auto px-4 py-16 md:py-24 max-w-4xl">

@@ -1,6 +1,9 @@
-export const metadata = {
-  title: "zioo — Blog",
-  description: "Wiedza o ziołach, terpenach i relaksie.",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog | Baza wiedzy o botanice i terpenach | zioo",
+  description:
+    "Blog zioo. Dowiedz się, jak działa efekt entourage, poznaj profile terpenowe i odkryj nasze metody na naturalny relaks oraz głębokie odprężenie.",
 };
 
 export default function Blog() {

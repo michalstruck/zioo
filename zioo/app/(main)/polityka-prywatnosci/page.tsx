@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Polityka prywatności | zioo",
+  description:
+    "Bezpieczeństwo przede wszystkim. Sprawdź, jak dbamy o ochronę Twoich danych podczas bezpiecznego zamawiania naszych mieszanek ziołowych online.",
+};
+
 export default function RegulaminPage() {
   return (
     <main className="container mx-auto px-4 py-16 md:py-24 max-w-4xl">

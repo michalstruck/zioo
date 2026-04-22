@@ -17,9 +17,9 @@ const publicSans = Public_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "zioo — Herbal Blends",
+  title: "zioo | Mieszanki ziołowe premium z terpenami",
   description:
-    "Premium botanical blends for relaxation, mood, and clarity. Herbata ziołowa crafted with care.",
+    "Pierwsze w Polsce premium mieszanki ziołowe z profilem terpenowym. Odkryj botaniczne kompozycje stworzone do relaksu, odprężenia i aromatyzacji.",
 };
 
 export default function RootLayout({

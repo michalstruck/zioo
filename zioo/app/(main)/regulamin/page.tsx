@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Regulamin sklepu | zioo",
+  description:
+    "Zasady zakupów, szybka wysyłka i bezpieczne zwroty. Przejrzysty regulamin sklepu zioo dla pełnego komfortu zamawiania Twoich mieszanek ziołowych premium.",
+};
+
 export default function RegulaminPage() {
   return (
     <main className="container mx-auto px-4 py-16 md:py-24 max-w-4xl">
