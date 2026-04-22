@@ -3,30 +3,30 @@ import { CartDrawer } from "./cart-drawer";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 flex h-16 w-full items-center justify-between border-b-4 border-black bg-background px-5 md:h-20 md:px-12 lg:px-20">
-      <div className="flex items-center gap-8">
+    <header className="sticky top-0 z-50 flex h-16 w-full items-center justify-between border-b border-border/10 bg-white backdrop-blur supports-backdrop-filter:bg-background/60 px-5 md:h-20 md:px-12 lg:px-20">
+      <div className="flex items-center gap-6 md:gap-12">
         <Link
           href="/"
-          className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl hover:text-primary transition-colors duration-150"
+          className="text-2xl font-heading font-medium tracking-tight sm:text-3xl md:text-4xl hover:text-primary transition-organic"
         >
-          Zioo.
+          zioo
         </Link>
-        <nav className="hidden gap-6 sm:flex md:gap-8">
+        <nav className="gap-8 flex">
           <Link
             href="/"
-            className="text-lg font-bold uppercase tracking-wider hover:text-primary transition-colors duration-150"
+            className="text-sm md:text-lg font-sans font-medium text-secondary hover:text-primary transition-organic"
           >
-            About
+            O nas
           </Link>
           <Link
             href="/store"
-            className="text-lg font-bold uppercase tracking-wider hover:text-primary transition-colors duration-150"
+            className="text-sm md:text-lg font-sans font-medium text-secondary hover:text-primary transition-organic"
           >
-            Store
+            Sklep
           </Link>
           <Link
             href="/blog"
-            className="text-lg font-bold uppercase tracking-wider hover:text-primary transition-colors duration-150"
+            className="text-sm md:text-lg font-sans font-medium text-secondary hover:text-primary transition-organic"
           >
             Blog
           </Link>

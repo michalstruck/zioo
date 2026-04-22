@@ -1,38 +1,39 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+import { Fraunces, Public_Sans } from "next/font/google";
 import { Providers } from "@/components/providers";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-	variable: "--font-space-grotesk",
-	subsets: ["latin"],
-	weight: ["300", "400", "500", "600", "700"],
+const fraunces = Fraunces({
+  variable: "--font-heading",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+});
+
+const publicSans = Public_Sans({
+  variable: "--font-sans",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-	title: "Zioo — Herbal Blends",
-	description:
-		"Premium botanical blends for relaxation, mood, and clarity. Herbata ziołowa crafted with care.",
+  title: "zioo | Mieszanki ziołowe premium z terpenami",
+  description:
+    "Pierwsze w Polsce premium mieszanki ziołowe z profilem terpenowym. Odkryj botaniczne kompozycje stworzone do relaksu, odprężenia i aromatyzacji.",
 };
 
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-	return (
-		<html lang="pl">
-			<body className={`${spaceGrotesk.variable} antialiased`}>
-				<Providers>
-					<div className="flex min-h-screen flex-col">
-						<Header />
-						<div className="flex-1">{children}</div>
-						<Footer />
-					</div>
-				</Providers>
-			</body>
-		</html>
-	);
+  return (
+    <html lang="pl">
+      <body
+        className={`${fraunces.variable} ${publicSans.variable} antialiased`}
+      >
+        <Providers>{children}</Providers>
+      </body>
+    </html>
+  );
 }

@@ -1,6 +1,6 @@
-# Zioo Copy Dictionary
+# zioo Copy Dictionary
 
-This dictionary defines strict rules for terminology used across the Zioo product, marketing, and UI. We operate under strict Polish market regulations, which means our products must be positioned clearly as botanical blends, not for combustion.
+This dictionary defines strict rules for terminology used across the zioo product, marketing, and UI. We operate under strict Polish market regulations, which means our products must be positioned clearly as botanical blends, not for combustion.
 
 ## 🚫 BANNED TERMS
 
@@ -10,6 +10,7 @@ Do **NOT** use any of the follow terms or their derivatives under any circumstan
 - palić (to smoke)
 - waporyzacja (vaporization)
 - waporyzować (to vaporize)
+- inhalacja (inhalation)
 - dym (smoke)
 - bletki / bibułki (rolling papers)
 - tytoń (tobacco) - _never market or refer to our product as tobacco substitute or meant for combustion._
@@ -20,12 +21,14 @@ Use the following terms to describe our products and their usage:
 
 - herbata ziołowa (herbal tea)
 - mieszanka do aromatyzacji (aromatization blend)
+- mieszanka ziołowa (herbal blend)
 - napar (infusion / brew)
 - relaks (relaxation)
 - odprężenie (unwinding)
 - aromaterapia (aromatherapy)
 - profil terpenowy (terpene profile) - _for the infused line_
-- kompozycja botaniczna (botanical composition)
+- mentions of chemical compounds found in herbs
+- effects of chemical compounds found in herbs
 
 ---
 

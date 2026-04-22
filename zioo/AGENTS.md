@@ -1,42 +1,59 @@
 # AGENTS.md
 
-The business we're running in called Zioo. It's targeting the Polish market only.
+The business we're running in called zioo. It's targeting the Polish market only.
 We're marketing and selling herbal blends. These are healthier, less harsh and don't make you have a bad trip. We also have a line of cannabis-derived, terpene infused blends. We do not sell other products (NO rolling papers, bags, cbd, humidity packs).
 
-Refer to `COPY_DICTIONARY.md` for strict rules on terminology used across the Zioo product, marketing.
+Refer to `COPY_DICTIONARY.md` for strict rules on terminology used across the zioo product, marketing.
 
-ALL copy on landing or else is in Polish.
+ALL copy is in Polish.
 
-Payments will be handled using Stripe.
+Payments will be handled using a payment aggregator that supports BLIK, Apple Pay, Google Pay, and card payments - Stripe
+
+## Technology stack
+
+Next.js 16 (App Router)
+TypeScript
+Tailwind CSS
+Shadcn UI (Lucide, Radix)
 
 ## Design Context & Guidelines
 
-Use `ui-ux-pro-max` skill.
-For all UI/UX work, styling, and design-related decisions, you **MUST** read and strictly follow the design context outlined in `.impeccable.md`.
+For all UI/UX work, styling, and design-related decisions, you **MUST** read and strictly follow the design context outlined in `design-system/zioo`
 
-Available blends (6 products total across 2 lines: Natural & Terpene-Infused):
+Available blends (7 products total across 2 lines: Natural & Terpene-Infused):
 
-"Deep Unwind" (Sleep & Relaxation)
-20.00% Damiana
-45.00% Dziewanna
-20.00% Malina
-15.00% Melisa
-Terpene (Infused Line Only) - Purple Punch
+Fresh
+20% Dziewanna
+20% Malina
+20% Szałwia
+20% Mięta
+10% Pokrzywa
+10% Prawoślaz
+No terpene infused line for this one
 
-"Social Spark" (Euphoria & Mood Enhancement)
-10.00% Róża
-45.00% Dziewanna
-10.00% Lawenda
-25.00% Prawoślaz
-10.00% Rumianek
-Terpene (Infused Line Only) - GSC
+Chill
+30% Dziewanna
+30% Malina
+20% Pokrzywa
+10% Lawenda
+10% Melisa
+Terpene (Infused Line Only) - Girl Scout Cookies
 
-"Clear Mind" (Focus & Clarity)
-15.00% Mięta
-40.00% Dziewanna
-20.00% Pokrzywa
-25.00% Malina
+Focus
+30% Dziewanna
+30% Malina
+15% Pokrzywa
+15% Prawoślaz
+10% Mięta
 Terpene (Infused Line Only) - Lemon Skunk
+
+Sleep
+30% Dziewanna
+30% Malina
+20% Pokrzywa
+15% Melisa
+5% Róża
+Terpene (Infused Line Only) - Purple Punch
 
 ## Commands
 

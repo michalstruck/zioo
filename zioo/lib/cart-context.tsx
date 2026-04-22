@@ -4,23 +4,27 @@ import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
   useState,
   type ReactNode,
 } from "react";
 import type { Product } from "./products";
+import { LocalStorageCart } from "./local-storage";
 
 export type CartItem = {
   product: Product;
+  bundleId: string;
   quantity: number;
 };
 
 type CartContextValue = {
   items: CartItem[];
   cartCount: number;
-  addToCart: (product: Product) => void;
-  removeFromCart: (productId: string) => void;
-  updateQuantity: (productId: string, quantity: number) => void;
+  addToCart: (product: Product, bundleId: string) => void;
+  removeFromCart: (productId: string, bundleId: string) => void;
+  updateQuantity: (productId: string, bundleId: string, quantity: number) => void;
+  clearCart: () => void;
   isCartOpen: boolean;
   setIsCartOpen: (open: boolean) => void;
 };
@@ -31,30 +35,66 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
-  const addToCart = useCallback((product: Product) => {
+  useEffect(() => {
+    setItems(LocalStorageCart.get() ?? []);
+  }, []);
+
+  const addToCart = (product: Product, bundleId: string) => {
     setItems((prev) => {
-      const existing = prev.find((i) => i.product.id === product.id);
-      if (existing) {
-        return prev.map((i) =>
-          i.product.id === product.id ? { ...i, quantity: i.quantity + 1 } : i,
+      const isProductInCart = prev.find(
+        (i) => i.product.id === product.id && i.bundleId === bundleId
+      );
+      if (isProductInCart) {
+        const newCart = prev.map((i) =>
+          i.product.id === product.id && i.bundleId === bundleId
+            ? { ...i, quantity: i.quantity + 1 }
+            : i
         );
+        LocalStorageCart.set(newCart);
+        return newCart;
       }
-      return [...prev, { product, quantity: 1 }];
+
+      const newCart = [...prev, { product, bundleId, quantity: 1 }];
+      LocalStorageCart.set(newCart);
+      return newCart;
     });
-  }, []);
+  };
 
-  const removeFromCart = useCallback((productId: string) => {
-    setItems((prev) => prev.filter((i) => i.product.id !== productId));
-  }, []);
+  const removeFromCart = (productId: string, bundleId: string) => {
+    setItems((prev) => {
+      const newCart = prev.filter(
+        (i) => !(i.product.id === productId && i.bundleId === bundleId)
+      );
+      LocalStorageCart.set(newCart);
+      return newCart;
+    });
+  };
 
-  const updateQuantity = useCallback((productId: string, quantity: number) => {
+  const updateQuantity = (productId: string, bundleId: string, quantity: number) => {
     if (quantity <= 0) {
-      setItems((prev) => prev.filter((i) => i.product.id !== productId));
+      setItems((prev) => {
+        const newCart = prev.filter(
+          (i) => !(i.product.id === productId && i.bundleId === bundleId)
+        );
+        LocalStorageCart.set(newCart);
+        return newCart;
+      });
       return;
     }
-    setItems((prev) =>
-      prev.map((i) => (i.product.id === productId ? { ...i, quantity } : i)),
-    );
+    setItems((prev) => {
+      const newCart = prev.map((i) =>
+        i.product.id === productId && i.bundleId === bundleId
+          ? { ...i, quantity }
+          : i,
+      );
+      LocalStorageCart.set(newCart);
+      return newCart;
+    });
+  };
+
+  const clearCart = useCallback(() => {
+    setItems([]);
+    LocalStorageCart.clear();
   }, []);
 
   const cartCount = useMemo(
@@ -69,6 +109,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       addToCart,
       removeFromCart,
       updateQuantity,
+      clearCart,
       isCartOpen,
       setIsCartOpen,
     }),
@@ -78,6 +119,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       addToCart,
       removeFromCart,
       updateQuantity,
+      clearCart,
       isCartOpen,
       setIsCartOpen,
     ],
