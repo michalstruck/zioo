@@ -28,7 +28,8 @@ const customerSchema = z.object({
   firstName: z.string().min(1, "Imię jest wymagane"),
   lastName: z.string().min(1, "Nazwisko jest wymagane"),
   email: z.string().email("Email jest wymagany"),
-  phone: z.string().min(1, "Numer telefonu jest wymagany"),
+  // it's optional, but if present it should be a valid phone number
+  phone: z.string().optional(),
   shippingMethod: z.enum(["locker", "courier"]),
   // locker
   pointName: z.string().optional(),
