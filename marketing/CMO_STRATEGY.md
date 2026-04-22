@@ -56,7 +56,7 @@
 - **Objective:** Double down on the highest-performing audience from Phase 2, optimize LTV, build community.
 - **Channels:** Email/SMS Marketing, community (Discord/Telegram), referral program.
 - **Key Initiatives:**
-  - **Initiative 1 - Referral Program:** "Poleć zioo znajomemu – oboje dostajecie darmową próbkę." Product cost is negligible, and referrals are the cheapest acquisition channel.
+  - **Initiative 1 - Referral Program:** "Poleć zioo znajomemu - oboje dostajecie darmową próbkę." Product cost is negligible, and referrals are the cheapest acquisition channel.
   - **Initiative 2 - Email/SMS Flows:** Post-purchase thank you → usage tips → "spróbuj inny blend" cross-sell → repeat purchase nudge at day 14/30. Use free-tier tools (Mailchimp free up to 500 contacts, or Brevo).
   - **Initiative 3 - Community Building:** Build a small Discord/Telegram where early adopters can share feedback, vote on new blends, get early access. This is the "zioo Crew" — organic, not paid.
   - **Initiative 4 - Co-Branded Drops (later):** Once cash flow allows, partner with local streetwear brands, artists, or music collectives for limited-edition labels or merch.
