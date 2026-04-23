@@ -80,7 +80,9 @@ export async function POST(req: Request) {
         price_data: {
           currency: "pln",
           product_data: {
-            name: `${product.name} (${product.primaryTerpene}) ${bundle.size} szt.`,
+            name: `${product.name} ${
+              product.primaryTerpene ? `(${product.primaryTerpene})` : ""
+            } ${bundle.size} szt.`,
             images: [
               // TODO actual images
               "https://localhost:3000/clear_mind_blend.png",
@@ -137,23 +139,28 @@ export async function POST(req: Request) {
     // Determine return URL
     const origin = req.headers.get("origin") || "http://localhost:3000";
 
+    const metadata = {
+      firstName: customer.firstName,
+      lastName: customer.lastName,
+      phone: customer.phone || "",
+      shippingMethod: customer.shippingMethod,
+      pointName: customer.pointName || "",
+      pointAddress: customer.pointAddress || "",
+      street: customer.street || "",
+      zip: customer.zip || "",
+      city: customer.city || "",
+    };
+
     const session = await stripe.checkout.sessions.create({
       ui_mode: "embedded_page",
       line_items: lineItems,
       mode: "payment",
       return_url: `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
       customer_email: customer.email,
-      metadata: {
-        firstName: customer.firstName,
-        lastName: customer.lastName,
-        phone: customer.phone || "",
-        shippingMethod: customer.shippingMethod,
-        pointName: customer.pointName || "",
-        pointAddress: customer.pointAddress || "",
-        street: customer.street || "",
-        zip: customer.zip || "",
-        city: customer.city || "",
+      payment_intent_data: {
+        metadata,
       },
+      metadata,
     });
 
     return NextResponse.json({ clientSecret: session.client_secret });

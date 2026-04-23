@@ -8,9 +8,7 @@ import { formatPrice } from "@/lib/utils";
 import Image from "next/image";
 import { products } from "@/lib/products";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
-  apiVersion: "2024-12-18.acacia",
-});
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
 
 type Props = {
   searchParams: Promise<{ session_id?: string }>;
@@ -35,7 +33,7 @@ export default async function CheckoutSuccessPage({ searchParams }: Props) {
   if (session.payment_status !== "paid") {
     redirect("/store");
   }
-
+  console.log(session);
   const lineItems = session.line_items?.data ?? [];
   const shippingMethod = session.metadata?.shippingMethod;
   const email = session.customer_email ?? session.customer_details?.email;
