@@ -9,6 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Link from "next/link";
 
 const FAQ_ITEMS = [
   {
@@ -74,6 +75,8 @@ export default function Home() {
         id="hero"
         className="relative overflow-hidden px-5 pt-16 pb-20 md:px-12 md:pt-24 md:pb-28 lg:px-20"
       >
+        {/* Gradient transition to previous section */}
+        <div className="absolute inset-x-0 -top-6 mt-6 h-8 z-10 bg-linear-to-b from-background to-transparent pointer-events-none" />
         {/* Primary organic background - full bleed */}
         <div
           className="absolute inset-0 z-0 opacity-25 mix-blend-multiply pointer-events-none bg-cover bg-center"
@@ -88,25 +91,13 @@ export default function Home() {
             transform: "scale(1.3) rotate(180deg)",
           }}
         />
-        {/* Radial warmth in the upper-left to draw eye toward copy */}
-        <div
-          className="absolute inset-0 z-0 pointer-events-none opacity-40"
-          style={{
-            background:
-              "radial-gradient(ellipse 60% 50% at 20% 30%, rgba(196,132,100,0.12), transparent)",
-          }}
-        />
         {/* Gradient transition to next section */}
-        <div className="absolute inset-x-0 bottom-0 h-40 z-0 bg-linear-to-t from-background to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 -mt-6 h-16 z-0 bg-linear-to-t from-background to-transparent pointer-events-none" />
 
         <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
           {/* Copy column */}
           <div className="flex flex-col gap-6">
-            <p className="w-fit rounded-full border border-primary/20 bg-white/50 backdrop-blur-sm px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-primary shadow-sm">
-              Mieszanka do aromatyzacji
-            </p>
-
-            <h1 className="text-5xl font-heading font-medium leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
+            <h1 className="">
               {/* COPY: main headline */}
               Zioła z profilem terpenowym.
               <span className="block text-secondary italic">
@@ -116,25 +107,19 @@ export default function Home() {
 
             <p className="max-w-lg text-lg font-medium leading-relaxed text-foreground/80 md:text-xl">
               Cztery mieszanki do aromatyzacji - relaks, skupienie, orzeźwienie
-              i spokojny sen. Z legalnym profilem terpenowym z konopi lub bez.
-              Twoje, w 24h z InPost.
+              i spokojny sen. Z profilem terpenowym z konopi lub bez. Twoje, w
+              24h z InPost.
             </p>
 
-            <div className="flex flex-wrap gap-4 pt-6">
-              <Button size="lg" className="px-8" id="cta-hero-primary">
-                Wybierz swój blend
-                <ArrowRight
-                  data-icon="inline-end"
-                  className="size-4 transition-transform duration-300 ease-out group-hover/button:translate-x-1"
-                />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="rounded-full px-8 border-primary/20 text-primary hover:bg-primary/5"
-                id="cta-hero-secondary"
-              >
-                Zacznij od Zestawu Startowego
+            <div className="flex flex-wrap gap-4 pt-8">
+              <Button asChild size="lg" id="cta-hero-primary">
+                <Link href="/store">
+                  Odkryj aromaty zioo
+                  <ArrowRight
+                    data-icon="inline-end"
+                    className="size-4 transition-transform duration-300 ease-out group-hover/button:translate-x-1"
+                  />
+                </Link>
               </Button>
             </div>
           </div>
@@ -185,7 +170,7 @@ export default function Home() {
         className="px-5 py-(--space-2xl) md:px-12 md:py-(--space-3xl) lg:px-20"
       >
         <div className="mx-auto max-w-3xl text-center space-y-6">
-          <h2 className="text-3xl font-heading font-medium tracking-tight text-secondary md:text-4xl lg:text-5xl">
+          <h2 className="">
             {/* COPY: problem headline */}
             Szukałeś czegoś innego. Po prostu brakowało opcji.
           </h2>
@@ -216,7 +201,7 @@ export default function Home() {
       >
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 md:mb-14 text-center">
-            <h2 className="text-3xl font-heading font-medium tracking-tight text-secondary md:text-5xl lg:text-6xl">
+            <h2 className="">
               {/* COPY: product showcase headline */}
               Znajdź swój moment
             </h2>
@@ -241,7 +226,7 @@ export default function Home() {
       >
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl font-heading font-medium tracking-tight text-secondary md:text-4xl lg:text-5xl">
+            <h2 className="">
               {/* COPY: terpene section headline */}
               Co to są terpeny i dlaczego zmieniają wszystko
             </h2>
@@ -261,17 +246,15 @@ export default function Home() {
             {/* Czill Terpene */}
             {chillTerpene && (
               <div className="rounded-2xl border border-border p-6 shadow-sm flex flex-col gap-4">
-                <div
-                  className="w-fit rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider"
-                  style={{
-                    backgroundColor: chillTerpene.terpeneStyle?.primary,
-                    color: chillTerpene.terpeneStyle?.text,
-                  }}
-                >
-                  Chill
-                </div>
+                <h3 className="">Chill</h3>
+
                 <div>
-                  <h3 className="text-xl font-heading font-medium text-secondary">
+                  <h3
+                    className="text-xl"
+                    style={{
+                      color: chillTerpene.terpeneStyle?.primary,
+                    }}
+                  >
                     {chillTerpene.primaryTerpene}
                   </h3>
                   <p className="mt-2 text-sm text-foreground/80 leading-relaxed">
@@ -286,17 +269,14 @@ export default function Home() {
             {/* Focus Terpene */}
             {focusTerpene && (
               <div className="rounded-2xl border border-border p-6 shadow-sm flex flex-col gap-4">
-                <div
-                  className="w-fit rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider"
-                  style={{
-                    backgroundColor: focusTerpene.terpeneStyle?.primary,
-                    color: focusTerpene.terpeneStyle?.text,
-                  }}
-                >
-                  Focus
-                </div>
+                <h3 className="">Focus</h3>
                 <div>
-                  <h3 className="text-xl font-heading font-medium text-secondary">
+                  <h3
+                    className="text-xl"
+                    style={{
+                      color: focusTerpene.terpeneStyle?.primary,
+                    }}
+                  >
                     {focusTerpene.primaryTerpene}
                   </h3>
                   <p className="mt-2 text-sm text-foreground/80 leading-relaxed">
@@ -311,17 +291,14 @@ export default function Home() {
             {/* Sleep Terpene */}
             {sleepTerpene && (
               <div className="rounded-2xl border border-border p-6 shadow-sm flex flex-col gap-4">
-                <div
-                  className="w-fit rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider"
-                  style={{
-                    backgroundColor: sleepTerpene.terpeneStyle?.primary,
-                    color: sleepTerpene.terpeneStyle?.text,
-                  }}
-                >
-                  Sleep
-                </div>
+                <h3 className="">Sleep</h3>
                 <div>
-                  <h3 className="text-xl font-heading font-medium text-secondary">
+                  <h3
+                    className="text-xl"
+                    style={{
+                      color: sleepTerpene.terpeneStyle?.primary,
+                    }}
+                  >
                     {sleepTerpene.primaryTerpene}
                   </h3>
                   <p className="mt-2 text-sm text-foreground/80 leading-relaxed">
@@ -350,7 +327,7 @@ export default function Home() {
         className="border-t border-border/20 bg-muted/10 px-5 py-(--space-2xl) md:px-12 md:py-(--space-3xl) lg:px-20"
       >
         <div className="mx-auto max-w-3xl">
-          <h2 className="mb-10 text-center text-3xl font-heading font-medium tracking-tight text-secondary md:text-4xl lg:text-5xl">
+          <h2 className="mb-10 text-center">
             {/* COPY: FAQ section headline */}
             Masz pytania?
           </h2>
@@ -382,28 +359,26 @@ export default function Home() {
         />
 
         <div className="relative z-10 mx-auto max-w-2xl text-center space-y-8">
-          <h2 className="text-4xl font-heading font-medium tracking-tight text-secondary md:text-5xl lg:text-6xl">
+          <h2 className="">
             {/* COPY: final CTA recap */}
             Mieszanki do aromatyzacji zaprojektowane pod konkretne momenty.
             Zioła, legalny profil terpenowy, dostawa w 24h.
           </h2>
           <div className="flex flex-col items-center gap-4 pt-4">
-            <Button size="lg" className="px-8" id="cta-final-primary">
-              {/* COPY: final CTA button text */}
-              Wybierz swój blend
-              <ArrowRight
-                data-icon="inline-end"
-                className="size-4 transition-transform duration-300 ease-out hover:translate-x-1"
-              />
+            <Button size="lg" asChild id="cta-final-primary">
+              <Link href="/store">
+                {/* COPY: final CTA button text */}
+                Wybierz swój blend
+                <ArrowRight
+                  data-icon="inline-end"
+                  className="size-4 transition-transform duration-300 ease-out hover:translate-x-1"
+                />
+              </Link>
             </Button>
             <p className="text-sm font-medium text-foreground/60">
               {/* COPY: final CTA secondary note */}
               Nie wiesz od czego zacząć? Zamów Zestaw Startowy - wszystkie
-              warianty Natural i Terpene w jednym zestawie, od 24,99 zł.
-            </p>
-            <p className="text-xs text-foreground/50 mt-2">
-              {/* COPY: delivery reminder */}
-              Zamówienie dziś = dostawa jutro.
+              warianty Natural i Terpene w jednym zestawie.
             </p>
           </div>
         </div>

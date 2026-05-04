@@ -11,10 +11,6 @@ export function Footer() {
           <p className="text-lg font-sans leading-relaxed text-secondary/80">
             Produkty zioo to wyłącznie{" "}
             <span className="italic text-accent font-heading">
-              herbaty ziołowe
-            </span>{" "}
-            i&nbsp;
-            <span className="italic text-accent font-heading">
               mieszanki do aromatyzacji
             </span>
             . Łączymy tradycyjną wiedzę botaniczną z&nbsp;nowoczesną precyzją.
