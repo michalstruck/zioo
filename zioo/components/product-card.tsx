@@ -92,7 +92,7 @@ export function ProductCard({ product }: { product: Product }) {
           }
         </Link>
       </CardHeader>
-      <CardFooter className="border-t border-border pt-0 bg-muted ">
+      <CardFooter className="border-none pt-0">
         <AddToCartButton product={product} isListing />
       </CardFooter>
     </Card>
