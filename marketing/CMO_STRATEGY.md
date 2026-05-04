@@ -6,7 +6,7 @@
 - **Brand Voice & Identity:**
   - **Tone:** Punchy, direct, surfer-chill, bold, confident, youth-focused. Not artificial or overly corporate "lab-like".
   - **Aesthetic:** Clinical Naturalism
-  - **Core Directives:** Strictly adhere to regulatory compliance dictates (see `COPY_DICTIONARY.md`). Always use terms like "mieszanka do aromatyzacji", "napar", "kompozycja botaniczna", "herbata ziołowa", "relaks". **Never** mention combustion, smoke, vaporization, or tobacco. The wink-and-nod to the actual use case must be culturally native, not legally compromising.
+  - **Core Directives:** Strictly adhere to regulatory compliance dictates (see `COPY_DICTIONARY.md`). Products are **strictly positioned as "mieszanka do aromatyzacji"** — this is non-negotiable. Always use terms like "mieszanka do aromatyzacji", "kompozycja botaniczna", "aromaterapia", "profil terpenowy". **Never** mention combustion, smoke, vaporization, tobacco, tea, or infusion. The wink-and-nod to the actual use case must be culturally native, not legally compromising.
 - **Target Audience Positioning:**
   - **Primary:** Gen Z wellness enthusiasts and recreational cannabis users looking for a clean, non-addictive complementary botanical experience.
   - **Secondary:** Stressed urbanites seeking natural relaxation and aromatherapy without harshness.
@@ -27,7 +27,7 @@
 - **Current state:** Single-use 0.5g sachets in two formats: Natural line in 5×8cm matte white bags, Terpene-Infused line in 5×8cm matte black bags. Printed labels applied on both sides.
 - **Key Initiatives:**
   - **Initiative 1 - Label Design:** Decide between transparent vs. colored labels. Transparent shows the herb (builds trust, "look what's inside"), colored is more brandable. Recommendation: **transparent front, branded back**. Front shows the blend, back carries the zioo logo, blend name, ingredient list, and a QR code to the product page.
-  - **Initiative 2 - Label Content:** Per label: blend name (Fresh/Chill/Focus/Sleep), full ingredient list in Polish, net weight, "Mieszanka do aromatyzacji / Herbata ziołowa" descriptor, zioo logo, QR code. No health claims. No combustion references.
+  - **Initiative 2 - Label Content:** Per label: blend name (Fresh/Chill/Focus/Sleep), full ingredient list in Polish, net weight, "Mieszanka do aromatyzacji" descriptor, zioo logo, QR code. No health claims. No combustion references. No tea/food references.
   - **Initiative 3 - Pictograms (optional):** Minimalist icons for the blend's "mood" (e.g., leaf for Fresh, moon for Sleep). Keeps it premium without needing full custom print yet.
 
 ### Phase 1: Organic Tease & Educate (Weeks 1-4)
@@ -63,20 +63,20 @@
 
 ---
 
-## 3. Dual Positioning: "Herbata" + "Aromatyzacja"
+## 3. Official Positioning: "Mieszanka do Aromatyzacji"
 
-> **Key strategic question you raised:** Should we market as tea AND subtly suggest the real use case?
+> **Regulatory update:** Due to Polish market regulations, our products can only be positioned as `mieszanka do aromatyzacji`. Tea/food positioning is not compliant and is no longer in use.
 
-**Yes — dual positioning is the play.** Here's the framework:
+**Positioning is singular, not dual:**
 
-- **Official positioning (all copy, ads, packaging, website):** "Herbata ziołowa / Mieszanka do aromatyzacji." This is legally compliant and visually represented everywhere.
+- **Official positioning (all copy, ads, packaging, website):** "Mieszanka do aromatyzacji." This is the only legally compliant label and must appear everywhere without exception.
 - **Cultural positioning (aesthetic, vibe, channels, visual language):** The target audience recognizes the product for what it is through context, not words. We don't say it; we show it through:
   - Channel selection (posting where the audience already is)
   - Visual language (lifestyle shots that resonate with the scene, not stock-photo tea ceremonies)
   - Product naming (Fresh, Chill, Focus, Sleep — these names speak for themselves)
   - Terpene strain names (Girl Scout Cookies, Lemon Skunk, Purple Punch — instant recognition for the target audience)
 
-**The tea angle is not fake** — these herbs genuinely make good tea. It's a real secondary use case that gives us regulatory cover AND an additional selling point. Some customers will literally brew it. That's fine — it's a bonus.
+**The tea angle is dropped** — while these herbs can genuinely be brewed as tea, positioning products this way creates regulatory risk. The "mieszanka do aromatyzacji" label is the single, unified, compliant position.
 
 ---
 
