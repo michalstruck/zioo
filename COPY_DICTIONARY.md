@@ -1,6 +1,6 @@
 # zioo Copy Dictionary
 
-This dictionary defines strict rules for terminology used across the zioo product, marketing, and UI. We operate under strict Polish market regulations.
+This dictionary defines strict rules for terminology used across the zioo product, marketing, and UI. We operate under strict Polish market regulations, which means our products must be positioned clearly as botanical blends, not for combustion, or consumption as tea/infusion.
 
 ---
 
@@ -28,6 +28,8 @@ Do **NOT** use any of the following terms or their derivatives under any circums
 - dym (smoke)
 - bletki / bibułki (rolling papers)
 - tytoń (tobacco) — _never market or refer to our product as tobacco substitute or meant for combustion_
+- nikotyna
+- joint, skręt i tym podobne
 - herbata (tea) — _do not position product as tea; regulatory risk_
 - herbata ziołowa (herbal tea) — _banned as product descriptor_
 - napar (infusion/brew) — _implies food/drink use, not compliant_

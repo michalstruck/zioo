@@ -27,13 +27,14 @@ export function ProductCard({ product }: { product: Product }) {
           }}
         >
           <span className="text-[10px] font-black uppercase tracking-[0.2em]">
-            Terpene Infused
+            Z terpenami
           </span>
         </div>
       )}
       <Link
         href={`/store/product/${product.id}`}
         className="block overflow-hidden relative"
+        id={`product-card-${product.id}`}
       >
         {product.images?.[0] ? (
           <div className="aspect-4/3 w-full overflow-hidden bg-muted relative">
