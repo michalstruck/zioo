@@ -75,8 +75,6 @@ export default function Home() {
         id="hero"
         className="relative overflow-hidden px-5 pt-16 pb-20 md:px-12 md:pt-24 md:pb-28 lg:px-20"
       >
-        {/* Gradient transition to previous section */}
-        <div className="absolute inset-x-0 -top-6 mt-6 h-8 z-10 bg-linear-to-b from-background to-transparent pointer-events-none" />
         {/* Primary organic background - full bleed */}
         <div
           className="absolute inset-0 z-0 opacity-25 mix-blend-multiply pointer-events-none bg-cover bg-center"
@@ -371,7 +369,7 @@ export default function Home() {
                 Wybierz swój blend
                 <ArrowRight
                   data-icon="inline-end"
-                  className="size-4 transition-transform duration-300 ease-out hover:translate-x-1"
+                  className="size-4 transition-transform duration-300 ease-out group-hover/button:translate-x-1"
                 />
               </Link>
             </Button>

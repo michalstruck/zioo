@@ -28,7 +28,7 @@ export function Footer() {
             href="/polityka-prywatnosci"
             className="text-secondary/80 transition-organic hover:text-primary"
           >
-            Polityka
+            Polityka prywatności
           </Link>
           <Link
             href="/kontakt"
@@ -42,6 +42,7 @@ export function Footer() {
       <div className="mx-auto mt-16 flex max-w-7xl flex-col items-center justify-between gap-6 pt-8 text-xs font-bold uppercase tracking-widest text-secondary/80 md:flex-row md:mt-24">
         <p>
           &copy; {new Date().getFullYear()} zioo. Wszelkie prawa zastrzeżone.
+          Produkty przeznaczone wyłącznie do aromatyzacji.
         </p>
         {/* <div className="flex gap-4">
           <span>Apothecary Quality</span>
