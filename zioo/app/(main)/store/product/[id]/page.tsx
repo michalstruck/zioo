@@ -49,7 +49,7 @@ export default async function ProductPage({
           &larr; Wróć do sklepu
         </Link>
       </div>
-      <ProductDetails product={product} />
+      <ProductDetails product={product} standalone />
     </main>
   );
 }

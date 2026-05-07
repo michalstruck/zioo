@@ -15,7 +15,13 @@ import {
 import { X, ZoomIn } from "lucide-react";
 import { Button } from "./ui/button";
 
-export function ProductDetails({ product }: { product: Product }) {
+export function ProductDetails({
+  product,
+  standalone = false,
+}: {
+  product: Product;
+  standalone?: boolean;
+}) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [api, setApi] = useState<any>();
@@ -29,9 +35,21 @@ export function ProductDetails({ product }: { product: Product }) {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row w-full h-full min-h-full md:max-h-[85vh] overflow-hidden bg-background">
+      <div
+        className={`flex w-full bg-background ${
+          standalone
+            ? "flex-col md:flex-row"
+            : "flex-col md:flex-row h-full min-h-full md:max-h-[85vh] overflow-hidden"
+        }`}
+      >
         {/* Visuals - Left Column */}
-        <div className="w-full md:w-1/2 lg:w-[55%] relative flex flex-col bg-muted/30">
+        <div
+          className={`w-full md:w-1/2 lg:w-[55%] relative flex flex-col bg-muted/30 ${
+            standalone
+              ? "md:sticky md:top-6 md:h-[calc(100vh-3rem)] md:self-start rounded-2xl overflow-hidden"
+              : ""
+          }`}
+        >
           <div className="relative flex-1 min-h-[40vh] md:min-h-0 w-full group overflow-hidden bg-muted/20">
             <Carousel
               className="w-full h-full"
@@ -94,24 +112,28 @@ export function ProductDetails({ product }: { product: Product }) {
         </div>
 
         {/* Details - Right Column */}
-        <div className="w-full md:w-1/2 lg:w-[45%] flex flex-col h-full bg-background relative z-20 shadow-[-10px_0_30px_rgba(0,0,0,0.03)] border-l border-border/10 overflow-hidden">
+        <div
+          className={`w-full md:w-1/2 lg:w-[45%] flex flex-col h-full bg-background relative z-20 shadow-[-10px_0_30px_rgba(0,0,0,0.03)] border-border/10 ${
+            standalone ? "border-l-0 pl-0 md:pl-10" : "border-l overflow-hidden"
+          }`}
+        >
           {/* Crooked Label for Terpene products - Page Version */}
-          {product.terpeneStyle && (
+          {product.terpeneStyle && !standalone && (
             <div
               className="absolute -right-16 top-10 z-30 w-64 py-3 text-center transform rotate-45 shadow-2xl select-none pointer-events-none"
               style={{
                 backgroundColor: product.terpeneStyle.primary,
                 color: product.terpeneStyle.text,
               }}
-            >
-              <span className="text-xs font-black uppercase tracking-[0.3em]">
-                Terpene Infused
-              </span>
-            </div>
+            ></div>
           )}
 
           {/* Scrollable content container */}
-          <div className="flex-1 overflow-y-scroll px-6 py-10 md:px-10 lg:px-14 pb-32">
+          <div
+            className={`flex-1 px-6 py-10 md:px-10 lg:px-14 pb-32 ${
+              standalone ? "" : "overflow-y-scroll"
+            }`}
+          >
             {product.primaryTerpene && (
               <div
                 className={`mb-6 inline-flex flex-col items-start w-fit px-6 py-4 rounded-2xl border-2 shadow-md transform -rotate-1 transition-all hover:rotate-0 duration-500 ${!product.terpeneStyle ? "border-primary/10 bg-muted/40" : ""}`}
@@ -306,7 +328,11 @@ export function ProductDetails({ product }: { product: Product }) {
           </div>
 
           {/* Sticky footer for Add to Cart */}
-          <div className="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-background via-background/95 to-transparent pt-12">
+          <div
+            className={`${
+              standalone ? "sticky" : "absolute"
+            } bottom-0 left-0 right-0 p-8 bg-linear-to-t from-background via-background/95 to-transparent pt-12 z-30`}
+          >
             <AddToCartButton product={product} bundle={selectedBundle} />
           </div>
         </div>
