@@ -120,12 +120,12 @@ export function ProductDetails({
           {/* Crooked Label for Terpene products - Page Version */}
           {product.terpeneStyle && !standalone && (
             <div
-              className="absolute -right-16 top-10 z-30 w-64 py-3 text-center transform rotate-45 shadow-2xl select-none pointer-events-none"
+              className="absolute -right-16 top-10 z-30 w-64 py-3 transform rotate-45 shadow-md"
               style={{
                 backgroundColor: product.terpeneStyle.primary,
                 color: product.terpeneStyle.text,
               }}
-            ></div>
+            />
           )}
 
           {/* Scrollable content container */}
@@ -136,7 +136,7 @@ export function ProductDetails({
           >
             {product.primaryTerpene && (
               <div
-                className={`mb-6 inline-flex flex-col items-start w-fit px-6 py-4 rounded-2xl border-2 shadow-md transform -rotate-1 transition-all hover:rotate-0 duration-500 ${!product.terpeneStyle ? "border-primary/10 bg-muted/40" : ""}`}
+                className={`mb-6 inline-flex flex-col items-start w-fit px-6 py-4 rounded-2xl border-2 shadow-md transform transition-all hover:rotate-0 duration-500 ${!product.terpeneStyle ? "border-primary/10 bg-muted/40" : ""}`}
                 style={
                   product.terpeneStyle
                     ? {

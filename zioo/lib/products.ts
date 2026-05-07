@@ -47,29 +47,19 @@ export const PRODUCT_ID = {
 
 export const products: Product[] = [
   {
-    id: PRODUCT_ID.sleep,
-    name: "Sleep",
-    tagline: "Wieczorny reset",
-    bundles: [
-      { id: "3-pack", size: 3, price: 9.99 },
-      { id: "5-pack", size: 5, price: 14.99 },
-    ],
-    blendProfile: [
-      { herb: "Dziewanna", pct: 30 },
-      { herb: "Malina", pct: 30 },
-      { herb: "Pokrzywa", pct: 20 },
-      { herb: "Melisa", pct: 15 },
-      { herb: "Róża", pct: 5 },
-    ],
+    id: PRODUCT_ID.discoveryPack,
+    name: "Zestaw Startowy",
+    tagline: "Poznaj wszystkie smaki",
+    bundles: [{ id: "7-pack", size: 7, price: 24.99 }],
+    blendProfile: [],
     images: [
       "/deep_unwind_blend.png",
-      "/deep_unwind_blend.png",
-      "/deep_unwind_blend.png",
+      "/social_spark_blend.png",
+      "/clear_mind_blend.png",
     ],
     subheadline:
-      "Nocna mieszanka ziołowa, która pomaga wyciszyć głowę i przygotować ciało do snu.",
-    ingredientsDescription:
-      "W tym blendzie znajdziesz: melisę - zawiera kwas rozmarynowy i cytral, które obniżają napięcie nerwowe, poprawiają jakość snu i łagodzą stany lękowe. Dziewanna wycisza drogi oddechowe i nadaje naparowi miękki, aksamitny aromat. Liść maliny działa tonizująco i wspiera prawidłową pracę mięśni. Pokrzywa - łagodna baza odżywcza. Płatki róży kończą profil subtelnym, kwiatowym aromatem.",
+      "7 saszetek, wszystkie nasze blendy w jednym zestawie - idealny start z zioo.",
+    ingredientsDescription: `W środku: po jednej sztuce każdego wariantu: - 4 blendy Natural (Fresh, Focus, Chill, Sleep) i 3 Terpene-Infused (Focus z Lemon Skunk, Chill z Girl Scout Cookies, Sleep z Purple Punch). Od porannego Fresha z miętą i szałwią, przez Focus na deep work, odprężony Chill z lawendą, aż po nocny Sleep z melisą i różą. Plus trzy warianty terpenowe, żebyś mógł porównać bazę z wersją rozszerzoną.`,
     usageInstructions:
       "Przeznaczone wyłącznie do aromatyzacji. Nie do spożycia.",
   },
@@ -108,9 +98,9 @@ export const products: Product[] = [
       "Przeznaczone wyłącznie do aromatyzacji. Nie do spożycia.",
   },
   {
-    id: PRODUCT_ID.chill,
-    name: "Chill",
-    tagline: "Złap luz",
+    id: PRODUCT_ID.sleep,
+    name: "Sleep",
+    tagline: "Wieczorny reset",
     bundles: [
       { id: "3-pack", size: 3, price: 9.99 },
       { id: "5-pack", size: 5, price: 14.99 },
@@ -119,17 +109,18 @@ export const products: Product[] = [
       { herb: "Dziewanna", pct: 30 },
       { herb: "Malina", pct: 30 },
       { herb: "Pokrzywa", pct: 20 },
-      { herb: "Lawenda", pct: 10 },
-      { herb: "Melisa", pct: 10 },
+      { herb: "Melisa", pct: 15 },
+      { herb: "Róża", pct: 5 },
     ],
     images: [
-      "/social_spark_blend.png",
-      "/social_spark_blend.png",
-      "/social_spark_blend.png",
+      "/deep_unwind_blend.png",
+      "/deep_unwind_blend.png",
+      "/deep_unwind_blend.png",
     ],
-    subheadline: "Blend na chwile, kiedy chcesz się odprężyć bez ciężkości.",
+    subheadline:
+      "Nocna mieszanka ziołowa, która pomaga wyciszyć głowę i przygotować ciało do snu.",
     ingredientsDescription:
-      "W tym blendzie znajdziesz: lawendę - zawiera linalol, jeden z najsilniejszych naturalnych składników relaksujących. Obniża poziom kortyzolu i rozluźnia napięcie mięśniowe. Melisa łagodzi nadaktywny umysł dzięki kwasowi rozmarynowemu. Dziewanna wycisza drogi oddechowe i nadaje naparowi aksamitną teksturę. Liść maliny tonizuje organizm. Pokrzywa - łagodna baza.",
+      "W tym blendzie znajdziesz: melisę - zawiera kwas rozmarynowy i cytral, które obniżają napięcie nerwowe, poprawiają jakość snu i łagodzą stany lękowe. Dziewanna wycisza drogi oddechowe i nadaje naparowi miękki, aksamitny aromat. Liść maliny działa tonizująco i wspiera prawidłową pracę mięśni. Pokrzywa - łagodna baza odżywcza. Płatki róży kończą profil subtelnym, kwiatowym aromatem.",
     usageInstructions:
       "Przeznaczone wyłącznie do aromatyzacji. Nie do spożycia.",
   },
@@ -168,9 +159,9 @@ export const products: Product[] = [
       "Przeznaczone wyłącznie do aromatyzacji. Nie do spożycia.",
   },
   {
-    id: PRODUCT_ID.focus,
-    name: "Focus",
-    tagline: "Ostrość na zawołanie",
+    id: PRODUCT_ID.chill,
+    name: "Chill",
+    tagline: "Złap luz",
     bundles: [
       { id: "3-pack", size: 3, price: 9.99 },
       { id: "5-pack", size: 5, price: 14.99 },
@@ -178,19 +169,18 @@ export const products: Product[] = [
     blendProfile: [
       { herb: "Dziewanna", pct: 30 },
       { herb: "Malina", pct: 30 },
-      { herb: "Pokrzywa", pct: 15 },
-      { herb: "Prawoślaz", pct: 15 },
-      { herb: "Mięta", pct: 10 },
+      { herb: "Pokrzywa", pct: 20 },
+      { herb: "Lawenda", pct: 10 },
+      { herb: "Melisa", pct: 10 },
     ],
     images: [
-      "/clear_mind_blend.png",
-      "/clear_mind_blend.png",
-      "/clear_mind_blend.png",
+      "/social_spark_blend.png",
+      "/social_spark_blend.png",
+      "/social_spark_blend.png",
     ],
-    subheadline:
-      "Blend na momenty, kiedy potrzebujesz klarownej głowy i zero rozproszeń.",
+    subheadline: "Blend na chwile, kiedy chcesz się odprężyć bez ciężkości.",
     ingredientsDescription:
-      "W tym blendzie znajdziesz: miętę - mentol wyostrza skupienie, zwiększa uważność i działa pobudzająco na układ nerwowy bez efektu kofeinowego. To kluczowy składnik tego blendu. Prawoślaz zawiera śluz roślinny, który chroni i wygładza. Dziewanna wycisza drogi oddechowe i daje lekki, czysty aromat. Liść maliny zapewnia lekko ściągający posmak i balans. Pokrzywa - łagodna baza.",
+      "W tym blendzie znajdziesz: lawendę - zawiera linalol, jeden z najsilniejszych naturalnych składników relaksujących. Obniża poziom kortyzolu i rozluźnia napięcie mięśniowe. Melisa łagodzi nadaktywny umysł dzięki kwasowi rozmarynowemu. Dziewanna wycisza drogi oddechowe i nadaje naparowi aksamitną teksturę. Liść maliny tonizuje organizm. Pokrzywa - łagodna baza.",
     usageInstructions:
       "Przeznaczone wyłącznie do aromatyzacji. Nie do spożycia.",
   },
@@ -229,6 +219,33 @@ export const products: Product[] = [
       "Przeznaczone wyłącznie do aromatyzacji. Nie do spożycia.",
   },
   {
+    id: PRODUCT_ID.focus,
+    name: "Focus",
+    tagline: "Ostrość na zawołanie",
+    bundles: [
+      { id: "3-pack", size: 3, price: 9.99 },
+      { id: "5-pack", size: 5, price: 14.99 },
+    ],
+    blendProfile: [
+      { herb: "Dziewanna", pct: 30 },
+      { herb: "Malina", pct: 30 },
+      { herb: "Pokrzywa", pct: 15 },
+      { herb: "Prawoślaz", pct: 15 },
+      { herb: "Mięta", pct: 10 },
+    ],
+    images: [
+      "/clear_mind_blend.png",
+      "/clear_mind_blend.png",
+      "/clear_mind_blend.png",
+    ],
+    subheadline:
+      "Blend na momenty, kiedy potrzebujesz klarownej głowy i zero rozproszeń.",
+    ingredientsDescription:
+      "W tym blendzie znajdziesz: miętę - mentol wyostrza skupienie, zwiększa uważność i działa pobudzająco na układ nerwowy bez efektu kofeinowego. To kluczowy składnik tego blendu. Prawoślaz zawiera śluz roślinny, który chroni i wygładza. Dziewanna wycisza drogi oddechowe i daje lekki, czysty aromat. Liść maliny zapewnia lekko ściągający posmak i balans. Pokrzywa - łagodna baza.",
+    usageInstructions:
+      "Przeznaczone wyłącznie do aromatyzacji. Nie do spożycia.",
+  },
+  {
     id: PRODUCT_ID.fresh,
     name: "Fresh",
     tagline: "Kick na start",
@@ -253,23 +270,6 @@ export const products: Product[] = [
       "Mieszanka z dominującą miętą i szałwią, która budzi zmysły i dodaje lekkości.",
     ingredientsDescription:
       "W tym blendzie znajdziesz: miętę - wysoki poziom mentolu pobudza, wyostrza uwagę i odświeża. Szałwię - zawiera kwas karnozolowy i tujon, poprawia pamięć i wspiera koncentrację. Te dwa składniki nadają blendowi charakter. Dziewanna i liść maliny stanowią łagodną bazę i wygładzają profil sensoryczny. Prawoślaz chroni śluzówki swoim naturalnym śluzem roślinnym. Pokrzywa dopełnia całość.",
-    usageInstructions:
-      "Przeznaczone wyłącznie do aromatyzacji. Nie do spożycia.",
-  },
-  {
-    id: PRODUCT_ID.discoveryPack,
-    name: "Zestaw Startowy",
-    tagline: "Poznaj wszystkie smaki",
-    bundles: [{ id: "7-pack", size: 7, price: 24.99 }],
-    blendProfile: [],
-    images: [
-      "/deep_unwind_blend.png",
-      "/social_spark_blend.png",
-      "/clear_mind_blend.png",
-    ],
-    subheadline:
-      "7 saszetek, wszystkie nasze blendy w jednym zestawie - idealny start z zioo.",
-    ingredientsDescription: `W środku: po jednej sztuce każdego wariantu: - 4 blendy Natural (Fresh, Focus, Chill, Sleep) i 3 Terpene-Infused (Focus z Lemon Skunk, Chill z Girl Scout Cookies, Sleep z Purple Punch). Od porannego Fresha z miętą i szałwią, przez Focus na deep work, odprężony Chill z lawendą, aż po nocny Sleep z melisą i różą. Plus trzy warianty terpenowe, żebyś mógł porównać bazę z wersją rozszerzoną.`,
     usageInstructions:
       "Przeznaczone wyłącznie do aromatyzacji. Nie do spożycia.",
   },
