@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
-import { products } from "@/lib/products";
+import { Product, products } from "@/lib/products";
 import { ProductDetails } from "@/components/product-details";
 import Link from "next/link";
 import type { Metadata } from "next";
 
-const getProductById = (id: string) =>
+const getProductById = (id: string): Product | undefined =>
   products.find((product) => product.id === id);
 
 export async function generateMetadata({
@@ -43,7 +43,7 @@ export default async function ProductPage({
   }
 
   return (
-    <main className="min-h-screen py-32 px-5 md:px-12 lg:px-20 max-w-7xl mx-auto">
+    <main className="min-h-dvh py-16 px-5 md:px-12 lg:px-20 max-w-7xl mx-auto">
       <div className="mb-10 text-sm text-muted-foreground font-mono">
         <Link href="/store" className="hover:text-primary transition-colors">
           &larr; Wróć do sklepu

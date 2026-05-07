@@ -42,10 +42,10 @@ export const PRODUCT_ID = {
   focusTerpene: "focus-terpene",
   chillTerpene: "chill-terpene",
   sleepTerpene: "sleep-terpene",
-  discoveryPack: "discovery-pack",
+  discoveryPack: "zestaw-startowy",
 } as const;
 
-export const products = [
+export const products: Product[] = [
   {
     id: PRODUCT_ID.sleep,
     name: "Sleep",

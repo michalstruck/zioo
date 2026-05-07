@@ -13,6 +13,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { X, ZoomIn } from "lucide-react";
+import { Button } from "./ui/button";
 
 export function ProductDetails({ product }: { product: Product }) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -62,8 +63,8 @@ export function ProductDetails({ product }: { product: Product }) {
               </CarouselContent>
               {product.images && product.images.length > 1 && (
                 <>
-                  <CarouselPrevious className="left-6 opacity-0 shadow-lg transition-opacity group-hover:opacity-100 group-hover:-translate-y-1/2 group:-translate-y-1/2 bg-white/60 hover:bg-white/90 backdrop-blur-sm border-none" />
-                  <CarouselNext className="right-6 opacity-0 shadow-lg transition-opacity group-hover:opacity-100 group-hover:-translate-y-1/2 group:-translate-y-1/2 bg-white/60 hover:bg-white/90 backdrop-blur-sm border-none" />
+                  <CarouselPrevious className="left-6 opacity-0 shadow-lg transition-opacity group-hover:opacity-100 group-hover:-translate-y-1/2 group:-translate-y-1/2 bg-white/60 hover:bg-white/90 backdrop-blur-sm border-none hover:translate-y-0" />
+                  <CarouselNext className="right-6 opacity-0 shadow-lg transition-opacity group-hover:opacity-100 group-hover:-translate-y-1/2 group:-translate-y-1/2 bg-white/60 hover:bg-white/90 backdrop-blur-sm border-none hover:translate-y-0" />
                 </>
               )}
             </Carousel>
@@ -110,7 +111,7 @@ export function ProductDetails({ product }: { product: Product }) {
           )}
 
           {/* Scrollable content container */}
-          <div className="flex-1 overflow-y-auto px-6 py-10 md:px-10 lg:px-14 pb-32">
+          <div className="flex-1 overflow-y-scroll px-6 py-10 md:px-10 lg:px-14 pb-32">
             {product.primaryTerpene && (
               <div
                 className={`mb-6 inline-flex flex-col items-start w-fit px-6 py-4 rounded-2xl border-2 shadow-md transform -rotate-1 transition-all hover:rotate-0 duration-500 ${!product.terpeneStyle ? "border-primary/10 bg-muted/40" : ""}`}
@@ -313,13 +314,15 @@ export function ProductDetails({ product }: { product: Product }) {
 
       {/* Fullscreen Fixed Lightbox Override */}
       {lightboxOpen && (
-        <div className="fixed inset-0 z-100 bg-black/95 flex items-center justify-center animate-in fade-in duration-300">
-          <button
+        <div className="fixed inset-0 z-100 bg-black/80 backdrop-blur-sm flex items-center justify-center animate-in fade-in duration-300">
+          <Button
+            variant="outline"
+            size="icon"
             onClick={() => setLightboxOpen(false)}
-            className="absolute top-6 right-6 z-110 text-white/50 hover:text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors"
+            className="absolute top-6 right-6 z-110 bg-white/10 text-white hover:bg-white/20 border-white/20"
           >
             <X className="w-6 h-6" />
-          </button>
+          </Button>
 
           <div className="w-full h-full flex items-center justify-center p-4">
             <Carousel
@@ -347,8 +350,8 @@ export function ProductDetails({ product }: { product: Product }) {
               </CarouselContent>
               {product.images && product.images.length > 1 && (
                 <>
-                  <CarouselPrevious className="left-4 md:left-10 h-12 w-12 bg-white/10 text-white hover:bg-white/20 border-white/20" />
-                  <CarouselNext className="right-4 md:right-10 h-12 w-12 bg-white/10 text-white hover:bg-white/20 border-white/20" />
+                  <CarouselPrevious className="left-4 md:left-10 h-12 w-12" />
+                  <CarouselNext className="right-4 md:right-10 h-12 w-12" />
                 </>
               )}
             </Carousel>

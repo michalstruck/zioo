@@ -21,16 +21,20 @@ const FAQ_ITEMS = [
     a: "Linia Natural to czysta botanika - samo zioło. Linia Terpene zawiera dodatkowo ekstrakt terpenowy z konkretnego szczepu konopi: Girl Scout Cookies, Lemon Skunk lub Purple Punch. Efekt: intensywniejszy aromat i działanie efektu entourage. Skład ziołowy w obu liniach jest identyczny.",
   },
   {
+    q: "Dlaczego saszetka ma 0.5g?",
+    a: "Znasz to uczucie kiedy używasz ziół, a następnego dnia są zwietrzałe i wysuszone? 0.5g to idealna porcja na pojedynczą sesję. Nie musisz odmierzać, nie musisz martwić się, że susz zwietrzeje w dużym opakowaniu. Otwierasz, używasz, gotowe. Zawsze świeże, zawsze dobre.",
+  },
+  {
     q: "Jak szybko dostanę zamówienie?",
     a: "Wysyłamy w ciągu 24 godzin od złożenia zamówienia, przez InPost. Możesz wybrać paczkomat lub kuriera. Zamawiasz dziś - masz jutro.",
   },
   {
     q: "Ile kosztuje dostawa?",
-    a: "13 zł flat. Darmowa od 34,99 zł - czyli przy dwóch opakowaniach 5-pack. Większość klientów i tak przekracza próg naturalnie.",
+    a: "Zawsze 13 zł. Darmowa od 34,99 zł - czyli przy dwóch opakowaniach 5szt.",
   },
   {
     q: "Dlaczego zioo, a nie cokolwiek innego?",
-    a: "Bo nic innego w Polsce nie istnieje w tej formie. Mood-based blending, profil terpenowy z konopi, estetyczne opakowanie, szybka dostawa - w jednym miejscu. Skomponowane od zera, nie sklejone z losowych ziół.",
+    a: "Bo nic innego w Polsce nie istnieje w tej formie. Saszetki 0.5g zamiast sypkiego suszu, który zwietrzeje po tygodniu. Mood-based blending zamiast losowego zestawu ziół z apteki. Profil terpenowy z konopi, którego w ogóle nie ma na polskim rynku. Skomponowane od zera, nie sklejone z przypadku.",
   },
   {
     q: "Jak używać mieszanki do aromatyzacji?",
@@ -105,18 +109,28 @@ export default function Home() {
 
             <p className="max-w-lg text-lg font-medium leading-relaxed text-foreground/80 md:text-xl">
               Cztery mieszanki do aromatyzacji - relaks, skupienie, orzeźwienie
-              i spokojny sen. Z profilem terpenowym z konopi lub bez. Twoje, w
-              24h z InPost.
+              i spokojny sen. Z profilem terpenowym z konopi lub w 100% sauté.
+              Wysyłka w 24h z InPost.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-8">
               <Button asChild size="lg" id="cta-hero-primary">
                 <Link href="/store">
-                  Odkryj aromaty zioo
+                  Wybierz swój blend
                   <ArrowRight
                     data-icon="inline-end"
                     className="size-4 transition-transform duration-300 ease-out group-hover/button:translate-x-1"
                   />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="secondary"
+                id="cta-hero-secondary"
+              >
+                <Link href="/store/product/zestaw-startowy">
+                  Zestaw Startowy
                 </Link>
               </Button>
             </div>
@@ -156,7 +170,7 @@ export default function Home() {
           <div className="flex items-center gap-2 rounded-full border border-border bg-white px-4 py-2 shadow-sm">
             <Leaf className="size-4 text-primary" />
             <span className="text-sm font-medium text-foreground/80">
-              Zioła. Bez dodatków.
+              Saszetki 0.5g - zawsze świeże
             </span>
           </div>
         </div>
@@ -174,20 +188,19 @@ export default function Home() {
           </h2>
           <div className="text-lg font-medium text-foreground/70 space-y-6">
             <p>
-              Zioła z apteki wyglądają jak zmielona trawa i smakują podobnie.
-              Nikt ich nie zaprojektował pod konkretny moment - kupujesz losowo
-              i liczysz na cud.
+              Sypki susz w pudełku zwietrzeje po tygodniu. Nikt nie
+              zaprojektował tych mieszanek pod konkretny moment.
             </p>
             <p>
               Terpeny z konopi są od dawna dostępne jako ekstrakt. Tylko nikt
-              jeszcze nie połączył ich z ziołami w jedną gotową kompozycję. Do
-              teraz.
+              nie połączył ich z ziołami w jedną gotową kompozycję, spakowaną
+              tak, żeby każda porcja była idealna. Do teraz.
             </p>
           </div>
-          <p className="pt-4 text-xl font-heading font-medium text-primary">
+          <p className="pt-4 text-2xl font-heading font-semibold text-primary">
             {/* COPY: pain-to-solution bridge */}
-            zioo to mieszanki do aromatyzacji zaprojektowane od zera pod
-            konkretne nastroje - z wyboru, nie z przypadku.
+            zioo to saszetki 0.5g - porcja idealna na raz. Zawsze świeże, zawsze
+            dobre.
           </p>
         </div>
       </section>
@@ -204,8 +217,8 @@ export default function Home() {
               Znajdź swój moment
             </h2>
             <p className="mt-4 text-lg text-foreground/70 max-w-2xl mx-auto">
-              {/* COPY: product showcase subtext */} Każdy blend to inna okazja.
-              Terpene lub Natural - wybór należy do Ciebie.
+              {/* COPY: product showcase subtext */} Dobierz pod nastrój. Z
+              legalnym profilem terpenowym z konopi.
             </p>
           </div>
 
@@ -309,12 +322,23 @@ export default function Home() {
             )}
           </div>
 
-          <div className="mt-10 text-center">
-            <p className="text-sm font-medium text-primary uppercase tracking-widest">
-              {/* COPY: terpene section CTA */}
-              Chcesz poczuć różnicę? Zestaw Startowy zawiera zarówno linie
-              Natural, jak i Terpene.
+          <div className="mt-12 flex flex-col items-center text-center space-y-4">
+            <h3 className="text-2xl font-semibold">Spróbuj wszystkiego</h3>
+            <p className="text-foreground/70 max-w-md mx-auto">
+              Zestaw Startowy to 7 blendów do przetestowania. Znajdź ten, który
+              siądzie Ci najlepiej.
             </p>
+            <div className="pt-2">
+              <Button size="lg" asChild id="cta-terpenes">
+                <Link href="/store/product/zestaw-startowy">
+                  Wybieram Zestaw Startowy
+                  <ArrowRight
+                    data-icon="inline-end"
+                    className="size-4 transition-transform duration-300 ease-out group-hover/button:translate-x-1"
+                  />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -359,8 +383,11 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-2xl text-center space-y-8">
           <h2 className="">
             {/* COPY: final CTA recap */}
-            Mieszanki do aromatyzacji zaprojektowane pod konkretne momenty.
-            Zioła, legalny profil terpenowy, dostawa w 24h.
+            Zioła, legalny profil terpenowy, dostawa w 24h. Saszetki 0.5g.
+            Zawsze świeże, zawsze dobre.
+            <span className="block text-secondary italic">
+              Znajdź swój blend.
+            </span>
           </h2>
           <div className="flex flex-col items-center gap-4 pt-4">
             <Button size="lg" asChild id="cta-final-primary">
@@ -373,11 +400,20 @@ export default function Home() {
                 />
               </Link>
             </Button>
-            <p className="text-sm font-medium text-foreground/60">
+            <div className="text-sm font-medium text-foreground/60 mt-2">
+              <span className="block mb-1">
+                Wysyłka w 24h. Darmowa dostawa od 34,99 zł.
+              </span>
               {/* COPY: final CTA secondary note */}
-              Nie wiesz od czego zacząć? Zamów Zestaw Startowy - wszystkie
-              warianty Natural i Terpene w jednym zestawie.
-            </p>
+              Nie wiesz od czego zacząć? Sprawdź{" "}
+              <Link
+                href="/store/product/zestaw-startowy"
+                className="underline underline-offset-2 hover:text-primary transition-colors"
+              >
+                Zestaw Startowy
+              </Link>
+              .
+            </div>
           </div>
         </div>
       </section>
