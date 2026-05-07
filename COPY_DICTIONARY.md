@@ -49,6 +49,9 @@ Use the following terms to describe our products and their usage:
 - kompozycja botaniczna (botanical composition)
 - mentions of chemical compounds found in herbs
 - effects of chemical compounds found in herbs
+- **saszetka 0.5g (0.5g sachet)** — _always emphasize single-use, perfect portion_
+- **zawsze świeże (always fresh)**
+- **idealna porcja na raz (perfect single-use portion)**
 
 ---
 

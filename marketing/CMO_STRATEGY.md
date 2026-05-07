@@ -38,7 +38,7 @@
 - **Key Initiatives:**
   - **Initiative 1 - "Więcej niż zioła" Content Series:** Short-form video content (TikTok/Reels) showing the aesthetic unboxing, blend ingredients, and the "Clinical Naturalism" vibe. Focus on ASMR-style close-ups of herbs, pouring into cups/diffusers, the white and black sachets. No faces needed initially — product-focused.
   - **Initiative 2 - Terpene Education:** 3-4 carousel posts / short videos explaining what terpenes are (mircen, limonen, linalol), how they create "efekt entourage", and why zioo's infused line is unique in Poland.
-  - **Initiative 3 - Micro-Seeding (Free Product):** At ~10 groszy per unit, send free samples to 20-30 people in the target scene (friends of friends, local creatives, DJs, skaters). No formal "influencer deal" — just "hey, spróbuj i powiedz co myślisz." Word of mouth is the engine here. Cost: effectively zero.
+  - **Initiative 3 - Micro-Seeding (Free Product):** At ~40 groszy per unit, send free samples to 20-30 people in the target scene (friends of friends, local creatives, DJs, skaters). No formal "influencer deal" — just "hey, spróbuj i powiedz co myślisz." Word of mouth is the engine here. Cost: effectively zero.
 
 ### Phase 2: First Paid Tests & Broad Appeal (Months 1-3)
 
@@ -104,7 +104,7 @@ Given the 1500 PLN budget, here are **realistic** targets:
 - **Shadowbanning Risks:** Meta and TikTok algorithms may flag botanicals. All ad creatives **MUST** show the product as tea/aromatherapy. Visually emphasize cups, diffusers, raw herbs in lifestyle settings. Never show anything that could be interpreted as combustion.
 - **The "Wink":** Use aesthetic cues, music, fashion, and lingo to signal to the in-group. The branding speaks to who knows, without saying what they know.
 - **Logistics as Marketing:** 24h InPost delivery is a conversion driver. "Zamów dziś, relaksuj się jutro" should be hero-level copy on the storefront and in retargeting.
-- **Product cost advantage:** At ~10 groszy per unit, free samples and referral rewards are essentially free. Abuse this. Give product away aggressively in Phase 1.
+- **Product cost advantage:** At ~40 groszy per unit, free samples and referral rewards are essentially free. Abuse this. Give product away aggressively in Phase 1.
 
 ---
 
