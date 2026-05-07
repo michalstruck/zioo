@@ -2,7 +2,7 @@ import { ProductCard } from "@/components/product-card";
 import { products } from "@/lib/products";
 
 export const metadata = {
-  title: "zioo — Sklep",
+  title: "zioo | Sklep",
   description: "Nasze mieszanki do aromatyzacji. Sprawdź ofertę zioo.",
 };
 

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sklep | zioo - mieszanki do aromatyzacji i naparów",
+  title: "Sklep | zioo - mieszanki do aromatyzacji",
   description:
     "Nasze mieszanki w jednym miejscu. Znajdź idealną kompozycję dla siebie. Botaniczne mieszanki ziołowe z profilem terpenowym dla skupienia, wyciszenia lub pełnego relaksu.",
 };
