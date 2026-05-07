@@ -37,7 +37,7 @@ export function CartDrawer() {
 
   // show only on store page when empty
   if (cartCount === 0 && path !== "/store") return null;
-  console.log(items);
+
   return (
     <Sheet open={isCartOpen} onOpenChange={setIsCartOpen}>
       {/* Header-integrated trigger */}
@@ -100,18 +100,19 @@ export function CartDrawer() {
               return (
                 <li
                   key={`${product.id}-${bundleId}`}
-                  className="flex items-center gap-4 p-2 rounded-sm border border-border/20 bg-white shadow-sm transition-organic hover:shadow-md"
+                  className="flex items-center gap-2 sm:gap-4 p-2 rounded-sm border border-border/20 bg-white shadow-sm transition-organic hover:shadow-md"
                 >
-                  <div className="hidden xs:flex size-12 sm:size-24 overflow-hidden rounded-full border border-black/5 items-center justify-center bg-muted/20">
+                  <div className="hidden xs:flex size-12 sm:size-24 shrink-0 overflow-hidden rounded-full border border-black/5 items-center justify-center bg-muted/20">
                     <Image
                       src={product.images?.[0]}
                       alt={product.name}
                       width={128}
                       height={128}
+                      className="w-full h-full object-cover"
                     />
                   </div>
 
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <p
                       className="truncate text-base font-heading font-medium text-secondary"
                       style={
@@ -123,7 +124,7 @@ export function CartDrawer() {
                       {product.name}
                     </p>
                     <p
-                      className="text-xs font-sans text-primary/60 italic text-wrap whitespace-pre-wrap"
+                      className="truncate text-xs font-sans text-primary/60 italic"
                       style={
                         product.terpeneStyle?.primary
                           ? { color: product.terpeneStyle.primary }
@@ -138,13 +139,13 @@ export function CartDrawer() {
                     </p>
                   </div>
 
-                  <div className="flex flex-col items-center gap-4 mr-4">
+                  <div className="flex flex-col items-center gap-2 sm:gap-4 shrink-0">
                     {/* Quantity controls */}
                     <div className="flex items-center gap-1 bg-muted/50 rounded-full border border-border/5">
                       <Button
                         variant="ghost"
                         size="icon-xs"
-                        className="hover:bg-primary/30 bg-primary/20"
+                        className="hover:bg-primary/30 bg-primary/20 shrink-0"
                         onClick={() =>
                           updateQuantity(product.id, bundleId, quantity - 1)
                         }
@@ -152,13 +153,13 @@ export function CartDrawer() {
                       >
                         <Minus className="size-3" />
                       </Button>
-                      <span className="w-6 text-center text-xs font-bold font-mono">
+                      <span className="w-5 text-center text-xs font-bold font-mono shrink-0">
                         {quantity}
                       </span>
                       <Button
                         variant="ghost"
                         size="icon-xs"
-                        className="hover:bg-primary/30 bg-primary/20"
+                        className="hover:bg-primary/30 bg-primary/20 shrink-0"
                         onClick={() =>
                           updateQuantity(product.id, bundleId, quantity + 1)
                         }
@@ -175,7 +176,7 @@ export function CartDrawer() {
                   <Button
                     variant="ghost"
                     size="icon-xs"
-                    className="text-destructive/60 hover:text-destructive hover:bg-destructive/10 self-start"
+                    className="text-destructive/60 hover:text-destructive hover:bg-destructive/10 self-start shrink-0"
                     onClick={() => removeFromCart(product.id, bundleId)}
                     aria-label={`Usuń ${product.name}`}
                   >

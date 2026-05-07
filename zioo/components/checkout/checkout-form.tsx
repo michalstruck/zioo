@@ -133,8 +133,6 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
-    // TODO: Connect to your backend route to create Stripe Session
-    console.log("Form values", data);
 
     try {
       const response = await fetch("/api/checkout", {

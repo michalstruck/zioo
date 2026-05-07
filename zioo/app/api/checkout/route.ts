@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
-import { products } from "@/lib/products";
+import { BUNDLE_ID, PRODUCT_ID, products } from "@/lib/products";
 import { calculateShippingCost, SHIPPING_METHOD } from "@/lib/consts";
 import z from "zod";
 
@@ -25,7 +25,7 @@ type Customer = {
 const customerSchema = z.object({
   firstName: z.string().min(1, "Imię jest wymagane"),
   lastName: z.string().min(1, "Nazwisko jest wymagane"),
-  email: z.string().email("Email jest wymagany"),
+  email: z.email("Email jest wymagany"),
   // it's optional, but if present it should be a valid phone number
   phone: z.string().optional(),
   shippingMethod: z.enum(["inpostLocker", "inpostCourier"]),
@@ -38,10 +38,17 @@ const customerSchema = z.object({
   city: z.string().optional(),
 });
 
+const productSchema = z.object({
+  id: z.enum(Object.values(PRODUCT_ID)),
+  bundleId: z.enum(Object.values(BUNDLE_ID)),
+  quantity: z.number().positive(),
+});
+
 export async function POST(req: Request) {
   try {
     const { items, customer } = await req.json();
     // TODO add explicit loop that validates items from client
+    const parsedItems = z.array(productSchema).parse(items);
 
     const parsedCustomer = customerSchema.safeParse(customer);
 

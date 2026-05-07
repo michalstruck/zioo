@@ -8,13 +8,30 @@ export type TerpeneStyle = {
   text: string; // Text color on primary background
 };
 
-export type ProductBundleId = "3-pack" | "5-pack" | "7-pack";
+export const BUNDLE_ID = {
+  "3-pack": "3-pack",
+  "5-pack": "5-pack",
+  "7-pack": "7-pack",
+} as const;
+
+export type ProductBundleId = keyof typeof BUNDLE_ID;
 
 export type ProductBundle = {
   id: ProductBundleId;
   size: number;
   price: number;
 };
+
+export const PRODUCT_ID = {
+  fresh: "fresh",
+  chill: "chill",
+  focus: "focus",
+  sleep: "sleep",
+  focusTerpene: "focus-terpene",
+  chillTerpene: "chill-terpene",
+  sleepTerpene: "sleep-terpene",
+  discoveryPack: "zestaw-startowy",
+} as const;
 
 export type ProductId = (typeof PRODUCT_ID)[keyof typeof PRODUCT_ID];
 
@@ -33,17 +50,6 @@ export type Product = {
   usageInstructions: string;
   bundles: ProductBundle[];
 };
-
-export const PRODUCT_ID = {
-  fresh: "fresh",
-  chill: "chill",
-  focus: "focus",
-  sleep: "sleep",
-  focusTerpene: "focus-terpene",
-  chillTerpene: "chill-terpene",
-  sleepTerpene: "sleep-terpene",
-  discoveryPack: "zestaw-startowy",
-} as const;
 
 export const products: Product[] = [
   {
