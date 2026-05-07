@@ -257,7 +257,7 @@ export default function Home() {
             {/* Czill Terpene */}
             {chillTerpene && (
               <div className="rounded-2xl border border-border p-6 shadow-sm flex flex-col gap-4">
-                <h3 className="">Chill</h3>
+                <h3 className="">chill</h3>
 
                 <div>
                   <h3
@@ -280,7 +280,7 @@ export default function Home() {
             {/* Focus Terpene */}
             {focusTerpene && (
               <div className="rounded-2xl border border-border p-6 shadow-sm flex flex-col gap-4">
-                <h3 className="">Focus</h3>
+                <h3 className="">focus</h3>
                 <div>
                   <h3
                     className="text-xl"
@@ -302,7 +302,7 @@ export default function Home() {
             {/* Sleep Terpene */}
             {sleepTerpene && (
               <div className="rounded-2xl border border-border p-6 shadow-sm flex flex-col gap-4">
-                <h3 className="">Sleep</h3>
+                <h3 className="">sleep</h3>
                 <div>
                   <h3
                     className="text-xl"
@@ -386,7 +386,7 @@ export default function Home() {
             Zioła, legalny profil terpenowy, dostawa w 24h. Saszetki 0.5g.
             Zawsze świeże, zawsze dobre.
             <span className="block text-secondary italic">
-              Znajdź swój blend.
+              Znajdź swoje zioo.
             </span>
           </h2>
           <div className="flex flex-col items-center gap-4 pt-4">

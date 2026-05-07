@@ -48,7 +48,7 @@ export const PRODUCT_ID = {
 export const products: Product[] = [
   {
     id: PRODUCT_ID.discoveryPack,
-    name: "Zestaw Startowy",
+    name: "zestaw Startowy",
     tagline: "Poznaj wszystkie smaki",
     bundles: [{ id: "7-pack", size: 7, price: 24.99 }],
     blendProfile: [],
@@ -65,7 +65,7 @@ export const products: Product[] = [
   },
   {
     id: PRODUCT_ID.sleepTerpene,
-    name: "Sleep",
+    name: "sleep",
     tagline: "Głęboki sen z Purple Punch",
     bundles: [
       { id: "3-pack", size: 3, price: 14.99 },
@@ -99,7 +99,7 @@ export const products: Product[] = [
   },
   {
     id: PRODUCT_ID.sleep,
-    name: "Sleep",
+    name: "sleep",
     tagline: "Wieczorny reset",
     bundles: [
       { id: "3-pack", size: 3, price: 9.99 },
@@ -126,7 +126,7 @@ export const products: Product[] = [
   },
   {
     id: PRODUCT_ID.chillTerpene,
-    name: "Chill",
+    name: "chill",
     tagline: "Chill na wyższym levelu",
     bundles: [
       { id: "3-pack", size: 3, price: 14.99 },
@@ -160,7 +160,7 @@ export const products: Product[] = [
   },
   {
     id: PRODUCT_ID.chill,
-    name: "Chill",
+    name: "chill",
     tagline: "Złap luz",
     bundles: [
       { id: "3-pack", size: 3, price: 9.99 },
@@ -186,7 +186,7 @@ export const products: Product[] = [
   },
   {
     id: PRODUCT_ID.focusTerpene,
-    name: "Focus",
+    name: "focus",
     tagline: "Cytrynowy laser",
     bundles: [
       { id: "3-pack", size: 3, price: 14.99 },
@@ -220,7 +220,7 @@ export const products: Product[] = [
   },
   {
     id: PRODUCT_ID.focus,
-    name: "Focus",
+    name: "focus",
     tagline: "Ostrość na zawołanie",
     bundles: [
       { id: "3-pack", size: 3, price: 9.99 },
@@ -247,7 +247,7 @@ export const products: Product[] = [
   },
   {
     id: PRODUCT_ID.fresh,
-    name: "Fresh",
+    name: "fresh",
     tagline: "Kick na start",
     bundles: [
       { id: "3-pack", size: 3, price: 9.99 },
