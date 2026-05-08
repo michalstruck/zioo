@@ -26,6 +26,7 @@ export function AddToCartButton({
   if (isListing && hasMultipleBundles) {
     return (
       <Button
+        id="add-to-cart-button-listing"
         className="w-full text-base px-2 text-wrap whitespace-pre"
         size="lg"
         onClick={() => router.push(`/store/product/${product.id}`)}
@@ -41,6 +42,7 @@ export function AddToCartButton({
 
   return (
     <Button
+      id="add-to-cart-button"
       className="w-full text-base px-2 text-wrap whitespace-pre"
       size="lg"
       onClick={() => {

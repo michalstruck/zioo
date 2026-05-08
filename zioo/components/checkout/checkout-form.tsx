@@ -156,7 +156,10 @@ export function CheckoutForm({ items }: { items: CartItem[] }) {
 
   if (clientSecret) {
     return (
-      <div className="w-full bg-white rounded-2xl border shadow-sm overflow-hidden min-h-[600px]">
+      <div
+        id="stripe-checkout-wrapper"
+        className="w-full bg-white rounded-2xl border shadow-sm overflow-hidden min-h-[600px]"
+      >
         <EmbeddedCheckoutProvider
           stripe={stripePromise}
           options={{ clientSecret }}

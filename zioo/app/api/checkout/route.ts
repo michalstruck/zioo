@@ -48,7 +48,7 @@ export async function POST(req: Request) {
   try {
     const { items, customer } = await req.json();
     // TODO add explicit loop that validates items from client
-    const parsedItems = z.array(productSchema).parse(items);
+    // const parsedItems = z.array(productSchema).parse(items);
 
     const parsedCustomer = customerSchema.safeParse(customer);
 

@@ -202,6 +202,7 @@ export function ProductDetails({
                 <div className="flex gap-3">
                   {product.bundles.map((bundle) => (
                     <button
+                      id={`bundle-button-${bundle.id}`}
                       key={bundle.id}
                       onClick={() => setSelectedBundleId(bundle.id)}
                       className={`flex-1 py-3 px-2 sm:px-4 rounded-xl border-2 transition-all flex flex-col items-center gap-1 cursor-pointer ease-out-expo duration-300 ${
@@ -209,6 +210,7 @@ export function ProductDetails({
                           ? "border-primary bg-primary/10 scale-100 shadow-sm"
                           : "border-border/50 hover:border-border scale-[0.98] opacity-70 hover:opacity-100"
                       }`}
+                      type="button"
                       style={
                         selectedBundleId === bundle.id && product.terpeneStyle
                           ? {
