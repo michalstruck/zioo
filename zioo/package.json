@@ -8,7 +8,8 @@
     "start": "bun next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "test": "bun test .test.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "5.2.2",
