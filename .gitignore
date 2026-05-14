@@ -2,3 +2,5 @@ node_modules/
 build
 ..git
 .agents
+test-results/
+playwright-report/

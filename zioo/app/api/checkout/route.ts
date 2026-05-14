@@ -1,12 +1,14 @@
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
-import { BUNDLE_ID, PRODUCT_ID, products } from "@/lib/products";
-import { calculateShippingCost, SHIPPING_METHOD } from "@/lib/consts";
+import { BUNDLE_ID, PRODUCT_ID } from "@/lib/products";
+import { SHIPPING_METHOD } from "@/lib/consts";
 import z from "zod";
+import {
+  buildCheckoutLineItems,
+  CheckoutValidationError,
+} from "@/lib/checkout/checkout-utils";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
-
-const productMap = new Map(products.map((p) => [p.id, p]));
 
 // todo validation and customer type
 type Customer = {
@@ -62,85 +64,15 @@ export async function POST(req: Request) {
       );
     }
 
-    // Server-side price validation — never trust client prices
-    const lineItems = [];
-    for (const item of items) {
-      const product = productMap.get(item.product.id);
-      if (!product) {
-        return NextResponse.json(
-          { error: `Unknown product: ${item.product.id}` },
-          { status: 400 },
-        );
+    let lineItems: any[];
+    try {
+      const result = buildCheckoutLineItems(items, customer.shippingMethod);
+      lineItems = result.lineItems;
+    } catch (error) {
+      if (error instanceof CheckoutValidationError) {
+        return NextResponse.json({ error: error.message }, { status: 400 });
       }
-
-      const bundle = product.bundles.find((b) => b.id === item.bundleId);
-      if (!bundle) {
-        return NextResponse.json(
-          {
-            error: `Unknown bundle: ${item.bundleId} for product: ${item.product.id}`,
-          },
-          { status: 400 },
-        );
-      }
-      // TODO - use stripe built in Products to handle this - this will create mess in the future
-      lineItems.push({
-        price_data: {
-          currency: "pln",
-          product_data: {
-            name: `${product.name} ${
-              product.primaryTerpene ? `(${product.primaryTerpene})` : ""
-            } ${bundle.size} szt.`,
-            images: [
-              // TODO actual images
-              "https://localhost:3000/clear_mind_blend.png",
-              "https://localhost:3000/clear_mind_blend.png",
-            ],
-          },
-          unit_amount: Math.round(bundle.price * 100),
-        },
-        quantity: item.quantity,
-        metadata: {
-          zioo_product_id: product.id,
-          zioo_bundle_id: bundle.id,
-        },
-      });
-    }
-
-    // Compute subtotal from canonical server prices
-    const subtotal = items.reduce((acc: number, item: any) => {
-      const product = productMap.get(item.product.id);
-      // todo: undefined handling
-      const bundle = product?.bundles.find((b) => b.id === item.bundleId);
-      return acc + (bundle?.price ?? 0) * item.quantity;
-    }, 0);
-
-    const shippingCost = calculateShippingCost(
-      customer.shippingMethod,
-      subtotal,
-    );
-
-    if (shippingCost > 0) {
-      lineItems.push({
-        price_data: {
-          currency: "pln",
-          product_data: {
-            name: `Dostawa: ${customer.shippingMethod === "inpostLocker" ? "Paczkomat 24/7" : "Kurier InPost"}`,
-          },
-          unit_amount: Math.round(shippingCost * 100),
-        },
-        quantity: 1,
-      });
-    } else {
-      lineItems.push({
-        price_data: {
-          currency: "pln",
-          product_data: {
-            name: `Darmowa dostawa: ${customer.shippingMethod === "inpostLocker" ? "Paczkomat 24/7" : "Kurier InPost"}`,
-          },
-          unit_amount: 0,
-        },
-        quantity: 1,
-      });
+      throw error;
     }
 
     // Determine return URL

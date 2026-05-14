@@ -19,12 +19,9 @@ import {
   EmbeddedCheckoutProvider,
   EmbeddedCheckout,
 } from "@stripe/react-stripe-js";
-import {
-  calculateShippingCost,
-  getIsFreeShipping,
-  SHIPPING_COST,
-} from "@/lib/consts";
+import { SHIPPING_COST } from "@/lib/consts";
 import Image from "next/image";
+import { calculateShippingCost, getIsFreeShipping } from "@/lib/shipping";
 
 const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string,

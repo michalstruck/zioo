@@ -54,7 +54,7 @@ export async function POST(req: Request) {
 
       const customerName = session.customer_details?.name || "Kliencie";
       const customerEmail = session.customer_details?.email || "";
-      const shippingDetails = session.shipping_details?.address || {};
+      const shippingDetails = ((session as any).shipping_details?.address as any) || {};
 
       const sellerEmail = process.env.SELLER_EMAIL;
 
@@ -96,11 +96,11 @@ export async function POST(req: Request) {
               customerEmail: customerEmail || "Brak danych",
               orderTotal,
               shippingDetails: {
-                line1: shippingDetails.line1 || undefined,
-                line2: shippingDetails.line2 || undefined,
-                city: shippingDetails.city || undefined,
-                postalCode: shippingDetails.postal_code || undefined,
-                country: shippingDetails.country || undefined,
+                line1: shippingDetails?.line1 || undefined,
+                line2: shippingDetails?.line2 || undefined,
+                city: shippingDetails?.city || undefined,
+                postalCode: shippingDetails?.postal_code || undefined,
+                country: shippingDetails?.country || undefined,
               },
               lineItems: formattedLineItems,
             }),
