@@ -111,174 +111,293 @@ zioo.pl
 
 ---
 
-### 5. First Organic Content Batch (5-10 pieces)
+### 5. First Month Content Plan (Packaging-Free Pivot)
 
-> **Owner:** Brand Manager (direction) + Copywriter (captions) + CEO (filming)
+> **Owner:** Brand Manager (direction) + Copywriter (captions)
 > **Skills:** `social-content`, `humanizer`, `marketing-psychology`
-> **Deliverable:** 7-10 published posts across TikTok + Instagram
+> **Deliverable:** 12 posts across TikTok + Instagram, prepared and scheduled in Canva
 
-**Brief:**
+**Context:** Packaging production is delayed ~2 weeks. This plan pivots to educational terpene content and quirky brand-building posts that require **no physical product, no packaging, no on-camera filming.** Everything below can be prepared and scheduled in Canva in advance.
 
-This is the first content your audience will ever see. It sets the tone. It must feel authentic, visually premium, and effortlessly cool — not corporate, not try-hard, not like a brand that just hired an agency. Think: "a friend who happens to blend really nice herbs and has good taste."
+**Constraints & principles:**
 
-**Content pieces with full direction:**
+- All formats are graphic/text-first — no labeled sachet in frame required
+- No on-camera filming required anywhere in this batch
+- COPY_DICTIONARY.md applies in full — products are **mieszanki do aromatyzacji**; never `herbata`, `herbata ziołowa`, `napar`, or any combustion term
+- Tone: quirky, a little funny, informative. Science kid who has a good design eye. Not corporate, not try-hard.
+- Language: Polish throughout
+- Hashtags: 5-8 per post — `#terpeny`, `#mieszankiziołowe`, `#aromaterapia`, `#zioo` + 1-2 niche
 
----
+**Visual system (Canva):**
 
-**Piece 1-2: "Co jest w środku?" unboxing (Reel/TikTok)**
-
-| Spec     | Value                                                                   |
-| -------- | ----------------------------------------------------------------------- |
-| Format   | Vertical video, 9:16, 1080×1920px                                       |
-| Duration | 15-25 seconds                                                           |
-| Platform | Post to TikTok first, then IG Reel                                      |
-| Sound    | Original ASMR audio (crinkling sachet, herbs pouring). No music needed. |
-
-Script outline:
-
-1. (0-3s) HOOK: Close-up of hand holding sealed sachet (white for Natural, black for Terpene). Text overlay: "Co jest w środku?" or sound of package crinkling
-2. (3-10s) Tear open the sachet slowly. Camera catches the herbs spilling or being poured onto a marble/wood surface
-3. (10-18s) Close-up of the loose herb blend — show texture, colors, individual ingredients recognizable
-4. (18-25s) Pull back to reveal the label. End frame: blend name visible, zioo logo
-
-What NOT to do: don't show the product near rolling papers, a lighter, or anything combustion-related. Don't add commentary about how to "use" it. Let the visual speak.
-
-Caption framework:
-
-```
-[Name of blend] — [one-liner about the mood]
-[1-2 sentences about the ingredients, what makes it unique]
-[CTA: link in bio / "zamów na zioo.pl"]
-#zioo #mieszankiziołowe #aromaterapia #terpeny
-```
+| Element        | Spec                                                                                                                |
+| -------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Backgrounds    | `#FBF9F4` (Antique Paper) or `#6B7F6A` (Sage) — alternate per post                                                  |
+| Accent colours | `#A27FE2` (Lilac) for terpene callouts; `#C48464` (Terracotta) for blend mood callouts                              |
+| Body font      | Public Sans                                                                                                         |
+| Display font   | Fraunces                                                                                                            |
+| Text colour    | `#121625` (Soft Ink Black)                                                                                          |
+| Imagery        | Botanical line drawings, terpene molecule diagrams, macro herb/petal shots on linen or marble — no packaging needed |
 
 ---
 
-**Piece 3-4: Terpene education carousel (Instagram)**
-
-| Spec     | Value                                            |
-| -------- | ------------------------------------------------ |
-| Format   | Carousel, 1:1 square, 1080×1080px                |
-| Slides   | 5-7 per carousel                                 |
-| Platform | Instagram only (carousels don't exist on TikTok) |
-
-Carousel 1: "Czym są terpeny?"
-
-| Slide     | Content                                                                                 | Visual                                              |
-| --------- | --------------------------------------------------------------------------------------- | --------------------------------------------------- |
-| 1 (Cover) | "Czym są terpeny?"                                                                      | Bold text on sage green (`#6B7F6A`) background      |
-| 2         | "Terpeny to naturalne związki aromatyczne występujące w roślinach — w tym w konopiach." | Minimalist botanical illustration or photo of herbs |
-| 3         | "Mircen — earthy, ziołowy. Wspiera odprężenie."                                         | Terpene molecule icon + herb photo                  |
-| 4         | "Limonen — cytrusowy, energetyczny. Poprawia nastrój."                                  | Same format                                         |
-| 5         | "Linalol — kwiatowy, łagodny. Sprzyja wyciszeniu."                                      | Same format                                         |
-| 6         | "W naszej linii Infused, terpeny z konopi wzbogacają kompozycję botaniczną."            | CTA: "Sprawdź na zioo.pl"                           |
-
-Carousel 2: "Dlaczego mieszanki ziołowe?" (Why herbal blends?)
-
-| Slide     | Content                                                                         | Visual                     |
-| --------- | ------------------------------------------------------------------------------- | -------------------------- |
-| 1 (Cover) | "Dlaczego mieszanki ziołowe?"                                                   | Bold text, same style      |
-| 2         | "Bez uzależnienia. Bez chemii."                                                 | Clean typography           |
-| 3         | "Naturalne ziołowe składniki — dziewanna, malina, pokrzywa, szałwia, melisa..." | Herb flat-lay photo        |
-| 4         | "Idealne jako herbata ziołowa lub mieszanka do aromatyzacji."                   | Lifestyle shot with teacup |
-| 5         | "Wysyłka w 24h z InPost 📦"                                                     | Packaging photo            |
-
-Design rules for carousels:
-
-- Typography: Public Sans for body, Fraunces for slide titles
-- Background: alternate between `#FBF9F4` (Antique Paper) and `#6B7F6A` (Sage) slides
-- Keep text density low — max 20-25 words per slide
-- No stock photos. Use product photography from Brief #2 or original botanical close-ups
-- Run all text through `humanizer` — it must sound human, not like a Wikipedia entry
+#### Week 1 — "Czym są terpeny?"
 
 ---
 
-**Piece 5: "Zrobiłem herbatę z [blend]" brewing video (Reel/TikTok)**
+**Piece 1: Carousel — „Terpeny — co to właściwie jest?"**
 
-| Spec     | Value                                                                  |
-| -------- | ---------------------------------------------------------------------- |
-| Format   | Vertical video, 9:16, 1080×1920px                                      |
-| Duration | 20-30 seconds                                                          |
-| Platform | TikTok first, then IG Reel                                             |
-| Sound    | Background lo-fi or original audio with water boiling / pouring sounds |
+| Spec     | Value                                                     |
+| -------- | --------------------------------------------------------- |
+| Format   | Carousel, 1:1, 1080×1080px, 6 slides                      |
+| Platform | Instagram primary; export last slide as static for TikTok |
 
-Script outline:
+Intro-level, no assumed knowledge.
 
-1. (0-3s) HOOK: Text overlay "Herbata z Chill 🌿" while opening the sachet
-2. (3-12s) Pinch-pour herbs into an infuser/teacup. Show the water being poured. Steam rising.
-3. (12-20s) Let it steep. Show the color change in the cup.
-4. (20-30s) First sip reaction. Smile, nod, or a simple "Dobra." — keep it real, not acted.
+| Slide     | Copy direction                                                                                                                              |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1 (Cover) | „Terpeny? Serio, o co chodzi?" — bold Fraunces on sage bg                                                                                   |
+| 2         | „Każda roślina pachnie inaczej. Za to odpowiadają terpeny — naturalne związki aromatyczne." + botanical illustration                        |
+| 3         | „Znajdziesz je w lawendzie, cytrusach, sosnie i... konopiach." + flat-lay                                                                   |
+| 4         | „W naszej linii Infused dodajemy terpeny z konopi do mieszanki ziołowej. Aromat i efekt entourage — bez THC, bez nikotyny." + molecule icon |
+| 5         | „To nie magia. To chemia roślin." — clean typography                                                                                        |
+| 6 (CTA)   | „Sprawdź blendy na zioo.pl"                                                                                                                 |
 
-This video does two things: shows the tea use case (compliance) and looks genuinely pleasant (conversion). It's not a tutorial, it's a vibe.
-
----
-
-**Piece 6: Behind-the-scenes story series (Instagram Stories)**
-
-| Spec     | Value                                  |
-| -------- | -------------------------------------- |
-| Format   | Vertical, 9:16, 1080×1920px, ephemeral |
-| Quantity | 3-5 stories                            |
-| Platform | Instagram Stories                      |
-
-Story sequence:
-
-1. Shot of raw herb ingredients laid out on a table — text: "Dzisiejszy blend: Focus"
-2. Weighing herbs on a precision scale — text: "30% dziewanna, 30% malina..."
-3. Mixing/blending in a bowl — show the hands, the texture
-4. Packing into sachets — quick clip, satisfying
-5. Final shot: labeled product on a clean surface — poll sticker: "Który blend chcecie zobaczyć następny?"
-
-Purpose: builds transparency, shows craftsmanship, drives engagement (poll). Stories disappear in 24h but the content can be reused as Highlights.
-
-**Create Highlights** with these categories: "🌿 Blendy" | "📦 Zamówienie" | "💡 Terpeny" | "🎬 Kulisy (BTS)"
+Caption hook: „Czy wiedziałeś, że mango zawiera ten sam terpen co konopie?" + 2-3 zdania + CTA.
 
 ---
 
-**Piece 7: Lifestyle flat-lay post (Instagram feed)**
+**Piece 2: Static / Meme — „Miesiąc losowych ziół vs miesiąc zioo"**
 
-| Spec     | Value                                                |
-| -------- | ---------------------------------------------------- |
-| Format   | Single image, 1:1 or 4:5, 1080×1080px or 1080×1350px |
-| Platform | Instagram feed                                       |
+| Spec     | Value                                                   |
+| -------- | ------------------------------------------------------- |
+| Format   | Single image, 4:5, 1080×1350px, meme-style split screen |
+| Platform | Instagram + TikTok                                      |
 
-Scene: product on a nightstand or desk with complementary props (candle, book, plant, ceramic cup). Evening light. Shot from above or 45° angle. Use existing lifestyle photography from Brief #2.
+Left panel: chaotic — opisane zioła bez etykiety, brak pomysłu, pytajnik. Right panel: „Miesiąc zioo" — nazwane blendy (Czill, Fokus, Slep, Fresz), ikona terpenu, „zawsze świeże." Humorystyczna, nie agresywna wobec konkurencji.
 
-Caption framework:
+> ⚠️ Nie używaj `herbata`, `napar`, `herbata ziołowa` — nawet w kontekście memu. „Losowe zioła z herbaciarni" jest ok (opisuje sklep, nie nasz produkt).
 
-```
-[Short, punchy statement about the mood — e.g., "Wieczór z Chill."]
-[1 sentence about the blend — what it is, how it smells, what it's for]
-[CTA or conversational closer — "A Ty, jak relaksujesz się wieczorem?"]
+Caption: krótki, cięty humor. „Wiesz co masz w każdej saszetce. My też." + CTA.
 
-#zioo #relaks #mieszankaziołowa #aromaterapia #wieczór
-```
+---
 
-**Hashtag strategy (all posts):**
+**Piece 3: Carousel — „5 roślin pełnych terpenów. Nr 4 zaskoczy."**
 
-- 5-8 hashtags per post (not 30 — Instagram penalizes hashtag spam now)
-- Mix: 2-3 broad (#relaks, #zioła), 2-3 niche (#mieszankiziołowe, #terpeny, #aromaterapia), 1 branded (#zioo)
-- Research Polish hashtag volumes before finalizing — use Instagram search suggestions
+| Spec     | Value                   |
+| -------- | ----------------------- |
+| Format   | Carousel, 1:1, 7 slides |
+| Platform | Instagram               |
 
-**Post schedule (Week 2-3):**
+Każdy slide = 1 roślina + 1 terpen + 1 efekt aromatyczny.
 
-| Day | Platform    | Content piece                            |
-| --- | ----------- | ---------------------------------------- |
-| Mon | TikTok + IG | Piece 1 (unboxing Reel)                  |
-| Wed | IG          | Piece 3 (terpene carousel)               |
-| Thu | TikTok + IG | Piece 5 (brewing Reel)                   |
-| Fri | IG Stories  | Piece 6 (BTS)                            |
-| Sat | IG          | Piece 7 (lifestyle flat-lay)             |
-| Mon | IG          | Piece 4 (herbal blends carousel)         |
-| Wed | TikTok + IG | Piece 2 (unboxing Reel, different blend) |
+| Slide     | Content                                                     |
+| --------- | ----------------------------------------------------------- |
+| 1 (Cover) | „5 roślin pełnych terpenów. Nr 4 zaskoczy."                 |
+| 2         | Lawenda → Linalol → Kwiatowy, wyciszający                   |
+| 3         | Cytryna → Limonen → Cytrusowy, energetyczny                 |
+| 4         | Konopie → Mircen → Earthy, ziołowy (spoiler)                |
+| 5         | Sosna → α-Pinen → Świeży, klarujący                         |
+| 6         | Mięta → Mentol → Orzeźwiający — „Tak wygląda profil Fresz"  |
+| 7 (CTA)   | „Infused line = terpeny z konopi w Twoim blendzie. zioo.pl" |
+
+Caption: „Terpeny są wszędzie. My je po prostu komponujemy."
+
+---
+
+#### Week 2 — Blend Spotlights
+
+---
+
+**Piece 4: Static — „Blend spotlight: Czill"**
+
+| Spec     | Value                     |
+| -------- | ------------------------- |
+| Format   | Single image, 1:1 lub 4:5 |
+| Platform | Instagram + TikTok        |
+
+Graphic-first: duże nazwę blendu (Fraunces), lista składników jako elegancki typograficzny układ (30% Dziewanna, 30% Malina…), profil terpenowy „Girl Scout Cookies." Tło: Antique Paper lub głęboka szałwia. Bez zdjęcia produktu — sama typografia i ilustracja botaniczna.
+
+Caption: „Kiedy dzień był za długi. Czill ma to rozegrane." + skład + CTA.
+
+---
+
+**Piece 5: Carousel — „Efekt entourage — w 4 slidach"**
+
+| Spec     | Value                   |
+| -------- | ----------------------- |
+| Format   | Carousel, 1:1, 5 slides |
+| Platform | Instagram               |
+
+Edukacja o efekcie entourage — wyjaśniona prosto, bez naukowego żargonu.
+
+| Slide     | Content                                                                                                          |
+| --------- | ---------------------------------------------------------------------------------------------------------------- |
+| 1 (Cover) | „Efekt entourage. Brzmi skomplikowanie. Nie jest."                                                               |
+| 2         | „Jeden terpen robi swoje. Kilka razem robi więcej." Analogia: solowy muzyk vs. zespół                            |
+| 3         | „Kombinujemy terpeny z konopi z ziołami tak, żeby się wzajemnie wzmacniały." Diagram: terpeny + zioła = synergia |
+| 4         | „Czill + GSC. Fokus + Lemon Skunk. Slep + Purple Punch."                                                         |
+| 5 (CTA)   | „Przekonaj się sam — zioo.pl"                                                                                    |
+
+Caption: „1+1=3 w świecie terpenów."
+
+---
+
+**Piece 6: Reel (Canva-only) — „Aromaty blendu jako Spotify Wrapped"**
+
+| Spec     | Value                                                  |
+| -------- | ------------------------------------------------------ |
+| Format   | Reel, 15s, Canva animated slides — no filming required |
+| Platform | TikTok + Instagram Reel                                |
+
+Animowany format przypominający Spotify Wrapped — ale dla blendów. Każdy kadr: „Twój blend w tym roku był... Czill. Bo linalol i melisa mówią samo za siebie." Prosta animacja w Canva (slide przejście, bold typografia).
+
+Caption: „Twój blend roku: Czill 🌿" + krótko o blendzie + link in bio.
+
+---
+
+#### Week 3 — „Terpeny pod lupą"
+
+---
+
+**Piece 7: Carousel — „Mircen — terpene spotlight #1"**
+
+| Spec     | Value                   |
+| -------- | ----------------------- |
+| Format   | Carousel, 1:1, 5 slides |
+| Platform | Instagram               |
+
+Pierwszy z serii deep-dive'ów na konkretne terpeny. Wzór do powielenia dla Linalolu, Limonenu, α-Pinenu.
+
+| Slide     | Content                                                         |
+| --------- | --------------------------------------------------------------- |
+| 1 (Cover) | „Mircen — co to jest i dlaczego go lubisz?" — Sage bg, Fraunces |
+| 2         | Gdzie go znajdziesz: mango, chmiel, konopie, tymianek           |
+| 3         | Aromat: earthy, ziołowy, lekko owocowy                          |
+| 4         | „W Czill używamy profilu terpenowego bogatego w mircen."        |
+| 5 (CTA)   | „Chcesz poczuć różnicę? zioo.pl"                                |
+
+Caption: „Mango ma ten sam terpen co konopie. Serio." + edukacja + CTA.
+
+---
+
+**Piece 8: Static / Meme — „Ranking terpenów. Zrobiony z pełną powagą."**
+
+| Spec     | Value              |
+| -------- | ------------------ |
+| Format   | Single image, 4:5  |
+| Platform | Instagram + TikTok |
+
+Tier list (S / A / B / C) — humorystyczny ale fakty są prawdziwe. S tier: Mircen (z humorem: „co tu gadać"). W pełni graficzny — zero zdjęcia produktu. Shareable, komentowalne.
+
+Caption: „Kontrowersyjny? Może. Niepoprawny? Nie." + wyjaśnienie ratingu + CTA.
+
+---
+
+**Piece 9: Carousel — „Twój vibe — który blend?"**
+
+| Spec     | Value                           |
+| -------- | ------------------------------- |
+| Format   | Carousel, 1:1 lub 4:5, 6 slides |
+| Platform | Instagram                       |
+
+Nie quiz — „jeśli jesteś X, to Y." Każdy blend opisany przez nastrój, porę dnia i profil terpenowy — zero sugestii o konkretnym sposobie użycia.
+
+| Slide     | Blend                                                  | Opis                                              |
+| --------- | ------------------------------------------------------ | ------------------------------------------------- |
+| 1 (Cover) | „Który blend jest dla Ciebie?"                         |                                                   |
+| 2         | **Fresz**                                              | Rano, orzeźwienie, mięta i szałwia — czysty start |
+| 3         | **Czill**                                              | Po robocie, lawenda i melisa, GSC terpeny — reset |
+| 4         | **Fokus**                                              | Głęboka robota, mięta + Lemon Skunk — flow state  |
+| 5         | **Slep**                                               | Cisza, melisa i róża, Purple Punch — dobranoc     |
+| 6 (CTA)   | „Zamów próbkę wszystkich — Zestaw Startowy na zioo.pl" |                                                   |
+
+Caption: „Nie każdy dzień jest taki sam. Mamy na to blendy."
+
+---
+
+#### Week 4 — Community & Zaawansowana Edukacja
+
+---
+
+**Piece 10: Carousel — „Linalol — terpene spotlight #2"**
+
+| Spec     | Value                                             |
+| -------- | ------------------------------------------------- |
+| Format   | Carousel, 1:1, 5 slides — ten sam wzór co Piece 7 |
+| Platform | Instagram                                         |
+
+Gdzie: lawenda, kolendra, bazylia, konopie. Aromat: kwiatowy, lekko cytrusowy. W naszym blendzie: Slep (Purple Punch). Botanical illustrations.
+
+---
+
+**Piece 11: Static / Meme — „Gdyby terpeny były typami osobowości MBTI"**
+
+| Spec     | Value              |
+| -------- | ------------------ |
+| Format   | Single image, 4:5  |
+| Platform | Instagram + TikTok |
+
+Mircen jako ENFP, Linalol jako INFJ, Limonen jako ENFJ itp. 100% graficzny — bez zdjęcia produktu. Shareable, buduje engagement bez hard-sell.
+
+Caption: „Który typ jesteś?" — pytanie w komentarzach.
+
+---
+
+**Piece 12: Carousel — „Co robi każdy składnik Czilla?"**
+
+| Spec     | Value                   |
+| -------- | ----------------------- |
+| Format   | Carousel, 1:1, 7 slides |
+| Platform | Instagram               |
+
+Ingredient deep-dive — każdy slide = 1 składnik + właściwości aromatyczne.
+
+| Slide     | Składnik                                                                      | Opis                                                           |
+| --------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| 1 (Cover) | „Co jest w Czillu i co robi każdy składnik?"                                  |                                                                |
+| 2         | Dziewanna (30%)                                                               | Miękka baza, znana z właściwości wspierających drogi oddechowe |
+| 3         | Malina (30%)                                                                  | Lekko owocowy aromat, zrównoważony                             |
+| 4         | Pokrzywa (20%)                                                                | Ziołowy charakter, bogata w minerały                           |
+| 5         | Lawenda (10%)                                                                 | Kwiatowy, łagodny                                              |
+| 6         | Melisa (10%)                                                                  | Delikatna, cytrynowa                                           |
+| 7 (CTA)   | „Profil GSC domknął całość. Czill na zioo.pl — saszetka 0.5g, zawsze świeże." |                                                                |
+
+Caption: „Każda saszetka 0.5g. Zawsze świeże, zawsze ta sama porcja." + link in bio.
+
+---
+
+**Post schedule (Month 1) — 3 posty/tydzień:**
+
+| Tydzień | Piece | Format              | Platforma   | Temat                        |
+| ------- | ----- | ------------------- | ----------- | ---------------------------- |
+| **1**   | 1     | Carousel (6 slides) | IG          | Czym są terpeny?             |
+|         | 2     | Static / Meme       | IG + TikTok | Losowe zioła vs zioo         |
+|         | 3     | Carousel (7 slides) | IG          | 5 roślin z terpenami         |
+| **2**   | 4     | Static              | IG + TikTok | Blend spotlight: Czill       |
+|         | 5     | Carousel (5 slides) | IG          | Efekt entourage              |
+|         | 6     | Reel (Canva-only)   | TikTok + IG | Aromaty jako Spotify Wrapped |
+| **3**   | 7     | Carousel (5 slides) | IG          | Terpene spotlight: Mircen    |
+|         | 8     | Static / Meme       | IG + TikTok | Ranking terpenów tier list   |
+|         | 9     | Carousel (6 slides) | IG          | Twój vibe — który blend?     |
+| **4**   | 10    | Carousel (5 slides) | IG          | Terpene spotlight: Linalol   |
+|         | 11    | Static / Meme       | IG + TikTok | Terpeny jako MBTI            |
+|         | 12    | Carousel (7 slides) | IG          | Ingredient deep-dive: Czill  |
+
+**What's on hold until packaging arrives:**
+
+- Unboxing / teardown reels
+- Product lifestyle flat-lays z labelowaną saszetką w kadrze
+- BTS packing stories
 
 **Deliverables:**
 
-- [ ] 7 content pieces filmed/designed
-- [ ] All captions written in Polish and reviewed with `humanizer`
-- [ ] All captions checked against `COPY_DICTIONARY.md`
-- [ ] Posted per schedule above
-- [ ] Engagement routine active from day 1 of posting
+- [ ] Canva templates: carousel, static/meme, Reel (animated)
+- [ ] Biblioteka ilustracji botanicznych (Noun Project / Canva / Unsplash)
+- [ ] 12 postów gotowych i zakolejkowanych
+- [ ] Wszystkie captiony w Polish, sprawdzone pod `COPY_DICTIONARY.md`
+- [ ] Hashtag lista: `#zioo #terpeny #mieszankiziołowe #aromaterapia` + niszowe
+- [ ] Zaplanowane w Canva Content Planner lub Meta Business Suite
 
 ---
 
