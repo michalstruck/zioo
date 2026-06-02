@@ -10,26 +10,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Link from "next/link";
-import * as React from "react";
-
-function formatAnswer(text: string) {
-  return text.split("\n").map((line, i, arr) => (
-    <React.Fragment key={i}>
-      {line
-        .split(/(\*\*.*?\*\*)/)
-        .map((part, j) =>
-          part.startsWith("**") && part.endsWith("**") ? (
-            <b key={j}>{part.slice(2, -2)}</b>
-          ) : (
-            part
-          ),
-        )}
-      {i < arr.length - 1 && <br />}
-    </React.Fragment>
-  ));
-}
-
-const cleanupAnswer = (text: string) => text.replace(/\*\*/g, "");
+import { cleanupSemiMarkdown, formatSemiMarkdown } from "@/lib/utils";
 
 const FAQ_ITEMS = [
   {
@@ -91,7 +72,7 @@ export default function Home() {
               name: q,
               acceptedAnswer: {
                 "@type": "Answer",
-                text: cleanupAnswer(a),
+                text: cleanupSemiMarkdown(a),
               },
             })),
           }),
@@ -384,7 +365,7 @@ export default function Home() {
                   {item.q}
                 </AccordionTrigger>
                 <AccordionContent className="text-foreground/70 leading-relaxed">
-                  {formatAnswer(item.a)}
+                  {formatSemiMarkdown(item.a)}
                 </AccordionContent>
               </AccordionItem>
             ))}
