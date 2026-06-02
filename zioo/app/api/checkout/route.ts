@@ -76,7 +76,7 @@ export async function POST(req: Request) {
     }
 
     // Determine return URL
-    const origin = req.headers.get("origin") || "http://localhost:3000";
+    const origin = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
     const metadata = {
       firstName: customer.firstName,
@@ -98,6 +98,7 @@ export async function POST(req: Request) {
       customer_email: customer.email,
       payment_intent_data: {
         metadata,
+        receipt_email: customer.email,
       },
       metadata,
     });

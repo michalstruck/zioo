@@ -1,6 +1,6 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Public+Sans:wght@100..900&display=swap"); */
 @import "tailwindcss";
-@import "tw-animate-css";
+@import "tw-animate-css/prefix";
 @import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
