@@ -9,19 +9,6 @@ export const metadata = {
 export default function Store() {
   return (
     <main className="bg-blend-color bg-background relative min-h-screen">
-      {/* Organic Background */}
-      <div
-        className="absolute inset-x-0 top-0 h-full z-0 opacity-30 mix-blend-multiply pointer-events-none bg-center transition-all duration-1000"
-        style={{
-          backgroundImage: "url('/floral-bg.png')",
-          backgroundRepeat: "repeat-y",
-          backgroundSize: "100% auto",
-        }}
-      />
-      {/* Gradient transition masking the bottom edge of the image */}
-      <div className="absolute inset-x-0 bottom-0 h-[10vh] z-0 bg-linear-to-t from-background to-transparent pointer-events-none" />
-      <div className="absolute inset-x-0 top-0 h-[10vh] z-0 bg-linear-to-b from-background to-transparent pointer-events-none" />
-
       <section
         id="storefront"
         className="relative z-10 px-5 py-(--space-2xl) md:px-12 md:py-(--space-3xl) lg:px-20"

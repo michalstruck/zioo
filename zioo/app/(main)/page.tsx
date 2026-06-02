@@ -10,35 +10,55 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Link from "next/link";
+import * as React from "react";
+
+function formatAnswer(text: string) {
+  return text.split("\n").map((line, i, arr) => (
+    <React.Fragment key={i}>
+      {line
+        .split(/(\*\*.*?\*\*)/)
+        .map((part, j) =>
+          part.startsWith("**") && part.endsWith("**") ? (
+            <b key={j}>{part.slice(2, -2)}</b>
+          ) : (
+            part
+          ),
+        )}
+      {i < arr.length - 1 && <br />}
+    </React.Fragment>
+  ));
+}
+
+const cleanupAnswer = (text: string) => text.replace(/\*\*/g, "");
 
 const FAQ_ITEMS = [
   {
     q: "Czy to jest legalne?",
-    a: "Tak, w 100%. Nasze mieszanki to zioła z legalnym ekstraktem terpenowym z konopi. Żaden składnik nie podlega żadnym ograniczeniom prawnym w Polsce. Brak THC, CBD i substancji uzależniających.",
+    a: "Tak, w 100%. Nasze mieszanki to zioła z legalnym **ekstraktem terpenowym z konopi**. Żaden składnik nie podlega żadnym ograniczeniom prawnym w Polsce. **Brak** THC, CBD i substancji uzależniających.",
   },
   {
     q: "Czym różni się linia Terpene od Natural?",
-    a: "Linia Natural to czysta botanika - samo zioło. Linia Terpene zawiera dodatkowo ekstrakt terpenowy z konkretnego szczepu konopi: Girl Scout Cookies, Lemon Skunk lub Purple Punch. Efekt: intensywniejszy aromat i działanie efektu entourage. Skład ziołowy w obu liniach jest identyczny.",
+    a: "Linia **Natural** to starannie dobrane i dopracowane mieszanki ziół. Linia **Terpene** została wzbogacona o naturalny ekstrakt terpenowy z konopi: **Girl Scout Cookies**, **Lemon Skunk** lub **Purple Punch**. Efekt: intensywniejszy aromat i **efekt entourage**. Skład bazowych ziół w obu liniach jest identyczny.",
   },
   {
     q: "Dlaczego saszetka ma 0.5g?",
-    a: "Znasz to uczucie kiedy używasz ziół, a następnego dnia są zwietrzałe i wysuszone? 0.5g to idealna porcja na pojedynczą sesję. Nie musisz odmierzać, nie musisz martwić się, że susz zwietrzeje w dużym opakowaniu. Otwierasz, używasz, gotowe. Zawsze świeże, zawsze dobre.",
+    a: "Znasz to uczucie kiedy używasz ziół, a następnego dnia są **zwietrzałe** i **wysuszone**? 0.5g to **idealna porcja** na pojedynczą sesję. Nie musisz odmierzać, nie musisz martwić się, że susz zwietrzeje w dużym opakowaniu. Otwierasz, używasz, gotowe. **Zawsze świeże, zawsze dobre**.",
   },
   {
     q: "Jak szybko dostanę zamówienie?",
-    a: "Wysyłamy w ciągu 24 godzin od złożenia zamówienia, przez InPost. Możesz wybrać paczkomat lub kuriera. Zamawiasz dziś - masz jutro.",
+    a: "Wysyłamy w ciągu **24 godzin** od złożenia zamówienia, przez InPost. Możesz wybrać paczkomat lub kuriera. **Zamawiasz dziś - masz jutro**.",
   },
   {
     q: "Ile kosztuje dostawa?",
-    a: "Zawsze 13 zł. Darmowa od 34,99 zł - czyli przy dwóch opakowaniach 5szt.",
+    a: "Zawsze 13 zł. **Darmowa od 34,99 zł** - czyli przy dwóch opakowaniach 5szt.",
   },
   {
     q: "Dlaczego zioo, a nie cokolwiek innego?",
-    a: "Bo nic innego w Polsce nie istnieje w tej formie. Saszetki 0.5g zamiast sypkiego suszu, który zwietrzeje po tygodniu. Mood-based blending zamiast losowego zestawu ziół z apteki. Profil terpenowy z konopi, którego w ogóle nie ma na polskim rynku. Skomponowane od zera, nie sklejone z przypadku.",
+    a: "Bo nic innego w Polsce **nie istnieje** w tej formie. Saszetki 0.5g zamiast sypkiego suszu, który zwietrzeje po tygodniu. **Dopracowane mieszanki** zamiast losowego zestawu ziół z apteki. **Profil terpenowy** z konopi, którego nie ma na polskim rynku. Skomponowane od zera, nie złożone z przypadku.",
   },
   {
     q: "Jak używać mieszanki do aromatyzacji?",
-    a: "Mieszanki zioo przeznaczone są wyłącznie do aromatyzacji - możesz użyć ich w dyfuzorze, kominku aromatycznym lub innym urządzeniu do aromatyzacji. Nie są produktem spożywczym ani leczniczym. Przechowuj w suchym i zacienionym miejscu, z dala od dzieci.",
+    a: "Mieszanki zioo przeznaczone są **wyłącznie do aromatyzacji** - możesz użyć ich w dyfuzorze, kominku aromatycznym lub innym urządzeniu do aromatyzacji. **Nie są** produktem spożywczym ani leczniczym. Przechowuj w suchym i zacienionym miejscu, z dala od dzieci.",
   },
 ];
 
@@ -69,7 +89,10 @@ export default function Home() {
             mainEntity: FAQ_ITEMS.map(({ q, a }) => ({
               "@type": "Question",
               name: q,
-              acceptedAnswer: { "@type": "Answer", text: a },
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: cleanupAnswer(a),
+              },
             })),
           }),
         }}
@@ -81,7 +104,7 @@ export default function Home() {
       >
         {/* Primary organic background - full bleed */}
         <div
-          className="absolute inset-0 z-0 opacity-25 mix-blend-multiply pointer-events-none bg-cover bg-center"
+          className="absolute inset-0 z-0 opacity-10 mix-blend-multiply pointer-events-none bg-cover bg-center"
           style={{ backgroundImage: "url('/dark-moss-bg.png')" }}
         />
         {/* Secondary organic layer - shifted for parallax depth */}
@@ -108,9 +131,8 @@ export default function Home() {
             </h1>
 
             <p className="max-w-lg text-lg font-medium leading-relaxed text-foreground/80 md:text-xl">
-              Cztery mieszanki do aromatyzacji - relaks, skupienie, orzeźwienie
-              i spokojny sen. Z profilem terpenowym z konopi lub w 100% sauté.
-              Wysyłka w 24h z InPost.
+              Relaks, skupienie, orzeźwienie i spokojny sen. Dostępne z
+              naturalnym ekstraktem terpenowym z konopi. Wysyłka w 24h z InPost.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-8">
@@ -186,21 +208,21 @@ export default function Home() {
             {/* COPY: problem headline */}
             Szukałeś czegoś innego. Po prostu brakowało opcji.
           </h2>
-          <div className="text-lg font-medium text-foreground/70 space-y-6">
-            <p>
-              Sypki susz w pudełku zwietrzeje po tygodniu. Nikt nie
-              zaprojektował tych mieszanek pod konkretny moment.
-            </p>
+          <div className="text-lg pt-3 font-medium text-foreground/70 space-y-6">
+            {/* <p>
+              Sypki susz w pudełku zwietrzeje po tygodniu. Nikt nie projektował
+              tych mieszanek pod konkretny moment.
+            </p> */}
             <p>
               Terpeny z konopi są od dawna dostępne jako ekstrakt. Tylko nikt
-              nie połączył ich z ziołami w jedną gotową kompozycję, spakowaną
-              tak, żeby każda porcja była idealna. Do teraz.
+              nie połączył ich z ziołami w spójną kompozycję, spakowaną tak,
+              żeby każda porcja była idealna. Do teraz.
             </p>
           </div>
-          <p className="pt-4 text-2xl font-heading font-semibold text-primary">
+          <p className="text-2xl font-heading font-semibold text-primary">
             {/* COPY: pain-to-solution bridge */}
-            zioo to saszetki 0.5g - porcja idealna na raz. Zawsze świeże, zawsze
-            dobre.
+            zioo to saszetki 0.5g - porcja idealna na raz. <br /> Zawsze świeże,
+            zawsze dobre.
           </p>
         </div>
       </section>
@@ -211,14 +233,14 @@ export default function Home() {
         className="border-t border-border/20 bg-muted/10 px-5 py-(--space-2xl) md:px-12 md:py-(--space-3xl) lg:px-20"
       >
         <div className="mx-auto max-w-7xl">
-          <div className="mb-10 md:mb-14 text-center">
+          <div className="mb-10 text-center">
             <h2 className="">
               {/* COPY: product showcase headline */}
               Znajdź swój moment
             </h2>
             <p className="mt-4 text-lg text-foreground/70 max-w-2xl mx-auto">
               {/* COPY: product showcase subtext */} Dobierz pod nastrój. Z
-              legalnym profilem terpenowym z konopi.
+              naturalnym profilem terpenowym z konopi.
             </p>
           </div>
 
@@ -239,17 +261,18 @@ export default function Home() {
           <div className="mb-10 text-center max-w-2xl mx-auto">
             <h2 className="">
               {/* COPY: terpene section headline */}
-              Co to są terpeny i dlaczego zmieniają wszystko
+              Co to są terpeny?
             </h2>
             <p className="mt-4 text-lg text-foreground/70">
               {/* COPY: terpene intro */}
-              Terpeny to związki aromatyczne naturalnie obecne w roślinach - w
-              tym w konopiach. <br />
-              Każdy szczep konopi ma inny profil terpenowy: inny aromat, inne
-              działanie. W linii Terpene infuzujemy nasze mieszanki legalnym
-              ekstraktem terpenowym z konkretnych szczepów. <br />
-              Efekt entourage to synergia ziół z terpenemami - więcej niż suma
-              składników.
+              Terpeny to związki aromatyczne <b>naturalnie obecne</b> w
+              roślinach, w tym w konopiach. <br />
+              Każdy <b>szczep konopi</b> ma inny profil terpenowy: inny aromat,
+              inne działanie. W linii Terpene infuzujemy nasze mieszanki{" "}
+              <b>naturalnym ekstraktem terpenowym</b> z konkretnych szczepów.{" "}
+              <br />
+              <b>Efekt entourage</b> to synergia ziół z terpenemami - więcej niż
+              suma składników.
             </p>
           </div>
 
@@ -361,7 +384,7 @@ export default function Home() {
                   {item.q}
                 </AccordionTrigger>
                 <AccordionContent className="text-foreground/70 leading-relaxed">
-                  {item.a}
+                  {formatAnswer(item.a)}
                 </AccordionContent>
               </AccordionItem>
             ))}
@@ -383,8 +406,8 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-2xl text-center space-y-8">
           <h2 className="">
             {/* COPY: final CTA recap */}
-            Zioła, legalny profil terpenowy, dostawa w 24h. Saszetki 0.5g.
-            Zawsze świeże, zawsze dobre.
+            Zioła, profil terpenowy, dostawa w 24h. Saszetki 0.5g. Zawsze
+            świeże, zawsze dobre.
             <span className="block text-secondary italic">
               Znajdź swoje zioo.
             </span>
