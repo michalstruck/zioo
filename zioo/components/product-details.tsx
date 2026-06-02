@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Product } from "@/lib/products";
-import { formatPrice } from "@/lib/utils";
+import { cn, formatPrice, formatSemiMarkdown } from "@/lib/utils";
 import { AddToCartButton } from "@/components/add-to-cart-button";
 import {
   Carousel,
@@ -96,7 +96,7 @@ export function ProductDetails({
                   <button
                     key={idx}
                     onClick={() => api?.scrollTo(idx)}
-                    className="relative h-12 w-18 sm:h-14 sm:w-20 shrink-0 overflow-hidden rounded-xl border border-white/20 transition-all hover:scale-105 hover:border-white focus:outline-none focus:ring-2 focus:ring-white bg-black/50"
+                    className="relative h-12 w-18 sm:h-14 sm:w-20 shrink-0 overflow-hidden rounded-md border border-white/20 transition-all hover:scale-105 hover:border-white focus:outline-none focus:ring-2 focus:ring-white bg-black/50"
                   >
                     <Image
                       src={image}
@@ -136,7 +136,7 @@ export function ProductDetails({
           >
             {product.primaryTerpene && (
               <div
-                className={`mb-6 inline-flex flex-col items-start w-fit px-6 py-4 rounded-2xl border-2 shadow-md transform transition-all hover:rotate-0 duration-500 ${!product.terpeneStyle ? "border-primary/10 bg-muted/40" : ""}`}
+                className={`mb-6 inline-flex flex-col items-start w-fit px-6 py-4 rounded-md border-2 shadow-md transform transition-all duration-500 ${!product.terpeneStyle ? "border-primary/10 bg-muted/40" : ""}`}
                 style={
                   product.terpeneStyle
                     ? {
@@ -205,11 +205,12 @@ export function ProductDetails({
                       id={`bundle-button-${bundle.id}`}
                       key={bundle.id}
                       onClick={() => setSelectedBundleId(bundle.id)}
-                      className={`flex-1 py-3 px-2 sm:px-4 rounded-xl border-2 transition-all flex flex-col items-center gap-1 cursor-pointer ease-out-expo duration-300 ${
+                      className={cn(
+                        "flex-1 py-3 px-2 sm:px-4 rounded-md border-2 transition-all flex flex-col items-center gap-1 cursor-pointer ease-out-expo duration-300",
                         selectedBundleId === bundle.id
                           ? "border-primary bg-primary/10 scale-100 shadow-sm"
-                          : "border-border/50 hover:border-border scale-[0.98] opacity-70 hover:opacity-100"
-                      }`}
+                          : "border-border hover:border-secondary/60 scale-[0.98] opacity-90 hover:opacity-100",
+                      )}
                       type="button"
                       style={
                         selectedBundleId === bundle.id && product.terpeneStyle
@@ -252,7 +253,7 @@ export function ProductDetails({
             <div className="space-y-10">
               {/* Section 1: Receptura */}
               <div
-                className="rounded-xl bg-muted p-8 md:p-10 border transition-all duration-700"
+                className="rounded-md bg-muted p-8 md:p-10 border transition-all duration-700"
                 style={
                   product.terpeneStyle
                     ? {
@@ -273,8 +274,8 @@ export function ProductDetails({
                   Receptura & Działanie
                   <span className="h-px flex-1 bg-primary"></span>
                 </h3>
-                <p className="text-secondary/80 leading-relaxed text-md mb-8 font-medium">
-                  {product.ingredientsDescription}
+                <p className="text-secondary leading-relaxed text-md mb-8 font-medium">
+                  {formatSemiMarkdown(product.ingredientsDescription)}
                 </p>
 
                 <ul className="space-y-5">
@@ -310,20 +311,17 @@ export function ProductDetails({
                 </ul>
               </div>
 
-              {/* Section 2: Usage */}
+              {/* Section 2: Disclaimer */}
               <div
-                className="rounded-[2.5rem] p-8 md:p-10 border transform hover:-rotate-1 transition-transform duration-500 shadow-sm bg-white"
+                className="rounded-md bg-muted p-4 md:p-6 border transition-all duration-700"
                 style={{
                   borderColor: `${product.terpeneStyle?.primary || "var(--border)"}40`,
                 }}
               >
-                <h3 className="text-[10px] font-heading font-black italic uppercase tracking-[0.4em] mb-6 flex items-center gap-4 text-secondary/40">
-                  <span className="h-px bg-border flex-1"></span>
-                  Jak Stosować
-                  <span className="h-px bg-border flex-1"></span>
-                </h3>
-                <p className="text-secondary/70 leading-relaxed text-md text-center font-medium">
-                  {product.usageInstructions}
+                <p className="text-secondary leading-relaxed text-md text-center font-medium">
+                  Przeznaczone wyłącznie do aromatyzacji. Nie do spożycia.
+                  Przechowywać poza zasięgiem dzieci. Przechowywać w suchym i
+                  chłodnym miejscu.
                 </p>
               </div>
             </div>
