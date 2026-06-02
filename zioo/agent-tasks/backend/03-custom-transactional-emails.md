@@ -13,7 +13,7 @@ Building on our Stripe webhook infrastructure, we will use Resend and React Emai
 
 **Feature 1: React Email Templates**
 
-- `[ ]` Design and build a custom, visually appealing "Order Confirmation" HTML email. The design must adhere to the premium "Clinical Naturalism" brand guidelines and design system. This template will be later imported into resend templates and reused.
+- `[ ]` Design and build a custom, visually appealing "Order Confirmation" HTML email. The design must adhere to the premium "Clinical Naturalism" brand guidelines and design system. This template will be imported into resend templates.
 - `[ ]` **Utilize the `copywriting` skill** to write a Polish confirmation message that expresses gratitude, outlines what to expect next, and strictly follows `COPY_DICTIONARY.md` (no medical claims).
 - `[ ]` Design and build an internal "New Order Alert" HTML email sent to `SELLER_EMAIL`. This should clearly list the items purchased, the calculated total, and customer shipping details.
 
