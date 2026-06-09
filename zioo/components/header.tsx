@@ -4,26 +4,27 @@ import Link from "next/link";
 import { CartDrawer } from "./cart-drawer";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { ROUTES } from "@/lib/config";
 
 export function Header() {
   const pathname = usePathname();
 
-  const isIndexPage = pathname === "/";
-  const isStorePage = pathname.includes("/store");
-  const isBlogPage = pathname.includes("/blog");
+  const isIndexPage = pathname === ROUTES.HOME;
+  const isStorePage = pathname.includes(ROUTES.STORE);
+  const isArtykulyPage = pathname.includes(ROUTES.ARTYKULY);
 
   return (
     <header className="sticky top-0 z-50 flex h-16 w-full items-center justify-between border-b border-border/10 bg-white backdrop-blur supports-backdrop-filter:bg-background/60 px-5 md:h-20 md:px-12 lg:px-20">
       <div className="flex items-center gap-6 md:gap-12">
         <Link
-          href="/"
+          href={ROUTES.HOME}
           className="text-2xl font-heading font-medium tracking-tight sm:text-3xl md:text-5xl hover:text-primary transition-organic"
         >
           zioo
         </Link>
         <nav className="gap-8 flex">
           <Link
-            href="/"
+            href={ROUTES.HOME}
             className={cn(
               "text-sm md:text-lg font-sans font-medium p-2 transition-organic text-secondary hover:text-primary",
               isIndexPage
@@ -34,7 +35,7 @@ export function Header() {
             O nas
           </Link>
           <Link
-            href="/store"
+            href={ROUTES.STORE}
             className={cn(
               "text-sm md:text-lg font-sans font-medium p-2 transition-organic text-secondary hover:text-primary",
               isStorePage
@@ -45,15 +46,15 @@ export function Header() {
             Sklep
           </Link>
           <Link
-            href="/blog"
+            href={ROUTES.ARTYKULY}
             className={cn(
               "text-sm md:text-lg font-sans font-medium p-2 transition-organic text-secondary hover:text-primary",
-              isBlogPage
+              isArtykulyPage
                 ? "text-primary/80 underline underline-offset-3 decoration-2 decoration-primary/70"
                 : "",
             )}
           >
-            Blog
+            Artykuły
           </Link>
         </nav>
       </div>

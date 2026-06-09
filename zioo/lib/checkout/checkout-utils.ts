@@ -1,6 +1,7 @@
 import { products } from "@/lib/products";
 import { SHIPPING_METHOD } from "@/lib/consts";
 import { calculateShippingCost } from "../shipping";
+import { SITE_URL } from "../config";
 
 const productMap = new Map(products.map((p) => [p.id, p]));
 
@@ -8,8 +9,7 @@ const productMap = new Map(products.map((p) => [p.id, p]));
  * @param path path with file extension
  * @returns absolute URL to image
  */
-const getPublicImageUrl = (path: string) =>
-  `${process.env.NEXT_PUBLIC_BASE_URL}/images/${path}`;
+const getPublicImageUrl = (path: string) => `${SITE_URL}/images/${path}`;
 
 export class CheckoutValidationError extends Error {
   constructor(message: string) {

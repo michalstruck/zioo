@@ -7,6 +7,7 @@ import {
   buildCheckoutLineItems,
   CheckoutValidationError,
 } from "@/lib/checkout/checkout-utils";
+import { SITE_URL } from "@/lib/config";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
 
@@ -76,7 +77,7 @@ export async function POST(req: Request) {
     }
 
     // Determine return URL
-    const origin = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+    const origin = SITE_URL || "http://localhost:3000";
 
     const metadata = {
       firstName: customer.firstName,
