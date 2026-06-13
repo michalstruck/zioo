@@ -70,6 +70,8 @@ export function ProductDetails({
                       src={image}
                       alt={`${product.name} - Image ${idx + 1}`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 55vw, 704px"
+                      quality={100}
                       className="object-cover transition-transform duration-700 hover:scale-102"
                       priority={idx === 0}
                     />
@@ -102,6 +104,8 @@ export function ProductDetails({
                       src={image}
                       alt={`Thumbnail ${idx + 1}`}
                       fill
+                      sizes="80px"
+                      quality={80}
                       className="object-cover opacity-80 hover:opacity-100 transition-opacity pointer-events-none"
                     />
                   </button>

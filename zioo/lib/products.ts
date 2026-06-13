@@ -53,19 +53,30 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    id: PRODUCT_ID.discoveryPack,
-    name: "zestaw startowy",
-    tagline: "Poznaj wszystkie aromaty",
-    bundles: [{ id: "7-pack", size: 7, price: 24.99 }],
-    blendProfile: [],
+    id: PRODUCT_ID.sleep,
+    name: "sleep",
+    tagline: "Wieczorny reset",
+    bundles: [
+      { id: "3-pack", size: 3, price: 9.99 },
+      { id: "5-pack", size: 5, price: 14.99 },
+    ],
+    blendProfile: [
+      { herb: "Dziewanna", pct: 30 },
+      { herb: "Malina", pct: 30 },
+      { herb: "Pokrzywa", pct: 20 },
+      { herb: "Melisa", pct: 15 },
+      { herb: "Róża", pct: 5 },
+    ],
     images: [
-      "/deep_unwind_blend.png",
-      "/social_spark_blend.png",
-      "/clear_mind_blend.png",
+      "/product-photos/hand1/jpg/sleep.jpeg",
+      "/product-photos/cloth/jpg/sleep-5.jpeg",
+      "/product-photos/cloth/jpg/sleep-3.jpeg",
+      "/product-photos/stand/jpg/sleep.jpeg",
     ],
     subheadline:
-      "7 saszetek, wszystkie nasze blendy w jednym zestawie - idealny start z zioo.",
-    ingredientsDescription: `W środku znajdziesz po jednej sztuce **każdego** rodzaju zioo: \n**•** 4 blendy Natural (**Fresh**, **Focus**, **Chill**, **Sleep**) \n**•** 3 Terpene-Infused (**Focus** z Lemon Skunk, **Chill** z Girl Scout Cookies, **Sleep** z Purple Punch). \n\nOd porannego **Fresha** z miętą i szałwią, przez **Focus** na deep work, odprężający **Chill** z lawendą, aż **Sleep** z melisą i różą, na noc. \n\nTrzy warianty terpenowe, żebyś porównać bazę z wersją rozszerzoną.`,
+      "Nocna mieszanka ziołowa, która pomaga wyciszyć głowę i przygotować ciało do snu.",
+    ingredientsDescription:
+      "W tym blendzie znajdziesz: \n**•** Melisę - zawiera kwas rozmarynowy i cytral, które **obniżają napięcie nerwowe**, poprawiają jakość snu i **łagodzą** stany lękowe. \n**•** Dziewanna - **wycisza drogi oddechowe** i nadaje naparowi miękki, aksamitny aromat. \n**•** Liść maliny - działa tonizująco i wspiera prawidłową **pracę mięśni**.\n**•** Pokrzywa - łagodna baza odżywcza. \n**•** Płatki róży - kończą profil subtelnym, **kwiatowym aromatem**.\n",
     usageInstructions:
       "Przeznaczone wyłącznie do aromatyzacji. Nie do spożycia.",
   },
@@ -90,11 +101,10 @@ export const products: Product[] = [
       text: "#ffffff",
     },
     images: [
-      "/deep_unwind_blend.png",
-      "/deep_unwind_blend.png",
-      "/deep_unwind_blend.png",
-      "/deep_unwind_blend.png",
-      "/deep_unwind_blend.png",
+      "/product-photos/hand1/jpg/sleep-terpene.jpeg",
+      "/product-photos/cloth/jpg/sleep-terpene-5.jpeg",
+      "/product-photos/cloth/jpg/sleep-terpene-3.jpeg",
+      "/product-photos/stand/jpg/sleep-terpene.jpeg",
     ],
     subheadline:
       "Nasz najbardziej wyciszający blend - nocna mieszanka ziołowa z profilem terpenowym Purple Punch.",
@@ -104,29 +114,24 @@ export const products: Product[] = [
       "Przeznaczone wyłącznie do aromatyzacji. Nie do spożycia.",
   },
   {
-    id: PRODUCT_ID.sleep,
-    name: "sleep",
-    tagline: "Wieczorny reset",
-    bundles: [
-      { id: "3-pack", size: 3, price: 9.99 },
-      { id: "5-pack", size: 5, price: 14.99 },
-    ],
-    blendProfile: [
-      { herb: "Dziewanna", pct: 30 },
-      { herb: "Malina", pct: 30 },
-      { herb: "Pokrzywa", pct: 20 },
-      { herb: "Melisa", pct: 15 },
-      { herb: "Róża", pct: 5 },
-    ],
+    id: PRODUCT_ID.discoveryPack,
+    name: "zestaw startowy",
+    tagline: "Poznaj wszystkie aromaty",
+    bundles: [{ id: "7-pack", size: 7, price: 24.99 }],
+    blendProfile: [],
     images: [
-      "/deep_unwind_blend.png",
-      "/deep_unwind_blend.png",
-      "/deep_unwind_blend.png",
+      "/product-photos/cloth/jpg/discovery-pack.jpeg",
+      "/product-photos/hand1/jpg/chill-terpene.jpeg",
+      "/product-photos/hand1/jpg/fresh.jpeg",
+      "/product-photos/hand1/jpg/focus-terpene.jpeg",
+      "/product-photos/hand1/jpg/chill.jpeg",
+      "/product-photos/hand1/jpg/sleep-terpene.jpeg",
+      "/product-photos/hand1/jpg/focus.jpeg",
+      "/product-photos/hand1/jpg/sleep.jpeg",
     ],
     subheadline:
-      "Nocna mieszanka ziołowa, która pomaga wyciszyć głowę i przygotować ciało do snu.",
-    ingredientsDescription:
-      "W tym blendzie znajdziesz: \n**•** Melisę - zawiera kwas rozmarynowy i cytral, które **obniżają napięcie nerwowe**, poprawiają jakość snu i **łagodzą** stany lękowe. \n**•** Dziewanna - **wycisza drogi oddechowe** i nadaje naparowi miękki, aksamitny aromat. \n**•** Liść maliny - działa tonizująco i wspiera prawidłową **pracę mięśni**.\n**•** Pokrzywa - łagodna baza odżywcza. \n**•** Płatki róży - kończą profil subtelnym, **kwiatowym aromatem**.\n",
+      "7 saszetek, wszystkie nasze blendy w jednym zestawie - idealny start z zioo.",
+    ingredientsDescription: `W środku znajdziesz po jednej sztuce **każdego** rodzaju zioo: \n**•** 4 blendy Natural (**Fresh**, **Focus**, **Chill**, **Sleep**) \n**•** 3 Terpene-Infused (**Focus** z Lemon Skunk, **Chill** z Girl Scout Cookies, **Sleep** z Purple Punch). \n\nOd porannego **Fresha** z miętą i szałwią, przez **Focus** na deep work, odprężający **Chill** z lawendą, aż **Sleep** z melisą i różą, na noc. \n\nTrzy warianty terpenowe, żebyś porównać bazę z wersją rozszerzoną.`,
     usageInstructions:
       "Przeznaczone wyłącznie do aromatyzacji. Nie do spożycia.",
   },
@@ -151,11 +156,10 @@ export const products: Product[] = [
       text: "#ffffff",
     },
     images: [
-      "/social_spark_blend.png",
-      "/social_spark_blend.png",
-      "/social_spark_blend.png",
-      "/social_spark_blend.png",
-      "/social_spark_blend.png",
+      "/product-photos/hand1/jpg/chill-terpene.jpeg",
+      "/product-photos/cloth/jpg/chill-terpene-5.jpeg",
+      "/product-photos/cloth/jpg/chill-terpene-3.jpeg",
+      "/product-photos/stand/jpg/chill-terpene.jpeg",
     ],
     subheadline:
       "Wszystko co Chill, plus profil terpenowy Girl Scout Cookies - głębsze odprężenie z ziemistą słodyczą.",
@@ -180,9 +184,10 @@ export const products: Product[] = [
       { herb: "Melisa", pct: 10 },
     ],
     images: [
-      "/social_spark_blend.png",
-      "/social_spark_blend.png",
-      "/social_spark_blend.png",
+      "/product-photos/hand1/jpg/chill.jpeg",
+      "/product-photos/cloth/jpg/chill-5.jpeg",
+      "/product-photos/cloth/jpg/chill-3.jpeg",
+      "/product-photos/stand/jpg/chill.jpeg",
     ],
     subheadline: "Blend na chwile, kiedy chcesz się odprężyć bez ciężkości.",
     ingredientsDescription:
@@ -211,11 +216,10 @@ export const products: Product[] = [
       text: "#ffffff",
     },
     images: [
-      "/clear_mind_blend.png",
-      "/clear_mind_blend.png",
-      "/clear_mind_blend.png",
-      "/clear_mind_blend.png",
-      "/clear_mind_blend.png",
+      "/product-photos/hand1/jpg/focus-terpene.jpeg",
+      "/product-photos/cloth/jpg/focus-terpene-5.jpeg",
+      "/product-photos/cloth/jpg/focus-terpene-3.jpeg",
+      "/product-photos/stand/jpg/focus-terpene.jpeg",
     ],
     subheadline:
       "Focus z profilem terpenowym Lemon Skunk - ostrość zmysłów od pierwszego łyku.",
@@ -240,9 +244,10 @@ export const products: Product[] = [
       { herb: "Mięta", pct: 10 },
     ],
     images: [
-      "/clear_mind_blend.png",
-      "/clear_mind_blend.png",
-      "/clear_mind_blend.png",
+      "/product-photos/hand1/jpg/focus.jpeg",
+      "/product-photos/cloth/jpg/focus-5.jpeg",
+      "/product-photos/cloth/jpg/focus-3.jpeg",
+      "/product-photos/stand/jpg/focus.jpeg",
     ],
     subheadline:
       "Blend na momenty, kiedy potrzebujesz klarownej głowy i zero rozproszeń.",
@@ -268,9 +273,10 @@ export const products: Product[] = [
       { herb: "Prawoślaz", pct: 10 },
     ],
     images: [
-      "/clear_mind_blend.png",
-      "/clear_mind_blend.png",
-      "/clear_mind_blend.png",
+      "/product-photos/hand1/jpg/fresh.jpeg",
+      "/product-photos/cloth/jpg/fresh-5.jpeg",
+      "/product-photos/cloth/jpg/fresh-3.jpeg",
+      "/product-photos/stand/jpg/fresh.jpeg",
     ],
     subheadline:
       "Mieszanka z dominującą miętą i szałwią, która budzi zmysły i dodaje lekkości.",

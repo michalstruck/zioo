@@ -19,7 +19,7 @@ type Card = {
 
 const CARDS: Card[] = [
   {
-    src: "/deep_unwind_blend.png",
+    src: "/product-photos/hand1/jpg/sleep-terpene.jpeg",
     alt: "Deep Unwind blend",
     label: "Sleep",
     rotate: -14,
@@ -28,7 +28,7 @@ const CARDS: Card[] = [
     z: 1,
   },
   {
-    src: "/clear_mind_blend.png",
+    src: "/product-photos/hand1/jpg/focus-terpene.jpeg",
     alt: "Clear Mind blend",
     label: "Focus",
     rotate: 0,
@@ -37,7 +37,7 @@ const CARDS: Card[] = [
     z: 3,
   },
   {
-    src: "/social_spark_blend.png",
+    src: "/product-photos/hand1/jpg/fresh.jpeg",
     alt: "Social Spark blend",
     label: "Fresh",
     rotate: 14,
@@ -80,7 +80,7 @@ export function AnimatedHeroCards() {
           >
             {/* Card shell */}
             <div
-              className="w-50 md:w-80 lg:w-70 xl:w-90 rounded-2xl overflow-hidden bg-white border border-black/6 cursor-pointer"
+              className="size-50 md:size-80 lg:size-70 xl:size-90 rounded-2xl overflow-hidden bg-white border border-black/6 cursor-pointer"
               style={{
                 boxShadow: isHovered
                   ? "0 20px 48px rgba(0,0,0,0.16), 0 4px 12px rgba(0,0,0,0.10)"
@@ -95,8 +95,10 @@ export function AnimatedHeroCards() {
               <Image
                 src={card.src}
                 alt={card.alt}
-                width={220}
-                height={300}
+                width={360}
+                height={360}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 55vw, 704px"
+                quality={100}
                 className="block w-full h-auto object-cover"
                 priority={i === 1}
               />

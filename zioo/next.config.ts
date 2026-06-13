@@ -50,7 +50,7 @@ generateArticleSlugs();
 const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   images: {
-    qualities: [80, 90, 100],
+    qualities: [60, 80, 90, 100],
   },
 };
 
